@@ -64,7 +64,7 @@ label {
   flex-direction: column;
   width: 700px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 15px;
   background-color: var(--buttoncolor02);
   border-radius: 75px;
 }
@@ -83,7 +83,7 @@ label {
   width: 150px;
   height: 150px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .Logo {
   width: 150px;
