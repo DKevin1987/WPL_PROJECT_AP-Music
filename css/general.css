@@ -1,6 +1,64 @@
 /*
 HEADER CSS
 */
+header {
+  background-color: black;
+  width: 100vw;
+  height: 15%;
+  margin: auto;
+  align-content: center;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.background-icons {
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.icon-header {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.logo-header {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 25%;
+}
+
+.search {
+  width: 15rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #d9d9d9;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+::placeholder {
+  opacity: 50%;
+}
 
 /*
 TEKST CSS
@@ -9,3 +67,19 @@ TEKST CSS
 /*
 BACKGROUND KLEUREN + KLEUREN
 */
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #ff0000 0%, #403f3f 40%, #403f3f 100%)
+    no-repeat;
+}
+.body-home {
+}
+
+/* Aanbevelingen */
+.Aanbevelingen {
+  width: 50vw;
+  height: 50vh;
+  background-color: #222222;
+  border-radius: 2rem;
+}
