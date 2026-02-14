@@ -60,6 +60,34 @@ header {
   opacity: 50%;
 }
 
+/* header dropdown */
+.menu {
+  align-items: center;
+  position: absolute;
+  top: 7rem;
+  left: 2rem;
+  width: 15rem;
+  background: #111;
+  padding: 15px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.background-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
 /*
 TEKST CSS
 */
@@ -73,13 +101,55 @@ body {
   background: linear-gradient(to bottom, #ff0000 0%, #403f3f 40%, #403f3f 100%)
     no-repeat;
 }
-.body-home {
+
+/* Aanbevelingen main*/
+
+main {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Aanbevelingen */
-.Aanbevelingen {
-  width: 50vw;
-  height: 50vh;
+.aanbeveling {
+  width: 55vw;
+  height: 55vh;
   background-color: #222222;
   border-radius: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 1rem;
+  color: #d9d9d9;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.aanbeveling-center {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.aanbeveling-row1 {
+  display: flex;
+  gap: 3rem;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.aanbeveling-row2 {
+  display: flex;
+  gap: 3rem;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.album-cover {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 25%;
 }

@@ -16,27 +16,52 @@
     <header>
         <div class="header-inner">
             <div>
-                <button class="background-icons"><img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg"
-                        alt=""></button>
+                <button id="menu-button" class="background-icons"><img class="icon-header"
+                        src="./assets/icons/iconmonstr-menu-lined.svg" alt=""></button>
             </div>
             <div class="header-center">
-                <button class="background-icons"><img class="icon-header" src="./assets/icons/iconmonstr-home-7.svg"
-                        alt=""></button>
+                <a class="background-icons"><img class="icon-header" src="./assets/icons/iconmonstr-home-7.svg"
+                        alt=""></a>
                 <div class="search">
                     <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
                     <input type="text" placeholder="Nummer zoeken?" />
                 </div>
             </div>
             <div class="header-right">
-                <button class="background-icons"><img class="icon-header" src="./assets/icons/iconmonstr-weather-58.svg"
-                        alt=""></button>
+                <a href="./accountpage.html" class="background-icons"><img class="icon-header"
+                        src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
                 <img src="./assets/images/logo_AP-Music.png" class="logo-header">
             </div>
         </div>
     </header>
     <main>
-        <div class="Aanbevelingen"></div>
+        <div id="dropdownMenu" class="menu hidden">
+            <a href="./accountpage.html" class="background-dropdown">Account</a>
+            <a class="background-dropdown">Favorieten</a>
+            <a class="background-dropdown">Muziek Spel</a>
+            <a class="background-dropdown">Geschiedenis</a>
+            <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
+            <a href="./accountpage.html" class="background-dropdown">Mood</a>
+        </div>
+        <div class="aanbeveling">
+            <h1>Aanbevelingen</h1>
+            <div class="aanbeveling-center">
+                <ul class="aanbeveling-row1">
+                    <li><img class="album-cover" src="./assets/album-covers/AcDc.png" alt=""></li>
+                    <li><img class="album-cover" src="./assets/album-covers/beatels.jpg" alt=""></li>
+                    <li><img class="album-cover" src="./assets/album-covers/gunsRoses.jpg" alt=""></li>
+                    <li><img class="album-cover" src="./assets/album-covers/metallica.jpeg" alt=""></li>
+                </ul>
+                <ul class="aanbeveling-row2">
+                    <li><img class="album-cover" src="./assets/album-covers/Nirvana.png" alt=""></li>
+                    <li><img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt=""></li>
+                    <li><img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt=""></li>
+                    <li><img class="album-cover" src="./assets/album-covers/queen2.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
     </main>
 </body>
+<script src="./js/generalJava.js"></script>
 
 </html>
