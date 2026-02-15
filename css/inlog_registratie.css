@@ -7,9 +7,7 @@ LEGENDE:
 
 /* Inlog/registatie pagina */
 
-/*
-KLEURENPALLET VOOR INLOG / REGISTRATIE PAGINA
-*/
+/* KLEURENPALLET VOOR INLOG / REGISTRATIE PAGINA */
 :root {
   --background01: #f6f3f3;
   --tekst01: black;
@@ -20,6 +18,8 @@ KLEURENPALLET VOOR INLOG / REGISTRATIE PAGINA
   --bordercolor02: grey;
   --titlecolor01: #9d2929;
 }
+
+/* Zichtbare gedeelte van inlog en registratie pagina */
 body {
   max-width: 1440px;
   margin: auto;
@@ -77,8 +77,6 @@ label {
   flex-direction: column;
   align-items: center;
 }
-.form-item {
-}
 .logo-container {
   width: 150px;
   height: 150px;
@@ -110,11 +108,59 @@ button:focus {
   height: 45px;
   width: 255px;
 }
+button:hover {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+
+/* Gedeelte voor Foutieve invoer userEmail en userPasword. */
+#inlogInputCheck {
+  position: relative;
+  top: -400px;
+  border: 10px solid rgb(243, 5, 5);
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+#inlogInputCheckHidden {
+  display: none;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+#buttonError {
+  width: 100px;
+}
+
+.hidden{
+  display: none;
+}
 
 
-/*
-MEDIA CSS voor mobiele apparaten.
-*/
+/* Gedeelte voor PASWORD RESET */
+.sectionPaswordReset {
+  position: relative;
+  top: -400px;
+  background-color: #ffffff;
+  border: 10px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+#resetEmailLabel {
+  width: 300px;
+}
+#buttonCancle{
+  width: 100px;
+}
+
+/* MEDIA CSS voor mobiele apparaten. */
 @media only screen and (min-width: 375px) and (max-width: 750px) {
   .section-box {
     display: flex;

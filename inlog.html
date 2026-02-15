@@ -29,17 +29,64 @@
             ><img class="icon" src="./assets/icons/email.jpg" alt="" />
             Email</label
           >
-          <input type="email" name="Email" id="useremail" placeholder="abc@email.be" value="" />
+          <input
+            type="email"
+            name="Email"
+            id="useremail"
+            placeholder="abc@email.be"
+            value=""
+          />
           <label for="userpasword"
             ><img class="icon" src="./assets/icons/slot.jpg" alt="" />
             Wachtwoord</label
           >
-          <input type="password" name="Wachtwoord" id="userpasword" placeholder="Wachtwoord" value="" />
-          <button id="inlogButton" class="buttonInlog" type="submit">Inloggen</button>
+          <input
+            type="password"
+            name="Wachtwoord"
+            id="userpasword"
+            placeholder="Wachtwoord"
+            value=""
+          />
+          <button id="inlogButton" class="buttonInlog" type="submit">
+            Inloggen
+          </button>
           <button class="buttonRegistreren">
             <a href="./registratie.html">Registreren</a>
           </button>
           <button class="buttonRecovery">Wachtwoord Vergeten?</button>
+        </form>
+      </section>
+
+      <section class="hidden" id="inlogInputCheck">
+        <div class="hidden" id="emailError">
+          <h3>Foutieve Email.</h3>
+          <p>Deze email bestaat niet in ons systeem.</p>
+        </div>
+        <div class="hidden" id="paswordError">
+          <h3>Foutief Paswoord.</h3>
+          <p>Dit paswoord hoort niet bij dit email-adres.</p>
+        </div>
+        <button class="hidden" id="buttonError">OK</button>
+      </section>
+
+      <section class="sectionPaswordReset hidden">
+        <h3>PASWOORD RESET.</h3>
+        <form action="">
+          <label for="resetEmailLabel"
+            ><img
+              class="icon"
+              src="./assets/icons/email.jpg"
+              alt=""
+            />Email</label
+          >
+          <input
+            id="resetEmailLabel"
+            type="text"
+            value=""
+            placeholder="abc@music.be"
+          />
+          <button class="buttonInlog" type="submit">Submit</button>
+          <button id="buttonCancle">Anuleren</button>
         </form>
       </section>
     </main>
