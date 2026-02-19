@@ -9,11 +9,13 @@
     <title>AP-Music</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./css/inlog_registratie.css" />
-    <script type="module" src="./js/inlog_registratie.js"></script>
+    <script type="module" src="./js/inlog.js"></script>
   </head>
   <body>
     <main class="main-container">
       <section class="section-box">
+        <!-- LOGO EN TITEL  -->
+
         <div class="logo-container">
           <figure>
             <img
@@ -24,6 +26,9 @@
           </figure>
         </div>
         <h1>Inloggen bij AP-Music</h1>
+
+        <!-- INLOG FORMULIER -->
+
         <form action="" class="form-container" id="inlogform">
           <label for="useremail"
             ><img class="icon" src="./assets/icons/email.jpg" alt="" />
@@ -33,6 +38,7 @@
             type="email"
             name="Email"
             id="useremail"
+            required
             placeholder="abc@email.be"
             value=""
           />
@@ -44,6 +50,8 @@
             type="password"
             name="Wachtwoord"
             id="userpasword"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
             placeholder="Wachtwoord"
             value=""
           />
@@ -57,6 +65,8 @@
         </form>
       </section>
 
+      <!-- INLOG FORMULIER ERROR DEEL -->
+
       <section class="hidden" id="inlogInputCheck">
         <div class="hidden" id="emailError">
           <h3>Foutieve Email.</h3>
@@ -66,8 +76,10 @@
           <h3>Foutief Paswoord.</h3>
           <p>Dit paswoord hoort niet bij dit email-adres.</p>
         </div>
-        <button class="hidden" id="buttonError">OK</button>
+        <button class="hidden buttonError" id="buttonError">OK</button>
       </section>
+
+      <!-- RESET PASWORD DEEL -->
 
       <section class="sectionPaswordReset hidden">
         <h3>PASWOORD RESET.</h3>

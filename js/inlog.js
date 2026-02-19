@@ -3,6 +3,7 @@
 // Pakt het inlog form element vast.
 
 const inlogformEl = document.querySelector("#inlogform");
+const inlogInputCheckEl = document.querySelector("#inlogInputCheck");
 
 // tijdelijke array's om JS te testen met 2 users erin.
 const userEmailArray = ["admin@ap-music.be", "test@ap-music.be"];
@@ -29,6 +30,8 @@ inlogButtonEl.addEventListener("click", (event) => {
 }); 
 // EINDE van controle als op INLOG-button geklikt wordt.
 //
+
+
 
 //
 // Functies voor INLOG-Pagina.
@@ -84,9 +87,4 @@ buttonRecoveryEl.addEventListener('click', (event) => {
   });
 });
 
-//
-// GEDEELTE VOOR REGISTRATIE-PAGINA
-//
 
-// Pakt het registratie form element vast.
-const registrationformEl = document.querySelector("#registrationform");

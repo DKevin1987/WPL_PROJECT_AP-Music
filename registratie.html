@@ -9,11 +9,13 @@
     <title>AP-Music</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./css/inlog_registratie.css" />
-    <script type="module" src="./js/inlog_registratie.js"></script>
+    <script type="module" src="./js/registratie.js" defer></script>
   </head>
   <body>
     <main class="main-container">
       <section class="section-box">
+        <!-- LOGO EN TITEL -->
+
         <div class="logo-container">
           <figure>
             <img
@@ -24,32 +26,119 @@
           </figure>
         </div>
         <h1>Registreren bij AP-Music</h1>
+
+        <!-- REGISTRATIE FORMULIER -->
+
         <form action="" class="form-container" id="registrationform">
           <label for="Username"
             ><img class="icon" src="./assets/icons/person.jpg" alt="" />
             Gebruikersnaam</label
           >
-          <input type="text" name="Username" id="" value="abc" />
+          <input
+            type="text"
+            name="Username"
+            id="usernameInput"
+            required
+            placeholder="Gebruikersnaam"
+            value=""
+          />
           <label for="Email"
             ><img class="icon" src="./assets/icons/email.jpg" alt="" />
             Email</label
           >
-          <input type="email" name="Email" id="" value="abc@email.be" />
+          <input
+            type="email"
+            name="Email"
+            id="emailInput"
+            required
+            placeholder="abc@email.be"
+            value=""
+          />
           <label for="Pasword"
             ><img class="icon" src="./assets/icons/slot.jpg" alt="" />
             Wachtwoord</label
           >
-          <input type="password" name="Wachtwoord" id="" value="Wachtwoord" />
+          <input
+            type="password"
+            name="Wachtwoord"
+            id="paswordInput"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+            placeholder="wachtwoord"
+            value=""
+          />
+          <!--    Dit zou een optie kunnen zijn om aan te tonen wat de eisen van pasword zijn.
+          <div id="password-message">
+                <h4>Password must contain:</h4>
+                <p class="password-message-item invalid">Min.
+                    <b>één lowercase letter</b>
+                </p>
+                <p class="password-message-item invalid">Min.
+                    <b>één hoofdletter</b>
+                </p>
+                <p class="password-message-item invalid">Min.
+                    <b>één nummer</b>
+                </p>
+                <p class="password-message-item invalid">Min.
+                    <b>6 tot 10 characters</b>
+                </p>
+            </div>
+            -->
           <label for="Pasword"
             ><img class="icon" src="./assets/icons/slot.jpg" alt="" /> Bevestig
             Wachtwoord</label
           >
-          <input type="password" name="Wachtwoord" id="" value="Wachtwoord" />
-          <button class="buttonInlog">Registreren</button>
+          <input
+            type="password"
+            name="Wachtwoord"
+            id="paswordInputCheck"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+            placeholder="wachtwoord"
+            value=""
+          />
+          <button type="submit" class="buttonInlog" id="buttonRegister">Registreren</button>
           <button class="buttonRecovery">
             <a href="./inlog.html">Heb je al een account?</a>
           </button>
         </form>
+      </section>
+
+      <!-- REGISTRATIE FORMULIER ERROR DEEL hidden -->
+
+      <section class="hidden" id="registratieInputCheck">
+        <div class="hidden" id="usernameCheck">
+          <h3>Gebruikersnaam</h3>
+          <p>Gelieve een gebruikersnaam in te voeren.</p>
+        </div>
+        <div class="hidden" id="emailCheckValid">
+          <h3>Foutieve Email</h3>
+          <p>Dit is geen email. Gelieven een geldig email in te voeren.</p>
+        </div>
+        <div class="hidden" id="emailCheck">
+          <h3>Email bestaat al</h3>
+          <p>Deze email bestaat al in ons systeem. U kunt inloggen via:</p>
+          <button><a href="./inlog.html"></a>Inloggen</button>
+        </div>
+        <div class="hidden" id="paswordCheck">
+          <h3>Foutief wachtwoord</h3>
+          <p>Dit wachtwoord voldoet niet aan de vereisten.</p>
+        </div>
+        <div class="hidden" id="paswordCheckValid">
+          <h3>Foutief wachtwoord.</h3>
+          <p>De wachtwoorden dat u ingegeven hebt komen niet overeen.</p>
+        </div>
+        <button class="buttonError" id="buttonErrorRegistratie">OK</button>
+      </section>
+
+      <!-- REGISTRATIE GELUKT hidden -->
+
+      <section class="hidden" id="registratieValid">
+        <div>
+          <h2 id="registratieTekstValid">Het registreren is gelukt.</h2>
+          <p>u word verder gebracht naar onze inlog pagina.</p>
+          <button><a href="./inlog.html"></a>Inloggen</button>
+        </div>
       </section>
     </main>
   </body>
