@@ -1,0 +1,76 @@
+.landingcontainer {
+  width: 80%;
+  margin: 4px auto;
+  background-color: rgb(243, 224, 221);
+  padding: 30px;
+  border-radius: 6px;
+}
+
+.landingheader {
+  background: rgb(220, 220, 220);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingprofiel {
+  justify-content: end;
+  position: relative;
+}
+
+.landingtitel {
+  text-align: center;
+}
+
+.landingtitel h1 {
+  color: rgb(190, 34, 20);
+  font-size: 45px;
+}
+
+.landingtitel h2 {
+  font-size: 25px;
+  color: darkgray;
+}
+
+.landingprofiel img {
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+}
+
+.projecten {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.projectkeuze {
+  position: relative;
+  width: 180px;
+  height: 260px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projectkeuze img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grijsoverlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(120, 120, 120, 0.8);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 40px;
+}
