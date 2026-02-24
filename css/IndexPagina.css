@@ -1,5 +1,6 @@
 .landingcontainer {
-  width: 80%;
+  width: 80rem;
+  height: 35rem;
   margin: 4px auto;
   background-color: rgb(243, 224, 221);
   padding: 30px;
@@ -52,6 +53,14 @@
   height: 260px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.projectkeuze:hover {
+  border: 5px solid red;
+}
+
+.projectkeuze-button:focus {
+  border: 5px solid red;
 }
 
 .projectkeuze img {
