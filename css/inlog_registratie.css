@@ -4,3 +4,240 @@ CSS BESTAND VOOR INLOG EN REGISTRATIE -PAGINA.
 LEGENDE: 
 
 */
+
+/* Inlog/registatie pagina */
+
+/* KLEURENPALLET VOOR INLOG / REGISTRATIE PAGINA */
+:root {
+  --background01: #f6f3f3;
+  --tekst01: black;
+  --tekst02: #9d2929;
+  --buttoncolor01: black;
+  --buttoncolor02: #ffffff;
+  --bordercolor01: black;
+  --bordercolor02: grey;
+  --titlecolor01: #9d2929;
+}
+
+/* Zichtbare gedeelte van inlog en registratie pagina */
+body {
+  max-width: 1440px;
+  margin: auto;
+  background-color: var(--background01);
+}
+section {
+}
+h1 {
+  color: var(--tekst02);
+  margin: auto;
+  text-align: center;
+  font-size: 35px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 7px var(--bordercolor02);
+}
+h4 {
+  text-align: center;
+}
+p {
+  width: 80%;
+  margin: auto;
+}
+b{
+  font-weight: 800;
+}
+button {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+input {
+  border: 1px solid var(--bordercolor02);
+  border-radius: 10px;
+  height: 45px;
+  width: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+label {
+  height: 35px;
+  width: 350px;
+  align-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+.section-box {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: auto;
+  margin-top: 15px;
+  background-color: var(--buttoncolor02);
+  border-radius: 75px;
+}
+.main-container {
+  display: flexbox;
+  flex-direction: column;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-container {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 20px;
+}
+.Logo {
+  width: 150px;
+  height: 150px;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+}
+.buttonInlog {
+  background-color: var(--tekst02);
+  border-color: #9d2929;
+  color: var(--buttoncolor02);
+}
+.buttonRegistreren {
+  border-color: #9d2929;
+  color: #9d2929;
+}
+.buttonRecovery {
+  border-color: #ffffff;
+}
+button:focus {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+button:hover {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+.valid {
+  color: green;
+}
+.invalid {
+  color: red;
+}
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+.invalid::before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+#password-message{
+  width: 100%;
+  text-align: left;
+}
+.password-message-item{
+  width: 300px;
+}
+
+/* Gedeelte voor Foutieve invoer userEmail en userPasword. */
+#inlogInputCheck {
+  position: relative;
+  top: -400px;
+  border: 10px solid rgb(243, 5, 5);
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+/*
+#inlogInputCheckHidden {
+  display: none;
+}
+*/
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+/* Deze is voor inlog en registratie pagina. */
+.buttonError {
+  width: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Gedeelte voor PASWORD RESET */
+.sectionPaswordReset {
+  position: relative;
+  top: -400px;
+  background-color: #ffffff;
+  border: 10px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+#resetEmailLabel {
+  width: 300px;
+}
+#buttonCancle {
+  width: 100px;
+}
+
+/* GEDEELTE VOOR REGISTRATIE-PAGINA */
+#registratieInputCheck {
+  border: 10px solid rgb(243, 5, 5);
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+/* GEDEELTE VOOR MELDING DAT REGISTRATIE GELUKT IS */
+#registratieValid{
+  border: 10px solid green;
+  border-radius: 25px;
+  width: 350px;
+  height: 175px;
+  margin: auto;
+  text-align: center;
+  align-content: center;
+}
+#registratieTekstValid{
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* MEDIA CSS voor mobiele apparaten. */
+@media only screen and (min-width: 375px) and (max-width: 750px) {
+  .section-box {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 15px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 75px;
+  }
+  button {
+    border-radius: 20px;
+  }
+  input {
+    width: 300px;
+  }
+}
