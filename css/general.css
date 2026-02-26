@@ -1,53 +1,91 @@
 /*
+
+      CSS VOOR ALLE SCHERMEN van 800px tot 1440 px
+*/
+
+/*
 HEADER CSS
 */
 header {
   background-color: black;
-  width: 100vw;
-  height: 15%;
+  width: 100%;
+  max-width: 1440px;
+  height: 8rem;
   margin: auto;
   align-content: center;
 }
 .header-inner {
-  display: flex;
+  display: grid;
+  grid-template-areas: 'menu home search account logo';
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
 }
-.header-center {
+.header-menuButton {
+  margin-left: 2rem;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+  width: 4rem;
+  height: 4rem;
+}
+.header-homeButton {
+  display: flex;
+  align-items: end;
   justify-content: center;
   gap: 2rem;
+  width: 4rem;
+  height: 4rem;
 }
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.header-search-button {
+  /*   HIDDEN BUTTON VOOR MOBILE ALLEEN   */
+  display: none;
 }
-
+.header-accountbutton{
+  align-content: end;
+  width: 4rem;
+  height: 4rem;
+}
+.header-logo{
+  margin-right: 4rem;
+}
+.logo-header {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 25%;
+}
 .background-icons {
   background-color: #d9d9d9;
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 .icon-header {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
-.logo-header {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 25%;
+.search-button{
+  background: #d9d9d9;
 }
-
-.search {
+.search-button2{
+  background: #d9d9d9;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+}
+.search-input {
+  background: #d9d9d9;
+  border-radius: 2rem;
+  height: 4rem;
   width: 15rem;
+  margin-left: 20%;
+  text-align: left;
+}
+.search-form {
+  width: 25rem;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -59,8 +97,10 @@ header {
 ::placeholder {
   opacity: 50%;
 }
+/*
+/* header dropdown 
+*/
 
-/* header dropdown */
 .menu {
   align-items: center;
   position: absolute;
@@ -97,8 +137,8 @@ BACKGROUND KLEUREN + KLEUREN
 */
 body {
   height: 100vh;
-  width: 100vw;
-  background: linear-gradient(to bottom, #ff0000 0%, #403f3f 40%, #403f3f 100%)
+  width: 100%;
+  background: linear-gradient(to bottom, #ff0000 0%, #403f3f 60%, #403f3f 100%)
     no-repeat;
 }
 
@@ -109,14 +149,20 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .aanbeveling {
-  width: 55vw;
-  height: 55vh;
+  width: 80%;
+  max-width: 55rem;
+  height: 25rem;
   background-color: #222222;
   border-radius: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 h1 {
@@ -129,27 +175,438 @@ h1 {
 .aanbeveling-center {
   margin-top: 2rem;
   display: flex;
+  flex-direction: row;
   gap: 2rem;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   align-items: center;
   justify-content: center;
 }
-.aanbeveling-row1 {
+.aanbeveling-row {
+  width: 90%;
   display: flex;
-  gap: 3rem;
-  flex-flow: row nowrap;
+  gap: 1.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.aanbeveling-row2 {
-  display: flex;
-  gap: 3rem;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-}
+
 .album-cover {
   width: 7.5rem;
   height: 7.5rem;
   border-radius: 25%;
+}
+
+/*
+    MUZIEK PLAYER
+*/
+
+.musicplayer {
+  background-color: aqua;
+  height: 5rem;
+  border-radius: 5rem;
+  align-content: center;
+}
+
+td {
+  width: 10rem;
+  height: 4rem;
+  text-align: center;
+  align-content: center;
+}
+.music-left {
+  width: 1rem;
+}
+.music-middle-left {
+  border: #111 solid 0.2rem;
+  width: 4rem;
+}
+.music-middle {
+  border: #111 solid 0.2rem;
+  width: 15rem;
+}
+.music-middle-right {
+  border: #111 solid 0.2rem;
+  width: 15rem;
+}
+.music-right {
+  width: 1rem;
+}
+
+/*  MEDIA GEDEELTE    */
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .header-inner{
+    display: grid;
+    grid-template-areas: 'menu home search account logo';
+    justify-content: space-between;
+  }
+  .header-menuButton{
+    grid-area: 0/1/0/1;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+  }
+  .header-homeButton{
+    grid-area: 0/1/1/2;
+    width: 3rem;
+    height: 3rem;
+  }
+  .search-form {
+    grid-area: 0/1/2/3;
+    width: 15rem;
+  }
+  .search-input{
+    width: 100%;
+  }
+  .header-accountbutton{
+    grid-area: 0/01/3/4;
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo{
+    grid-area: 0/1/4/5;
+    margin-right: 2rem;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+  .header-center {
+    width: 8rem;
+  }
+  .search-form{
+    width: 10rem;
+  }
+  .search-button2{
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/*  IN ORDE BIJNA  */
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  
+  /*    HEADER    */
+  .header-inner{
+    display: grid;
+    grid-template-areas: 'menu home search account logo';
+  }
+  .header-menuButton{
+    grid-area: 0/1/0/1;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+  }
+  .header-homeButton{
+    grid-area: 0/1/1/2;
+    width: 3rem;
+    height: 3rem;
+  }
+  .search-form {
+    grid-area: 0/1/2/3;
+  }
+  .search-input{
+    width: 100%;
+  }
+  .header-accountbutton{
+    grid-area: 0/01/3/4;
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo{
+    grid-area: 0/1/4/5;
+    margin-right: 2rem;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+  .header-center {
+    width: 8rem;
+  }
+  .search-form{
+    width: 10rem;
+  }
+  .search-button2{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /*  MAIN  */
+  .aanbeveling-row2{
+    margin-bottom: 2rem;
+  }
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+}
+/*  IN ORDE   */
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  body {
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #ff0000 0%,
+        #403f3f 40%,
+        #403f3f 100%
+      )
+      no-repeat;
+  }
+
+  /*   HEADER   */
+
+ .header-inner{
+    display: grid;
+    grid-template-areas: 'menu home search account logo';
+  }
+  .header-menuButton{
+    grid-area: 0/1/0/1;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+  }
+  .header-homeButton{
+    grid-area: 0/1/1/2;
+    width: 3rem;
+    height: 3rem;
+  }
+  .search-form {
+    grid-area: 0/1/2/3;
+    width: 10rem;
+  }
+  .search-input{
+    width: 100%;
+  }
+  .header-accountbutton{
+    grid-area: 0/01/3/4;
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo{
+    grid-area: 0/1/4/5;
+    margin-right: 2rem;
+  }
+  .search-button2{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /*   MAIN   */
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 9rem;
+    height: 9rem;
+  }
+  ::placeholder {
+    opacity: 100%;
+  }
+}
+
+
+/*  NAKIJKEN  */
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .body-home{
+    height: 100%;
+  }
+  .header-inner{
+    display: grid;
+    grid-template: 'menu home search-button2 search-input account logo';
+  }
+  .button-mobile{
+    height: 100%;
+    width: 100%;
+  }
+  /*  HEADER  */
+  .header-menuButton{
+    grid-area: menu;
+    width: 4rem;
+    height: 4rem;
+  }
+  .header-homeButton{
+    grid-area: home;
+    width: 4rem;
+    height: 4rem;
+  }
+  .search-form{
+    display: none;
+  }
+  .search-input{
+    margin-left: 0;
+  }
+  .header-search-button{
+    grid-area: search;
+    display: contents;
+    margin-right: 4rem;
+  }
+  .header-accountbutton{
+    grid-area: account;
+    width: 4rem;
+    height: 4rem;
+  }
+  .header-logo{
+    grid-area: logo;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 2rem;
+  }
+  .search-button{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }.search-input{
+    width: 8rem;
+  }
+
+  /*  MAIN  */
+  .main-item1{
+    order: 2;
+    height: 100%;
+  }
+  .main-item2{
+    order: 1;
+  }
+  .aanbeveling{
+    width: 95%;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover{
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+/*  IN ORDE  */
+@media screen and (min-width: 450px) and (max-width: 550px) {
+ .body-home{
+    height: 100%;
+  }
+  .button-mobile{
+    height: 100%;
+    width: 100%;
+  }
+  /*  HEADER  */
+  .search-form{
+    display: none;
+  }
+  .header-menuButton{
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-homeButton{
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-search-button{
+    display: contents;
+    margin-right: 3rem;
+  }
+  .header-accountbutton{
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 2rem;
+  }
+  .search-button{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+  }
+
+
+  /*  MAIN  */
+  .main-item1{
+    order: 2;
+    height: 100%;
+  }
+  .main-item2{
+    order: 1;
+  }
+  .aanbeveling{
+    width: 95%;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover{
+    width: 8rem;
+    height: 8rem;
+  }
+}
+/*  IN ORDE  */
+@media screen and (min-width: 375px) and (max-width: 450px) {
+  .body-home{
+    height: 100%;
+  }
+  .button-mobile{
+    height: 100%;
+    width: 100%;
+  }
+  /*  HEADER  */
+  .search-form{
+    display: none;
+  }
+  .header-menuButton{
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-homeButton{
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-search-button{
+    display: contents;
+    margin-right: 3rem;
+  }
+  .header-accountbutton{
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 2rem;
+  }
+  .search-button{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+  }
+
+
+  /*  MAIN  */
+  .main-item1{
+    order: 2;
+    height: 100%;
+  }
+  .main-item2{
+    order: 1;
+  }
+  .aanbeveling{
+    width: 95%;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
 }

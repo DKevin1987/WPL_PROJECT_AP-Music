@@ -15,27 +15,43 @@
 <body class="body-home">
     <header>
         <div class="header-inner">
-            <div>
+            <div class="header-menuButton">
                 <button id="menu-button" class="background-icons"><img class="icon-header"
-                        src="./assets/icons/iconmonstr-menu-lined.svg" alt=""></button>
+                        src="./assets/icons/iconmonstr-menu-lined.svg" alt="">
+                </button>
             </div>
-            <div class="header-center">
-                <a class="background-icons"><img class="icon-header" src="./assets/icons/iconmonstr-home-7.svg"
-                        alt=""></a>
-                <div class="search">
+            <div class="header-homeButton">
+                <button class="background-icons">
+                    <a href="./homepage.html" ><a><img src="./assets/icons/iconmonstr-home-7.svg" alt="Homepage"></a></a>
+                </button>
+            </div>
+            <div class="header-search-button">
+                <button class="search-button">
                     <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
-                    <input type="text" placeholder="Nummer zoeken?" />
-                </div>
+                </button>
             </div>
-            <div class="header-right">
+            <form class="search-form" action="">
+                <input class="search-input" type="text" placeholder="Nummer zoeken?" value="" />
+                <button class="search-button2 ">
+                    <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
+                </button>
+                
+            </form>
+            
+            <div class="header-accountbutton">
                 <a href="./accountpage.html" class="background-icons"><img class="icon-header"
                         src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
+            </div>
+            <div class="header-logo">
                 <img src="./assets/images/logo_AP-Music.png" class="logo-header">
             </div>
         </div>
     </header>
+
+            <!-- START MAIN  -->
+
     <main>
-        <div id="dropdownMenu" class="menu hidden">
+        <div id="dropdownMenu" class="menu hidden ">
             <a href="./accountpage.html" class="background-dropdown">Account</a>
             <a class="background-dropdown">Favorieten</a>
             <a class="background-dropdown">Muziek Spel</a>
@@ -43,9 +59,66 @@
             <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
             <a href="./accountpage.html" class="background-dropdown">Mood</a>
         </div>
-        <div class="aanbeveling">
+
+            <!-- START AANBEVELINGEN  -->
+
+        <div class="aanbeveling main-item1">
             <h1>Aanbevelingen</h1>
             <div class="aanbeveling-center">
+                <div class="aanbeveling-row1 aanbeveling-row">
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/AcDc.png" alt=""></li>
+                    </div>
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/beatels.jpg" alt=""></li>
+                    </div>
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/gunsRoses.jpg" alt=""></li>
+                    </div>
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/metallica.jpeg" alt=""></li>
+                    </div>
+                </div>
+                <div class="aanbeveling-row2 aanbeveling-row">
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/Nirvana.png" alt=""></li>
+                    </div>
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt=""></li>
+                    </div>
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt=""></li>
+                    </div>
+                    <div>
+                        <li><img class="album-cover" src="./assets/album-covers/queen2.jpg" alt=""></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="musicplayer main-item2">
+            <div>
+                <table>
+                    <tr>
+                        <td class="music-left"></td>
+                        <td class="music-middle-left">LoGO</td>
+                        <td class="music-middle">TITEL & ARTIEST</td>
+                        <td class="music-middle-right">PLAYBUTTONS ZOOI KOMT HIER</td>
+                        <td class="music-right"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+
+
+        <!-- EINDE AANBEVELINGEN  -->
+    </main>
+</body>
+<script src="./js/generalJava.js"></script>
+
+</html>
+
+<!-- 
                 <ul class="aanbeveling-row1">
                     <li><img class="album-cover" src="./assets/album-covers/AcDc.png" alt=""></li>
                     <li><img class="album-cover" src="./assets/album-covers/beatels.jpg" alt=""></li>
@@ -58,10 +131,5 @@
                     <li><img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt=""></li>
                     <li><img class="album-cover" src="./assets/album-covers/queen2.jpg" alt=""></li>
                 </ul>
-            </div>
-        </div>
-    </main>
-</body>
-<script src="./js/generalJava.js"></script>
 
-</html>
+-->
