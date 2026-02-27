@@ -209,8 +209,8 @@ h1 {
   background-color: rgb(230, 241, 241);
   height: 6rem;
   border-radius: 3rem;
-  align-content: center;
   justify-content: center;
+  align-content: center;
 }
 .player-container{
   display: grid;
@@ -218,8 +218,8 @@ h1 {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 6rem;
-  height: 6rem;
+  width:5rem;
+  height: 5rem;
   grid-area: logo;
   margin-left: 3rem;
 }
@@ -232,6 +232,7 @@ h1 {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 18rem;
+  height: 5rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -254,8 +255,8 @@ h1 {
   width: 1rem;
 }
 .player-buttons{
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
 }
 .player-logo{
   border-radius: 2.5rem;
@@ -354,8 +355,8 @@ td {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   grid-area: logo;
   margin-left: 3rem;
 }
@@ -368,6 +369,7 @@ td {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 18rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -380,18 +382,18 @@ td {
   font-size: 1.5rem;
 }
 .music-logo{
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   align-self: center;
-  border-radius: 2.5rem;
+  border-radius: 2rem;
 }
 .music-right {
   border: #df1b1b solid 0.2rem;
   width: 1rem;
 }
 .player-buttons{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .player-logo{
   border-radius: 2rem;
@@ -480,8 +482,8 @@ td {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   grid-area: logo;
   margin-left: 2rem;
 }
@@ -494,6 +496,7 @@ td {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 18rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -506,18 +509,18 @@ td {
   font-size: 1.5rem;
 }
 .music-logo{
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   align-self: center;
-  border-radius: 2.5rem;
+  border-radius: 2rem;
 }
 .music-right {
   border: #df1b1b solid 0.2rem;
   width: 1rem;
 }
 .player-buttons{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .player-logo{
   border-radius: 2rem;
@@ -618,8 +621,8 @@ td {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   grid-area: logo;
   margin-left: 3rem;
 }
@@ -633,6 +636,7 @@ td {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 18rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -655,8 +659,8 @@ td {
   width: 1rem;
 }
 .player-buttons{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .player-logo{
   border-radius: 2rem;
@@ -758,8 +762,8 @@ td {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   grid-area: logo;
   margin-left: 3rem;
 }
@@ -773,6 +777,7 @@ td {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 18rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -785,8 +790,8 @@ td {
   font-size: 1.5rem;
 }
 .music-logo{
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   align-self: center;
   border-radius: 2.5rem;
 }
@@ -795,8 +800,8 @@ td {
   width: 1rem;
 }
 .player-buttons{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .player-logo{
   border-radius: 2rem;
@@ -884,8 +889,8 @@ td {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   grid-area: logo;
   margin-left: 1rem;
 }
@@ -899,6 +904,7 @@ td {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 18rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -911,8 +917,8 @@ td {
   font-size: 1.5rem;
 }
 .music-logo{
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   align-self: center;
   border-radius: 2.5rem;
 }
@@ -921,8 +927,8 @@ td {
   width: 1rem;
 }
 .player-buttons{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .player-logo{
   border-radius: 2rem;
@@ -1005,8 +1011,8 @@ td {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   grid-area: logo;
   margin-left: 1rem;
 }
@@ -1020,6 +1026,7 @@ td {
 .music-middle-player {
   background-color: #d9d9d9;
   width: 14rem;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -1032,8 +1039,8 @@ td {
   font-size: 1.5rem;
 }
 .music-logo{
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   align-self: center;
   border-radius: 2.5rem;
 }
@@ -1042,8 +1049,8 @@ td {
   width: 1rem;
 }
 .player-buttons{
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
 }
 .player-logo{
   border-radius: 2rem;
