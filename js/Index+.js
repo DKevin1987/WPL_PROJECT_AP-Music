@@ -1,4 +1,11 @@
-// Knop OK bij error
+// knop op index+ om naar homepage te gaan
+
+document
+  .querySelector(".projectkeuze-button-ToHome")
+  .addEventListener("click", () => {
+    window.location.href = "homepage.html";
+  });
+
 const projectBtns = document.querySelectorAll(".projectkeuze-button");
 const errorMenu = document.getElementById("inlogErrorBox");
 const okBtn = document.querySelector(".buttonError");

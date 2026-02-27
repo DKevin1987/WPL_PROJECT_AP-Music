@@ -120,6 +120,52 @@ body {
   font-weight: bold;
 }
 
+/* Gedeelte voor Foutieve invoer userEmail en userPasword. */
+#inlogErrorBox {
+  position: absolute;
+  border: 10px solid rgb(243, 5, 5);
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  align-self: center;
+  text-align: center;
+}
+
+.buttonError {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.buttonError:focus {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+.buttonError:hover {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.buttonError {
+  width: 100px;
+}
+.hidden {
+  display: none;
+}
+
 footer {
   width: 100vw;
   height: 10vh;
