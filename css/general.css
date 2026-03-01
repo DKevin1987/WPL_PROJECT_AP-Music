@@ -9,12 +9,14 @@ HEADER CSS
 header {
   background-color: black;
   width: 100%;
-  max-width: 1440px;
   height: 8rem;
   margin: auto;
   align-content: center;
+  justify-content: center;
 }
 .header-inner {
+  max-width: 1440px;
+  margin: auto;
   display: grid;
   grid-template-areas: 'menu home search  account logo';
   align-items: center;
@@ -203,9 +205,8 @@ h1 {
 .musicplayer {
   background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
     no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
   width: 100%;
+  max-width: 1440px;
   background-color: rgb(230, 241, 241);
   height: 6rem;
   border-radius: 3rem;
