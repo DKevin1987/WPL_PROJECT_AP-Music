@@ -18,7 +18,7 @@ header {
   max-width: 1440px;
   margin: auto;
   display: grid;
-  grid-template-areas: 'menu home search  account logo';
+  grid-template-areas: "menu home search  account logo";
   align-items: center;
   justify-content: space-between;
 }
@@ -42,12 +42,12 @@ header {
   /*   HIDDEN BUTTON VOOR MOBILE ALLEEN   */
   display: none;
 }
-.header-accountbutton{
+.header-accountbutton {
   align-content: end;
   width: 4rem;
   height: 4rem;
 }
-.header-logo{
+.header-logo {
   margin-right: 4rem;
 }
 .logo-header {
@@ -69,10 +69,10 @@ header {
   width: 2rem;
   height: 2rem;
 }
-.search-button{
+.search-button {
   background: #d9d9d9;
 }
-.search-button2{
+.search-button2 {
   background: #d9d9d9;
   height: 4rem;
   width: 4rem;
@@ -146,7 +146,7 @@ body {
 
 /* Aanbevelingen main*/
 
-main {
+.mainHomePage {
   margin: 2rem;
   display: flex;
   align-items: center;
@@ -213,13 +213,13 @@ h1 {
   justify-content: center;
   align-content: center;
 }
-.player-container{
+.player-container {
   display: grid;
-  grid-template-areas: 'logo title title title title title title player player';
+  grid-template-areas: "logo title title title title title title player player";
   gap: 1rem;
 }
 .music-left-logo {
-  width:5rem;
+  width: 5rem;
   height: 5rem;
   grid-area: logo;
   margin-left: 3rem;
@@ -242,10 +242,10 @@ h1 {
   justify-content: space-around;
   grid-area: player;
 }
-.title-artist{
+.title-artist {
   font-size: 1.5rem;
 }
-.music-logo{
+.music-logo {
   width: 6rem;
   height: 6rem;
   align-self: center;
@@ -255,11 +255,11 @@ h1 {
   border: #df1b1b solid 0.2rem;
   width: 1rem;
 }
-.player-buttons{
+.player-buttons {
   height: 4rem;
   width: 4rem;
 }
-.player-logo{
+.player-logo {
   border-radius: 2.5rem;
 }
 
@@ -279,27 +279,22 @@ td {
 }
 */
 
-
-
-
-
-
 /*  MEDIA GEDEELTE    */
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   /*  HEADER  */
-  .header-inner{
+  .header-inner {
     display: grid;
-    grid-template-areas: 'menu home search account logo';
+    grid-template-areas: "menu home search account logo";
     justify-content: space-between;
   }
-  .header-menuButton{
+  .header-menuButton {
     grid-area: 0/1/0/1;
     width: 4rem;
     height: 4rem;
     justify-content: center;
   }
-  .header-homeButton{
+  .header-homeButton {
     grid-area: 0/1/1/2;
     width: 4rem;
     height: 4rem;
@@ -308,15 +303,15 @@ td {
     grid-area: 0/1/2/3;
     width: 18rem;
   }
-  .search-input{
+  .search-input {
     width: 100%;
   }
-  .header-accountbutton{
+  .header-accountbutton {
     grid-area: 0/01/3/4;
     width: 4rem;
     height: 4rem;
   }
-  .header-logo{
+  .header-logo {
     grid-area: 0/1/4/5;
     margin-right: 2rem;
   }
@@ -327,95 +322,94 @@ td {
   .header-center {
     width: 8rem;
   }
-  .search-form{
+  .search-form {
     width: 10rem;
   }
-  .search-button2{
+  .search-button2 {
     width: 3rem;
     height: 3rem;
   }
-/*
+  /*
     MUZIEK PLAYER
 */
 
-.musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-    no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 100%;
-  background-color: rgb(230, 241, 241);
-  height: 5rem;
-  border-radius: 3rem;
-  align-content: center;
-  justify-content: center;
-}
-.player-container{
-  display: grid;
-  grid-template-areas: 'logo title title title title title title player player';
-  gap: 1rem;
-}
-.music-left-logo {
-  width: 4rem;
-  height: 4rem;
-  grid-area: logo;
-  margin-left: 3rem;
-}
-.music-middle-title {
-  grid-area: title;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-}
-.music-middle-player {
-  background-color: #d9d9d9;
-  width: 18rem;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  border-radius: 2.5rem;
-  align-items: center;
-  justify-content: space-around;
-  grid-area: player;
-}
-.title-artist{
-  font-size: 1.5rem;
-}
-.music-logo{
-  width: 4rem;
-  height: 4rem;
-  align-self: center;
-  border-radius: 2rem;
-}
-.music-right {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-.player-buttons{
-  height: 3rem;
-  width: 3rem;
-}
-.player-logo{
-  border-radius: 2rem;
-}
+  .musicplayer {
+    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+      no-repeat;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    background-color: rgb(230, 241, 241);
+    height: 5rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo title title title title title title player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+    margin-left: 3rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+  }
+  .music-middle-player {
+    background-color: #d9d9d9;
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    border-radius: 2rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 3rem;
+    width: 3rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
 
 /*  IN ORDE BIJNA  */
 @media screen and (min-width: 700px) and (max-width: 800px) {
-  
   /*    HEADER    */
-  .header-inner{
+  .header-inner {
     display: grid;
-    grid-template-areas: 'menu home search account logo';
+    grid-template-areas: "menu home search account logo";
   }
-  .header-menuButton{
+  .header-menuButton {
     grid-area: 0/1/0/1;
     width: 3rem;
     height: 3rem;
     justify-content: center;
   }
-  .header-homeButton{
+  .header-homeButton {
     grid-area: 0/1/1/2;
     width: 3rem;
     height: 3rem;
@@ -423,15 +417,15 @@ td {
   .search-form {
     grid-area: 0/1/2/3;
   }
-  .search-input{
+  .search-input {
     width: 100%;
   }
-  .header-accountbutton{
+  .header-accountbutton {
     grid-area: 0/01/3/4;
     width: 3rem;
     height: 3rem;
   }
-  .header-logo{
+  .header-logo {
     grid-area: 0/1/4/5;
     margin-right: 2rem;
   }
@@ -442,16 +436,16 @@ td {
   .header-center {
     width: 8rem;
   }
-  .search-form{
+  .search-form {
     width: 10rem;
   }
-  .search-button2{
+  .search-button2 {
     width: 3rem;
     height: 3rem;
   }
 
   /*  MAIN  */
-  .aanbeveling-row2{
+  .aanbeveling-row2 {
     margin-bottom: 2rem;
   }
   .main-item1 {
@@ -461,71 +455,71 @@ td {
   .main-item2 {
     order: 1;
   }
-/*
+  /*
     MUZIEK PLAYER
 */
 
-.musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-    no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 100%;
-  background-color: rgb(230, 241, 241);
-  height: 5rem;
-  border-radius: 3rem;
-  align-content: center;
-  justify-content: center;
-}
-.player-container{
-  display: grid;
-  grid-template-areas: 'logo title title title title title title player player';
-  gap: 1rem;
-}
-.music-left-logo {
-  width: 4rem;
-  height: 4rem;
-  grid-area: logo;
-  margin-left: 2rem;
-}
-.music-middle-title {
-  grid-area: title;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-}
-.music-middle-player {
-  background-color: #d9d9d9;
-  width: 18rem;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  border-radius: 2.5rem;
-  align-items: center;
-  justify-content: space-around;
-  grid-area: player;
-}
-.title-artist{
-  font-size: 1.5rem;
-}
-.music-logo{
-  width: 4rem;
-  height: 4rem;
-  align-self: center;
-  border-radius: 2rem;
-}
-.music-right {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-.player-buttons{
-  height: 3rem;
-  width: 3rem;
-}
-.player-logo{
-  border-radius: 2rem;
-}
+  .musicplayer {
+    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+      no-repeat;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    background-color: rgb(230, 241, 241);
+    height: 5rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo title title title title title title player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+    margin-left: 2rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+  }
+  .music-middle-player {
+    background-color: #d9d9d9;
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    border-radius: 2rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 3rem;
+    width: 3rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
 /*  IN ORDE   */
 @media screen and (min-width: 600px) and (max-width: 700px) {
@@ -542,17 +536,17 @@ td {
 
   /*   HEADER   */
 
- .header-inner{
+  .header-inner {
     display: grid;
-    grid-template-areas: 'menu home search account logo';
+    grid-template-areas: "menu home search account logo";
   }
-  .header-menuButton{
+  .header-menuButton {
     grid-area: 0/1/0/1;
     width: 3rem;
     height: 3rem;
     justify-content: center;
   }
-  .header-homeButton{
+  .header-homeButton {
     grid-area: 0/1/1/2;
     width: 3rem;
     height: 3rem;
@@ -561,25 +555,25 @@ td {
     grid-area: 0/1/2/3;
     width: 10rem;
   }
-  .search-input{
+  .search-input {
     width: 100%;
   }
-  .header-accountbutton{
+  .header-accountbutton {
     grid-area: 0/01/3/4;
     width: 3rem;
     height: 3rem;
   }
-  .header-logo{
+  .header-logo {
     grid-area: 0/1/4/5;
     margin-right: 2rem;
   }
-  .search-button2{
+  .search-button2 {
     width: 3rem;
     height: 3rem;
   }
 
   /*   MAIN   */
-  main{
+  .mainHomePage {
     display: flex;
     flex-direction: column;
   }
@@ -600,460 +594,458 @@ td {
   ::placeholder {
     opacity: 100%;
   }
-/*
+  /*
     MUZIEK PLAYER
 */
 
-.musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-    no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 100%;
-  background-color: rgb(230, 241, 241);
-  height: 5rem;
-  border-radius: 3rem;
-  align-content: center;
-  justify-content: center;
+  .musicplayer {
+    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+      no-repeat;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    background-color: rgb(230, 241, 241);
+    height: 5rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+    margin-left: 3rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: none;
+  }
+  .music-middle-player {
+    background-color: #d9d9d9;
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
+    border-radius: 2.5rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 3rem;
+    width: 3rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
-.player-container{
-  display: grid;
-  grid-template-areas: 'logo player player';
-  gap: 1rem;
-}
-.music-left-logo {
-  width: 4rem;
-  height: 4rem;
-  grid-area: logo;
-  margin-left: 3rem;
-}
-.music-middle-title {
-  grid-area: title;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-  display: none;
-}
-.music-middle-player {
-  background-color: #d9d9d9;
-  width: 18rem;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  border-radius: 2.5rem;
-  align-items: center;
-  justify-content: space-around;
-  grid-area: player;
-}
-.title-artist{
-  font-size: 1.5rem;
-}
-.music-logo{
-  width: 5rem;
-  height: 5rem;
-  align-self: center;
-  border-radius: 2.5rem;
-}
-.music-right {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-.player-buttons{
-  height: 3rem;
-  width: 3rem;
-}
-.player-logo{
-  border-radius: 2rem;
-}
-}
-
 
 /*  NAKIJKEN  */
 @media screen and (min-width: 550px) and (max-width: 600px) {
-  .body-home{
+  .body-home {
     height: 100%;
   }
-  .header-inner{
+  .header-inner {
     display: grid;
-    grid-template: 'menu home search-button2 search-input account logo';
+    grid-template: "menu home search-button2 search-input account logo";
   }
-  .button-mobile{
+  .button-mobile {
     height: 100%;
     width: 100%;
   }
   /*  HEADER  */
-  .header-menuButton{
+  .header-menuButton {
     grid-area: menu;
     width: 4rem;
     height: 4rem;
   }
-  .header-homeButton{
+  .header-homeButton {
     grid-area: home;
     width: 4rem;
     height: 4rem;
   }
-  .search-form{
+  .search-form {
     display: none;
   }
-  .search-input{
+  .search-input {
     margin-left: 0;
   }
-  .header-search-button{
+  .header-search-button {
     grid-area: search;
     display: contents;
     margin-right: 4rem;
   }
-  .header-accountbutton{
+  .header-accountbutton {
     grid-area: account;
     width: 4rem;
     height: 4rem;
   }
-  .header-logo{
+  .header-logo {
     grid-area: logo;
     width: 4.5rem;
     height: 4.5rem;
     margin-right: 2rem;
   }
-  .search-button{
+  .search-button {
     width: 4rem;
     height: 4rem;
     border-radius: 2rem;
-  }.search-input{
+  }
+  .search-input {
     width: 8rem;
   }
 
   /*  MAIN  */
-  .main-item1{
+  .main-item1 {
     order: 2;
     height: 100%;
   }
-  .main-item2{
+  .main-item2 {
     order: 1;
   }
-  .aanbeveling{
+  .aanbeveling {
     width: 95%;
   }
   .aanbeveling-center {
     margin-bottom: 2rem;
   }
-  .album-cover{
+  .album-cover {
     width: 9rem;
     height: 9rem;
   }
-/*
+  /*
     MUZIEK PLAYER
 */
 
-.musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-    no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 100%;
-  background-color: rgb(230, 241, 241);
-  height: 5rem;
-  border-radius: 3rem;
-  align-content: center;
-  justify-content: center;
-}
-.player-container{
-  display: grid;
-  grid-template-areas: 'logo player player';
-  gap: 1rem;
-}
-.music-left-logo {
-  width: 4rem;
-  height: 4rem;
-  grid-area: logo;
-  margin-left: 3rem;
-}
-.music-middle-title {
-  grid-area: title;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-  display: none;
-}
-.music-middle-player {
-  background-color: #d9d9d9;
-  width: 18rem;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  border-radius: 2.5rem;
-  align-items: center;
-  justify-content: space-around;
-  grid-area: player;
-}
-.title-artist{
-  font-size: 1.5rem;
-}
-.music-logo{
-  width: 4rem;
-  height: 4rem;
-  align-self: center;
-  border-radius: 2.5rem;
-}
-.music-right {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-.player-buttons{
-  height: 3rem;
-  width: 3rem;
-}
-.player-logo{
-  border-radius: 2rem;
-}
+  .musicplayer {
+    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+      no-repeat;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    background-color: rgb(230, 241, 241);
+    height: 5rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+    margin-left: 3rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: none;
+  }
+  .music-middle-player {
+    background-color: #d9d9d9;
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    border-radius: 2.5rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 3rem;
+    width: 3rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
 
 /*  IN ORDE  */
 @media screen and (min-width: 450px) and (max-width: 550px) {
- .body-home{
+  .body-home {
     height: 100%;
   }
-  .button-mobile{
+  .button-mobile {
     height: 100%;
     width: 100%;
   }
   /*  HEADER  */
-  .search-form{
+  .search-form {
     display: none;
   }
-  .header-menuButton{
+  .header-menuButton {
     width: 3rem;
     height: 3rem;
   }
-  .header-homeButton{
+  .header-homeButton {
     width: 3rem;
     height: 3rem;
   }
-  .header-search-button{
+  .header-search-button {
     display: contents;
     margin-right: 3rem;
   }
-  .header-accountbutton{
+  .header-accountbutton {
     width: 3rem;
     height: 3rem;
   }
-  .header-logo{
+  .header-logo {
     width: 4.5rem;
     height: 4.5rem;
     margin-right: 2rem;
   }
-  .search-button{
+  .search-button {
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
   }
 
-
   /*  MAIN  */
-  .main-item1{
+  .main-item1 {
     order: 2;
     height: 100%;
   }
-  .main-item2{
+  .main-item2 {
     order: 1;
   }
-  .aanbeveling{
+  .aanbeveling {
     width: 95%;
   }
   .aanbeveling-center {
     margin-bottom: 2rem;
   }
-  .album-cover{
+  .album-cover {
     width: 8rem;
     height: 8rem;
   }
-/*
+  /*
     MUZIEK PLAYER
 */
 
-.musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-    no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 100%;
-  background-color: rgb(230, 241, 241);
-  height: 5rem;
-  border-radius: 3rem;
-  align-content: center;
-  justify-content: center;
-}
-.player-container{
-  display: grid;
-  grid-template-areas: 'logo player player';
-  gap: 1rem;
-}
-.music-left-logo {
-  width: 4rem;
-  height: 4rem;
-  grid-area: logo;
-  margin-left: 1rem;
-}
-.music-middle-title {
-  grid-area: title;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-  display: none;
-}
-.music-middle-player {
-  background-color: #d9d9d9;
-  width: 18rem;
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  border-radius: 2.5rem;
-  align-items: center;
-  justify-content: space-around;
-  grid-area: player;
-}
-.title-artist{
-  font-size: 1.5rem;
-}
-.music-logo{
-  width: 4rem;
-  height: 4rem;
-  align-self: center;
-  border-radius: 2.5rem;
-}
-.music-right {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-.player-buttons{
-  height: 3rem;
-  width: 3rem;
-}
-.player-logo{
-  border-radius: 2rem;
-}
+  .musicplayer {
+    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+      no-repeat;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    background-color: rgb(230, 241, 241);
+    height: 5rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+    margin-left: 1rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: none;
+  }
+  .music-middle-player {
+    background-color: #d9d9d9;
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    border-radius: 2.5rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 3rem;
+    width: 3rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
 /*  IN ORDE  */
 @media screen and (min-width: 375px) and (max-width: 450px) {
-  .body-home{
+  .body-home {
     height: 100%;
   }
-  .button-mobile{
+  .button-mobile {
     height: 100%;
     width: 100%;
   }
   /*  HEADER  */
-  .search-form{
+  .search-form {
     display: none;
   }
-  .header-menuButton{
+  .header-menuButton {
     width: 3rem;
     height: 3rem;
   }
-  .header-homeButton{
+  .header-homeButton {
     width: 3rem;
     height: 3rem;
   }
-  .header-search-button{
+  .header-search-button {
     display: contents;
     margin-right: 3rem;
   }
-  .header-accountbutton{
+  .header-accountbutton {
     width: 3rem;
     height: 3rem;
   }
-  .header-logo{
+  .header-logo {
     width: 4.5rem;
     height: 4.5rem;
     margin-right: 2rem;
   }
-  .search-button{
+  .search-button {
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
   }
 
-
   /*  MAIN  */
-  .main-item1{
+  .main-item1 {
     order: 2;
     height: 100%;
   }
-  .main-item2{
+  .main-item2 {
     order: 1;
   }
-  .aanbeveling{
+  .aanbeveling {
     width: 95%;
   }
   .aanbeveling-center {
     margin-bottom: 2rem;
   }
-/*
+  /*
     MUZIEK PLAYER
 */
 
-.musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-    no-repeat;
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 100%;
-  background-color: rgb(230, 241, 241);
-  height: 4rem;
-  border-radius: 2rem;
-  align-content: center;
-  justify-content: center;
-}
-.player-container{
-  display: grid;
-  grid-template-areas: 'logo player player';
-  gap: 1rem;
-}
-.music-left-logo {
-  width: 3rem;
-  height: 3rem;
-  grid-area: logo;
-  margin-left: 1rem;
-}
-.music-middle-title {
-  grid-area: title;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-  display: none;
-}
-.music-middle-player {
-  background-color: #d9d9d9;
-  width: 14rem;
-  height: 3rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  border-radius: 2.5rem;
-  align-items: center;
-  justify-content: space-around;
-  grid-area: player;
-}
-.title-artist{
-  font-size: 1.5rem;
-}
-.music-logo{
-  width: 3rem;
-  height: 3rem;
-  align-self: center;
-  border-radius: 2.5rem;
-}
-.music-right {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-.player-buttons{
-  height: 2rem;
-  width: 2rem;
-}
-.player-logo{
-  border-radius: 2rem;
-}
+  .musicplayer {
+    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+      no-repeat;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    background-color: rgb(230, 241, 241);
+    height: 4rem;
+    border-radius: 2rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 3rem;
+    height: 3rem;
+    grid-area: logo;
+    margin-left: 1rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: none;
+  }
+  .music-middle-player {
+    background-color: #d9d9d9;
+    width: 14rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+    border-radius: 2.5rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 2rem;
+    width: 2rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
