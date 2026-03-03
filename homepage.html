@@ -15,53 +15,155 @@
 <body class="body-home">
     <header>
         <div class="header-inner">
-            <div>
+            <div class="header-menuButton">
                 <button id="menu-button" class="background-icons"><img class="icon-header"
-                        src="./assets/icons/iconmonstr-menu-lined.svg" alt=""></button>
+                        src="./assets/icons/iconmonstr-menu-lined.svg" alt="">
+                </button>
             </div>
-            <div class="header-center">
-                <a class="background-icons"><img class="icon-header" src="./assets/icons/iconmonstr-home-7.svg"
-                        alt=""></a>
-                <div class="search">
+            <div class="header-homeButton">
+                <button class="background-icons">
+                    <a href="./homepage.html" ><a><img src="./assets/icons/iconmonstr-home-7.svg" alt="Homepage"></a></a>
+                </button>
+            </div>
+            <div class="header-search-button">
+                <button class="search-button">
                     <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
-                    <input type="text" placeholder="Nummer zoeken?" />
-                </div>
+                </button>
             </div>
-            <div class="header-right">
+            <form class="search-form" action="">
+                <input class="search-input" type="text" placeholder="Nummer zoeken?" value="" />
+                <button class="search-button2 ">
+                    <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
+                </button>
+                
+            </form>
+            
+            <div class="header-accountbutton">
                 <a href="./accountpage.html" class="background-icons"><img class="icon-header"
                         src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
+            </div>
+            <div class="header-logo">
                 <img src="./assets/images/logo_AP-Music.png" class="logo-header">
             </div>
         </div>
     </header>
+
+            <!-- START MAIN  -->
+
     <main>
-        <div id="dropdownMenu" class="menu hidden">
+        <div id="dropdownMenu" class="menu hidden ">
             <a href="./accountpage.html" class="background-dropdown">Account</a>
             <a class="background-dropdown">Favorieten</a>
             <a class="background-dropdown">Muziek Spel</a>
             <a class="background-dropdown">Geschiedenis</a>
             <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
             <a href="./accountpage.html" class="background-dropdown">Mood</a>
+            <a class="background-dropdown" href="">UITLOGGEN</a>
         </div>
-        <div class="aanbeveling">
+
+            <!-- START AANBEVELINGEN  -->
+
+        <div class="aanbeveling main-item1">
             <h1>Aanbevelingen</h1>
             <div class="aanbeveling-center">
-                <ul class="aanbeveling-row1">
-                    <li><img class="album-cover" src="./assets/album-covers/AcDc.png" alt=""></li>
-                    <li><img class="album-cover" src="./assets/album-covers/beatels.jpg" alt=""></li>
-                    <li><img class="album-cover" src="./assets/album-covers/gunsRoses.jpg" alt=""></li>
-                    <li><img class="album-cover" src="./assets/album-covers/metallica.jpeg" alt=""></li>
-                </ul>
-                <ul class="aanbeveling-row2">
-                    <li><img class="album-cover" src="./assets/album-covers/Nirvana.png" alt=""></li>
-                    <li><img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt=""></li>
-                    <li><img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt=""></li>
-                    <li><img class="album-cover" src="./assets/album-covers/queen2.jpg" alt=""></li>
-                </ul>
+                <div class="aanbeveling-row1 aanbeveling-row">
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/AcDc.png" alt="">
+                    </div>
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/beatels.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/gunsRoses.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/metallica.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="aanbeveling-row2 aanbeveling-row">
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/Nirvana.png" alt="">
+                    </div>
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt="">
+                    </div>
+                    <div>
+                        <img class="album-cover" src="./assets/album-covers/queen2.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
+
+                <!-- EINDE AANBEVELINGEN  -->
+                 
+        <section class="musicplayer main-item2">
+            <div class="player-container">
+                <div class="music-left-logo">
+                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
+                </div>
+                <div class="music-middle-title">
+                    <h3 class="title-artist">ARTIEST</h3>
+                    <p>TITEL</p>
+                </div>
+                <div class="music-middle-player">
+                    <div class="previous-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="">
+                        </button>
+                    </div>
+                    <div class="play-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/play-icon.png" alt="">
+                        </button>
+                    </div>
+                    <div class="next-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EINDE MUSIC-PLAYER  -->
+
     </main>
 </body>
 <script src="./js/generalJava.js"></script>
 
 </html>
+
+<!--
+
+                <table>
+                    <tr>
+                        <td class="music-left"></td>
+                        <td class="music-left-logo">
+                            <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
+                        </td>
+                        <td class="music-middle-title">TITEL & ARTIEST</td>
+                        <td class="music-middle-right">
+                            <div class="previous-logo">
+                                <button class="player-buttons">
+                                    <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="">
+                                </button>
+                            </div>
+                            <div class="play-logo">
+                                <button class="player-buttons">
+                                    <img class="player-logo" src="./assets/icons/play-icon.png" alt="">
+                                </button>
+                            </div>
+                            <div class="next-logo">
+                                <button class="player-buttons">
+                                    <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="">
+                                </button>
+                            </div>
+                        </td>
+                        <td class="music-right"></td>
+                    </tr>
+                </table>
+
+-->

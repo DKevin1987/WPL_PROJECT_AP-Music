@@ -1,5 +1,12 @@
 # WPL_PROJECT_AP-Music
 
+
+## AFSPRAKEN CODE:
+
+1) rem standaard voor afmetingen, % in bepaalde gevallen toegestaan.
+2) Indien commentaar starten onderaan code met de nr-regels naar betreffend onderdeel.
+
+
 ## FIGMA account
 1) Dom Kevin s167175@ap.be account aangemaakt met email van school
 2) Yusufcan Yar
