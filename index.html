@@ -19,12 +19,13 @@
         <h1>AP-Music</h1>
         <h2>Projecten</h2>
       </div>
-
+      <a href="./inlog.html" class="inlogKnop" href="./inlog.html">Inloggen</a>
       <div class="landingprofiel">
         <img src="./assets/images/InlogIcoon_NietIngelogd.png" alt="avatarIngelogd" />
       </div>
     </header>
     <main class="projecten">
+
       <div class="projectkeuze">
         <button class="projectkeuze-button"><img src="./assets/project-banners/LEGO_Grey.png"
             alt="Lego Masters" /></button>
@@ -42,11 +43,22 @@
             alt="Game Hub" /></button>
         <div class="grijsoverlay">Game Hub</div>
       </div>
+      <!-- INLOG FORMULIER ERROR DEEL -->
+
+      <section class="hidden" id="inlogErrorBox">
+        <div id="inlogError">
+          <h3>ERROR</h3>
+          <p>Je moet eerst ingelogd zijn om een game te kunnen kiezen.</p>
+        </div>
+        <button class="buttonError">OK</button>
+      </section>
+
     </main>
   </div>
   <footer>
     <p>&copy;AP-Music</p>
   </footer>
 </body>
+<script src="./js/Index.js"></script>
 
 </html>

@@ -4,13 +4,44 @@ CSS BESTAND VOOR DE LANDINGS-PAGINA WAAR AL DE PROJECTEN ZICHTBAAR ZIJN.
 LEGENDE: 
 
 */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .landingcontainer {
-  width: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
   height: 35rem;
-  margin: 4px auto;
   background-color: rgb(243, 224, 221);
   padding: 30px;
   border-radius: 6px;
+}
+
+.inlogKnop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #9d2929;
+  color: white;
+  border: 2px solid black;
+}
+.inlogKnop:hover {
+  background-color: white;
+  color: #9d2929;
+}
+.inlogKnop:focus {
+  background-color: white;
+  color: #9d2929;
 }
 
 .landingheader {
@@ -37,7 +68,7 @@ LEGENDE:
 
 .landingtitel h2 {
   font-size: 25px;
-  color: darkgray;
+  color: black;
 }
 
 .landingprofiel img {
@@ -68,6 +99,9 @@ LEGENDE:
 .projectkeuze-button:focus {
   border: 5px solid red;
 }
+.projectkeuze-button-ToHome:focus {
+  border: 5px solid red;
+}
 
 .projectkeuze img {
   width: 100%;
@@ -86,6 +120,104 @@ LEGENDE:
   font-weight: bold;
 }
 
+/* Gedeelte voor Foutieve invoer userEmail en userPasword. */
+#inlogErrorBox {
+  position: absolute;
+  border: 10px solid rgb(243, 5, 5);
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  align-self: center;
+  text-align: center;
+}
+
+.buttonError {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.buttonError:focus {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+.buttonError:hover {
+  outline: solid black 1px;
+  height: 45px;
+  width: 255px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.buttonError {
+  width: 100px;
+}
+.hidden {
+  display: none;
+}
+
 footer {
-  padding: 40px;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .projecten {
+    display: flex;
+    flex-direction: column;
+  }
+  .projectkeuze {
+    display: flex;
+    width: 300px;
+    height: 120px;
+    align-items: center;
+  }
+
+  .landingcontainer {
+    width: 100vw;
+    height: 95vh;
+    align-items: center;
+  }
+
+  .landingheader {
+    width: 20rem;
+    padding: 15px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+  }
+  .landingprofiel img {
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+  }
+  .landingtitel h1 {
+    font-size: 30px;
+  }
+
+  .landingtitel h2 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .projectkeuze {
+    width: 300px;
+    height: 100px;
+  }
 }
