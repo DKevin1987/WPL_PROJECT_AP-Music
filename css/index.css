@@ -132,25 +132,26 @@ body {
   text-align: center;
 }
 
-.buttonError {
+.buttonError,
+.buttonInlog {
   width: 250px;
   height: 40px;
-  border: 3px solid black;
+  border: 2px solid black;
   text-align: center;
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.buttonError:focus {
-  outline: solid black 1px;
-  height: 45px;
-  width: 255px;
+.buttonError:focus,
+.buttonInlog:focus {
+  background: rgb(220, 220, 220);
+  border: 3px solid black;
 }
-.buttonError:hover {
-  outline: solid black 1px;
-  height: 45px;
-  width: 255px;
+.buttonError:hover,
+.buttonInlog:hover {
+  background: rgb(220, 220, 220);
+  border: 3px solid black;
 }
 
 h3 {
@@ -159,7 +160,8 @@ h3 {
   margin-top: 15px;
 }
 
-.buttonError {
+.buttonError,
+.buttonInlog {
   width: 100px;
 }
 .hidden {
