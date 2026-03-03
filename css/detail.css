@@ -1,0 +1,98 @@
+/*
+detailweergave track/artist 
+
+tonen cover/afbeelding, titel/naam, artiest(en), album, relevante audio-features 
+
+mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow 
+
+*/
+
+/*          */
+/*  MAIN    */
+/*          */
+.main-item {
+  order: 1;
+}
+.main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    "album album details details"
+    "album album details details"
+    "like like details details";
+}
+section {
+  border: 1px solid black;
+}
+#albumlogo {
+  grid-area: album;
+  width: 25rem;
+  height: 25rem;
+  background-image: url("../assets/album-covers/AcDc.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#likediv {
+  grid-area: like;
+  display: flex;
+  background-color: #959595;
+  height: 5rem;
+  width: 25rem;
+  justify-content: center;
+  align-items: center;
+}
+#likeButton {
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid rgb(141, 7, 7);
+  border-radius: 1rem;
+}
+#details {
+  background-color: antiquewhite;
+  grid-area: details;
+  width: 40rem;
+  height: 100%;
+}
+#detailUl {
+  margin-left: 3rem;
+  width: 80%;
+}
+.detailLi {
+  height: 2rem;
+  margin-top: 1rem;
+  border: 1px solid black;
+}
+
+#likeButton:hover{
+    border: 3px solid black;
+}
+#likeButton:focus{
+    border: 3px solid black;
+}
+p{ color: blue;}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+    
+}
+
+@media screen and (min-width: 450px) and (max-width: 550px) {
+    
+}
+
+@media screen and (min-width: 375px) and (max-width: 450px) {
+    
+}

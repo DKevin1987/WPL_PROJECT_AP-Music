@@ -2,12 +2,22 @@
 
       CSS VOOR ALLE SCHERMEN van 800px tot 1440 px
 */
-
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+button:focus{
+  border: 3px solid black;
+  border-radius: 50%;
+}
+button:hover{
+  border: 3px solid black;
+  border-radius: 50%;
+}
 /*
 HEADER CSS
 */
 header {
-  background-color: black;
+  background-color: rgb(165, 160, 160);
   width: 100%;
   height: 8rem;
   margin: auto;
@@ -18,37 +28,48 @@ header {
   max-width: 1440px;
   margin: auto;
   display: grid;
-  grid-template-areas: "menu home search  account logo";
+  grid-template-areas: "logo search  account menu ";
   align-items: center;
   justify-content: space-between;
 }
 .header-menuButton {
-  margin-left: 2rem;
+  grid-area: menu;
+  margin-right: 2rem;
   display: flex;
   flex-direction: row;
   gap: 3rem;
   width: 4rem;
   height: 4rem;
 }
-.header-homeButton {
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  gap: 2rem;
-  width: 4rem;
-  height: 4rem;
+.header-menuButton:focus{
+  border: 3px solid black ;
+  border-radius: 50%;
+}
+.header-menuButton:hover{
+  border: 3px solid black ;
+  border-radius: 50%;
 }
 .header-search-button {
   /*   HIDDEN BUTTON VOOR MOBILE ALLEEN   */
   display: none;
 }
 .header-accountbutton {
+  grid-area: account;
   align-content: end;
   width: 4rem;
   height: 4rem;
 }
+.header-accountbutton:focus{
+  border: 3px solid black ;
+  border-radius: 50%;
+}
+.header-accountbutton:hover{
+  border: 3px solid black ;
+  border-radius: 50%;
+}
 .header-logo {
-  margin-right: 4rem;
+  grid-area: logo;
+  margin-left: 4rem;
 }
 .logo-header {
   width: 6rem;
@@ -77,6 +98,10 @@ header {
   height: 4rem;
   width: 4rem;
   border-radius: 2rem;
+}
+.search-button2:hover{
+  border: 3px solid black ;
+  border-radius: 50%;
 }
 .search-input {
   background: #d9d9d9;
@@ -107,9 +132,9 @@ header {
   align-items: center;
   position: absolute;
   top: 7rem;
-  left: 2rem;
+  right: 2rem;
   width: 15rem;
-  background: #111;
+  background: #c0baba;
   padding: 15px;
   border-radius: 18px;
   display: flex;
@@ -129,9 +154,18 @@ header {
 .hidden {
   display: none;
 }
+.background-dropdown:focus{
+  border: 3px solid black ;
+}
+.background-dropdown:hover{
+  border: 3px solid black ;
+}
 
 /*
 TEKST CSS
+
+  background: linear-gradient(to bottom, #ada8a8 0%, #c9c7c7 60%, #c9c7c7 100%)
+    no-repeat;
 */
 
 /*
@@ -140,8 +174,6 @@ BACKGROUND KLEUREN + KLEUREN
 body {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom, #ff0000 0%, #403f3f 60%, #403f3f 100%)
-    no-repeat;
 }
 
 /* Aanbevelingen main*/
@@ -158,13 +190,17 @@ body {
 .aanbeveling {
   width: 80%;
   max-width: 55rem;
-  height: 25rem;
-  background-color: #222222;
+  height: 30rem;
+  background-color: #9a8f8f;
   border-radius: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+.albumButton:hover{
+  border: 3px solid black;
+  border-radius: 5%;
 }
 
 h1 {
@@ -195,7 +231,7 @@ h1 {
 .album-cover {
   width: 7.5rem;
   height: 7.5rem;
-  border-radius: 25%;
+  border-radius: 5%;
 }
 
 /*
@@ -203,12 +239,12 @@ h1 {
 */
 
 .musicplayer {
-  background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
+  background: linear-gradient(to right, #ada8a8 0%, #c9c7c7 60%, #c9c7c7 100%)
     no-repeat;
   width: 100%;
   max-width: 1440px;
   background-color: rgb(230, 241, 241);
-  height: 6rem;
+  height: 4rem;
   border-radius: 3rem;
   justify-content: center;
   align-content: center;
@@ -219,8 +255,8 @@ h1 {
   gap: 1rem;
 }
 .music-left-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   grid-area: logo;
   margin-left: 3rem;
 }
@@ -232,8 +268,8 @@ h1 {
 }
 .music-middle-player {
   background-color: #d9d9d9;
-  width: 18rem;
-  height: 5rem;
+  width: 10rem;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -246,8 +282,8 @@ h1 {
   font-size: 1.5rem;
 }
 .music-logo {
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
   align-self: center;
   border-radius: 3rem;
 }
@@ -256,53 +292,17 @@ h1 {
   width: 1rem;
 }
 .player-buttons {
-  height: 4rem;
-  width: 4rem;
+  height: 2rem;
+  width: 2rem;
 }
 .player-logo {
   border-radius: 2.5rem;
 }
 
-/*
-.music-left {
-  border: #df1b1b solid 0.2rem;
-  width: 1rem;
-}
-table{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-td {
-  height: 5rem;
-  text-align: center;
-  align-content: center;
-}
-*/
-
 /*  MEDIA GEDEELTE    */
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   /*  HEADER  */
-  .header-inner {
-    display: grid;
-    grid-template-areas: "menu home search account logo";
-    justify-content: space-between;
-  }
-  .header-menuButton {
-    grid-area: 0/1/0/1;
-    width: 4rem;
-    height: 4rem;
-    justify-content: center;
-  }
-  .header-homeButton {
-    grid-area: 0/1/1/2;
-    width: 4rem;
-    height: 4rem;
-  }
-  .search-form {
-    grid-area: 0/1/2/3;
-    width: 18rem;
-  }
   .search-input {
     width: 100%;
   }
@@ -311,136 +311,45 @@ td {
     width: 4rem;
     height: 4rem;
   }
-  .header-logo {
-    grid-area: 0/1/4/5;
-    margin-right: 2rem;
-  }
   .album-cover {
     width: 6rem;
     height: 6rem;
   }
-  .header-center {
-    width: 8rem;
-  }
   .search-form {
-    width: 10rem;
+    width: 17rem;
+  }
+  .search-input{
+    margin-left: 5%;
   }
   .search-button2 {
-    width: 3rem;
-    height: 3rem;
-  }
-  /*
-    MUZIEK PLAYER
-*/
-
-  .musicplayer {
-    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-      no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    background-color: rgb(230, 241, 241);
-    height: 5rem;
-    border-radius: 3rem;
-    align-content: center;
-    justify-content: center;
-  }
-  .player-container {
-    display: grid;
-    grid-template-areas: "logo title title title title title title player player";
-    gap: 1rem;
-  }
-  .music-left-logo {
     width: 4rem;
-    height: 4rem;
-    grid-area: logo;
-    margin-left: 3rem;
-  }
-  .music-middle-title {
-    grid-area: title;
-    width: 100%;
-    text-align: center;
-    align-content: center;
-  }
-  .music-middle-player {
-    background-color: #d9d9d9;
-    width: 18rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    border-radius: 2.5rem;
-    align-items: center;
-    justify-content: space-around;
-    grid-area: player;
-  }
-  .title-artist {
-    font-size: 1.5rem;
-  }
-  .music-logo {
-    width: 4rem;
-    height: 4rem;
-    align-self: center;
-    border-radius: 2rem;
-  }
-  .music-right {
-    border: #df1b1b solid 0.2rem;
-    width: 1rem;
-  }
-  .player-buttons {
     height: 3rem;
-    width: 3rem;
-  }
-  .player-logo {
-    border-radius: 2rem;
   }
 }
 
 /*  IN ORDE BIJNA  */
 @media screen and (min-width: 700px) and (max-width: 800px) {
   /*    HEADER    */
-  .header-inner {
-    display: grid;
-    grid-template-areas: "menu home search account logo";
-  }
-  .header-menuButton {
-    grid-area: 0/1/0/1;
-    width: 3rem;
-    height: 3rem;
-    justify-content: center;
-  }
-  .header-homeButton {
-    grid-area: 0/1/1/2;
-    width: 3rem;
-    height: 3rem;
-  }
-  .search-form {
-    grid-area: 0/1/2/3;
-  }
   .search-input {
     width: 100%;
   }
   .header-accountbutton {
     grid-area: 0/01/3/4;
-    width: 3rem;
-    height: 3rem;
-  }
-  .header-logo {
-    grid-area: 0/1/4/5;
-    margin-right: 2rem;
+    width: 4rem;
+    height: 4rem;
   }
   .album-cover {
     width: 6rem;
     height: 6rem;
   }
-  .header-center {
-    width: 8rem;
-  }
   .search-form {
-    width: 10rem;
+    width: 17rem;
+  }
+  .search-input{
+    margin-left: 5%;
   }
   .search-button2 {
-    width: 3rem;
+    width: 4rem;
     height: 3rem;
   }
 
@@ -455,91 +364,12 @@ td {
   .main-item2 {
     order: 1;
   }
-  /*
-    MUZIEK PLAYER
-*/
-
-  .musicplayer {
-    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-      no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    background-color: rgb(230, 241, 241);
-    height: 5rem;
-    border-radius: 3rem;
-    align-content: center;
-    justify-content: center;
-  }
-  .player-container {
-    display: grid;
-    grid-template-areas: "logo title title title title title title player player";
-    gap: 1rem;
-  }
-  .music-left-logo {
-    width: 4rem;
-    height: 4rem;
-    grid-area: logo;
-    margin-left: 2rem;
-  }
-  .music-middle-title {
-    grid-area: title;
-    width: 100%;
-    text-align: center;
-    align-content: center;
-  }
-  .music-middle-player {
-    background-color: #d9d9d9;
-    width: 18rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    border-radius: 2.5rem;
-    align-items: center;
-    justify-content: space-around;
-    grid-area: player;
-  }
-  .title-artist {
-    font-size: 1.5rem;
-  }
-  .music-logo {
-    width: 4rem;
-    height: 4rem;
-    align-self: center;
-    border-radius: 2rem;
-  }
-  .music-right {
-    border: #df1b1b solid 0.2rem;
-    width: 1rem;
-  }
-  .player-buttons {
-    height: 3rem;
-    width: 3rem;
-  }
-  .player-logo {
-    border-radius: 2rem;
-  }
 }
 /*  IN ORDE   */
 @media screen and (min-width: 600px) and (max-width: 700px) {
-  body {
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        #ff0000 0%,
-        #403f3f 40%,
-        #403f3f 100%
-      )
-      no-repeat;
-  }
-
+  
   /*   HEADER   */
 
-  .header-inner {
-    display: grid;
-    grid-template-areas: "menu home search account logo";
-  }
   .header-menuButton {
     grid-area: 0/1/0/1;
     width: 3rem;
@@ -594,72 +424,6 @@ td {
   ::placeholder {
     opacity: 100%;
   }
-  /*
-    MUZIEK PLAYER
-*/
-
-  .musicplayer {
-    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-      no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    background-color: rgb(230, 241, 241);
-    height: 5rem;
-    border-radius: 3rem;
-    align-content: center;
-    justify-content: center;
-  }
-  .player-container {
-    display: grid;
-    grid-template-areas: "logo player player";
-    gap: 1rem;
-  }
-  .music-left-logo {
-    width: 4rem;
-    height: 4rem;
-    grid-area: logo;
-    margin-left: 3rem;
-  }
-  .music-middle-title {
-    grid-area: title;
-    width: 100%;
-    text-align: center;
-    align-content: center;
-    display: none;
-  }
-  .music-middle-player {
-    background-color: #d9d9d9;
-    width: 18rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    border-radius: 2.5rem;
-    align-items: center;
-    justify-content: space-around;
-    grid-area: player;
-  }
-  .title-artist {
-    font-size: 1.5rem;
-  }
-  .music-logo {
-    width: 5rem;
-    height: 5rem;
-    align-self: center;
-    border-radius: 2.5rem;
-  }
-  .music-right {
-    border: #df1b1b solid 0.2rem;
-    width: 1rem;
-  }
-  .player-buttons {
-    height: 3rem;
-    width: 3rem;
-  }
-  .player-logo {
-    border-radius: 2rem;
-  }
 }
 
 /*  NAKIJKEN  */
@@ -667,54 +431,21 @@ td {
   .body-home {
     height: 100%;
   }
-  .header-inner {
-    display: grid;
-    grid-template: "menu home search-button2 search-input account logo";
-  }
   .button-mobile {
     height: 100%;
     width: 100%;
   }
   /*  HEADER  */
-  .header-menuButton {
-    grid-area: menu;
-    width: 4rem;
-    height: 4rem;
-  }
-  .header-homeButton {
-    grid-area: home;
-    width: 4rem;
-    height: 4rem;
-  }
   .search-form {
     display: none;
   }
-  .search-input {
-    margin-left: 0;
-  }
   .header-search-button {
-    grid-area: search;
     display: contents;
-    margin-right: 4rem;
-  }
-  .header-accountbutton {
-    grid-area: account;
-    width: 4rem;
-    height: 4rem;
-  }
-  .header-logo {
-    grid-area: logo;
-    width: 4.5rem;
-    height: 4.5rem;
-    margin-right: 2rem;
   }
   .search-button {
     width: 4rem;
     height: 4rem;
     border-radius: 2rem;
-  }
-  .search-input {
-    width: 8rem;
   }
 
   /*  MAIN  */
@@ -740,12 +471,6 @@ td {
 */
 
   .musicplayer {
-    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-      no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    background-color: rgb(230, 241, 241);
     height: 5rem;
     border-radius: 3rem;
     align-content: center;
@@ -770,7 +495,6 @@ td {
     display: none;
   }
   .music-middle-player {
-    background-color: #d9d9d9;
     width: 18rem;
     height: 4rem;
     display: flex;
@@ -832,11 +556,6 @@ td {
     width: 3rem;
     height: 3rem;
   }
-  .header-logo {
-    width: 4.5rem;
-    height: 4.5rem;
-    margin-right: 2rem;
-  }
   .search-button {
     width: 3rem;
     height: 3rem;
@@ -866,12 +585,6 @@ td {
 */
 
   .musicplayer {
-    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-      no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    background-color: rgb(230, 241, 241);
     height: 5rem;
     border-radius: 3rem;
     align-content: center;
@@ -896,7 +609,6 @@ td {
     display: none;
   }
   .music-middle-player {
-    background-color: #d9d9d9;
     width: 18rem;
     height: 4rem;
     display: flex;
@@ -915,10 +627,6 @@ td {
     height: 4rem;
     align-self: center;
     border-radius: 2.5rem;
-  }
-  .music-right {
-    border: #df1b1b solid 0.2rem;
-    width: 1rem;
   }
   .player-buttons {
     height: 3rem;
@@ -987,16 +695,8 @@ td {
 */
 
   .musicplayer {
-    background: linear-gradient(to right, #e4c7c7 0%, #ff0000 80%, #ff0000 100%)
-      no-repeat;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    background-color: rgb(230, 241, 241);
     height: 4rem;
     border-radius: 2rem;
-    align-content: center;
-    justify-content: center;
   }
   .player-container {
     display: grid;
@@ -1010,15 +710,10 @@ td {
     margin-left: 1rem;
   }
   .music-middle-title {
-    grid-area: title;
-    width: 100%;
-    text-align: center;
-    align-content: center;
     display: none;
   }
   .music-middle-player {
-    background-color: #d9d9d9;
-    width: 14rem;
+    width: 10rem;
     height: 3rem;
     display: flex;
     flex-direction: row;
@@ -1028,18 +723,11 @@ td {
     justify-content: space-around;
     grid-area: player;
   }
-  .title-artist {
-    font-size: 1.5rem;
-  }
   .music-logo {
     width: 3rem;
     height: 3rem;
     align-self: center;
     border-radius: 2.5rem;
-  }
-  .music-right {
-    border: #df1b1b solid 0.2rem;
-    width: 1rem;
   }
   .player-buttons {
     height: 2rem;
