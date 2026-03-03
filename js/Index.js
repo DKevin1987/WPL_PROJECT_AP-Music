@@ -16,3 +16,9 @@ okBtn.addEventListener("click", () => {
 inlogBtn.addEventListener("click", () => {
   window.location.href = "inlog.html";
 });
+
+document
+  .querySelector(".projectkeuze-button-ToHome")
+  .addEventListener("click", () => {
+    window.location.href = "inlog.html";
+  });

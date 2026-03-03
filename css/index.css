@@ -11,6 +11,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #d9d9d9;
+}
+
+.ondertekstProject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 2rem;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  background-color: #959595;
+}
+
+#logo {
+  height: 100px;
+  width: 100px;
 }
 
 .landingcontainer {
@@ -19,37 +37,19 @@ body {
   justify-content: center;
   width: 100vw;
   height: 35rem;
-  background-color: rgb(243, 224, 221);
+
   padding: 30px;
   border-radius: 6px;
 }
 
-.inlogKnop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 2rem;
-  border-radius: 1rem;
-  background-color: #9d2929;
-  color: white;
-  border: 2px solid black;
-}
-.inlogKnop:hover {
-  background-color: white;
-  color: #9d2929;
-}
-.inlogKnop:focus {
-  background-color: white;
-  color: #9d2929;
-}
-
 .landingheader {
-  background: rgb(220, 220, 220);
+  background: #959595;
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
+  align-self: center;
   align-items: center;
+  height: 8rem;
+  justify-content: center;
+  width: 50rem;
 }
 
 .landingprofiel {
@@ -61,63 +61,57 @@ body {
   text-align: center;
 }
 
-.landingtitel h1 {
-  color: rgb(190, 34, 20);
-  font-size: 45px;
-}
-
-.landingtitel h2 {
-  font-size: 25px;
-  color: black;
-}
-
-.landingprofiel img {
-  width: 100px;
-  height: 100px;
-  border-radius: 60%;
-}
-
 .projecten {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
+  align-self: center;
+  width: 50rem;
+}
+#lego,
+#music,
+#gameHub {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 260px;
+  cursor: pointer;
+}
+
+#lego {
+  background-image: url("../assets/project-banners/LEGO_Grey.png");
+}
+#music {
+  background-image: url("../assets/project-banners/Music_Grey.png");
+}
+#gameHub {
+  background-image: url("../assets/project-banners/GameHub_Grey.png");
+}
+
+#lego:hover,
+#lego:focus {
+  background-image: url("../assets/project-banners/LEGO.png");
+}
+#music:hover,
+#music:focus {
+  background-image: url("../assets/project-banners/Music.png");
+}
+#gameHub:hover,
+#gameHub:focus {
+  background-image: url("../assets/project-banners/GameHub.png");
 }
 
 .projectkeuze {
   position: relative;
   width: 180px;
-  height: 260px;
+  height: 320px;
   overflow: hidden;
   cursor: pointer;
-}
-
-.projectkeuze:hover {
-  border: 5px solid red;
-}
-
-.projectkeuze-button:focus {
-  border: 5px solid red;
-}
-.projectkeuze-button-ToHome:focus {
-  border: 5px solid red;
-}
-
-.projectkeuze img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.grijsoverlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(120, 120, 120, 0.8);
-  color: white;
-  text-align: center;
-  padding: 12px;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Gedeelte voor Foutieve invoer userEmail en userPasword. */
@@ -128,8 +122,8 @@ body {
   border-radius: 25px;
   width: 350px;
   margin: auto;
-  align-self: center;
   text-align: center;
+  align-self: center;
 }
 
 .buttonError,
@@ -169,57 +163,51 @@ h3 {
 }
 
 footer {
+  margin-top: 5%;
   width: 100vw;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .projecten {
     display: flex;
     flex-direction: column;
+    gap: 5%;
   }
   .projectkeuze {
-    display: flex;
-    width: 300px;
-    height: 120px;
-    align-items: center;
-  }
-
-  .landingcontainer {
+    align-self: center;
     width: 100vw;
-    height: 95vh;
+    height: 15rem;
     align-items: center;
   }
 
-  .landingheader {
-    width: 20rem;
-    padding: 15px;
-    gap: 1rem;
+  #lego,
+  #music,
+  #gameHub {
+    width: 400px;
+    height: 260px;
+  }
+
+  .ondertekstProject {
+    width: 400px;
+    height: 2rem;
+  }
+
+  footer {
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    border-radius: 2rem;
-  }
-  .landingprofiel img {
-    width: 50px;
-    height: 50px;
-    border-radius: 60%;
-  }
-  .landingtitel h1 {
-    font-size: 30px;
-  }
-
-  .landingtitel h2 {
-    font-size: 15px;
+    justify-content: center;
   }
 }
 @media (max-width: 600px) {
   .projectkeuze {
+    align-self: center;
     width: 300px;
-    height: 100px;
+    height: 200px;
   }
 }
