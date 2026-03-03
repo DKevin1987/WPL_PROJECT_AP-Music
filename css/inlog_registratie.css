@@ -199,6 +199,8 @@ h3 {
 
 /* GEDEELTE VOOR REGISTRATIE-PAGINA */
 #registratieInputCheck {
+  position: relative;
+  top: -400px;
   border: 10px solid rgb(243, 5, 5);
   background-color: #ffffff;
   border-radius: 25px;
@@ -209,6 +211,8 @@ h3 {
 
 /* GEDEELTE VOOR MELDING DAT REGISTRATIE GELUKT IS */
 #registratieValid{
+  position: relative;
+  top: -400px;
   border: 10px solid green;
   border-radius: 25px;
   width: 350px;
@@ -218,6 +222,8 @@ h3 {
   align-content: center;
 }
 #registratieTekstValid{
+  position: relative;
+  top: -400px;
   font-weight: 700;
   font-size: 25px;
   margin-bottom: 10px;
