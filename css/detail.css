@@ -52,6 +52,11 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
   text-align: center;
   border: 1px solid rgb(141, 7, 7);
   border-radius: 1rem;
+  background-image: url("../assets/icons/leegHart.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
 }
 #likeButton:focus:hover{
   border: 3px solid black;
@@ -74,6 +79,9 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
   align-content: center;
 }
 
+/*                          */
+/*  LIKE GEDEELTE TIJDELIJK */
+/*                          */
 #likeButton:hover{
     border: 3px solid black;
 }
@@ -81,6 +89,83 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
     border: 3px solid black;
 }
 p{ color: blue;}
+
+.likeSectionMelding{
+  order: 3;
+  text-align: center;
+}
+.likeAddMelding{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 6px solid red;
+  border-radius: 5%;
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  top: 25rem;
+  justify-self: center;
+}
+.likeDeleteMelding{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 6px solid red;
+  border-radius: 5%;
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  top: 25rem;
+  justify-self: center;
+}
+.likeToegevoegdBevestiging{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 6px solid rgb(14, 155, 14);
+  border-radius: 5%;
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  top: 25rem;
+  justify-self: center;
+}
+.likeDeleteBevestiging{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 6px solid rgb(14, 155, 14);
+  border-radius: 5%;
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  top: 25rem;
+  justify-self: center;
+}
+.likeMeldingButton{
+  width: 5rem;
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+.likeMeldingButton:hover{
+  border: 3px solid black;
+  border-radius: 10%;
+}
+.likeMeldingButton:focus{
+  border: 3px solid black;
+  border-radius: 10%;
+}
+.hidden{
+  display: none;
+}
+/*                                */
+/*  EINDE LIKE GEDEELTE TIJDELIJK */
+/*                                */
 
 @media screen and (min-width: 900px) and (max-width: 1024px) {
   #albumlogo{
