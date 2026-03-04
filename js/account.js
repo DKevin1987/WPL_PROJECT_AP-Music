@@ -56,3 +56,23 @@ user2.addEventListener("click", () => {
 user3.addEventListener("click", () => {
   userIcoon.src = "./assets/gebruikers-icoon/user3.png";
 });
+
+// code mood
+const moodIcoon = document.getElementById("moodIcon");
+const standaardMood = document.getElementById("moodIcoonStandaard");
+const mood1 = document.getElementById("moodIcoonHappy");
+const mood2 = document.getElementById("moodIcoonSad");
+const mood3 = document.getElementById("moodIcoonMad");
+
+standaardMood.addEventListener("click", () => {
+  moodIcoon.src = "./assets/icons/moods/neutral.png";
+});
+mood1.addEventListener("click", () => {
+  moodIcoon.src = "./assets/icons/moods/smile.png";
+});
+mood2.addEventListener("click", () => {
+  moodIcoon.src = "./assets/icons/moods/sad.png";
+});
+mood3.addEventListener("click", () => {
+  moodIcoon.src = "./assets/icons/moods/angry.png";
+});

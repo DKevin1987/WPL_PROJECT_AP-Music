@@ -89,7 +89,8 @@
 }
 
 /* gebruikers icoonen */
-.user-keuze {
+.user-keuze,
+.mood-keuze {
   margin: 2%;
   width: 5rem;
   height: 5rem;
@@ -98,14 +99,20 @@
 }
 
 .user-keuze:hover,
-.user-keuze:focus {
+.mood-keuze:hover,
+.user-keuze:focus,
+.mood-keuze:focus {
   border: solid black 2px;
 }
 
 #userIcoonStandaard,
+#moodIcoonStandaard,
 #userIcoon1,
+#moodIcoonHappy,
 #userIcoon2,
-#userIcoon3 {
+#moodIcoonSad,
+#userIcoon3,
+#moodIcoonMad {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -124,9 +131,25 @@
 }
 /* gebruikers icoonen einde */
 
+/* moodicoonen begin */
+#moodIcoonStandaard {
+  background-image: url("../assets/icons/moods/neutral.png");
+}
+#moodIcoonHappy {
+  background-image: url("../assets/icons/moods/smile.png");
+}
+#moodIcoonSad {
+  background-image: url("../assets/icons/moods/sad.png");
+}
+#moodIcoonMad {
+  background-image: url("../assets/icons/moods/angry.png");
+}
+/* mood icoonen einde */
+
 @media (max-width: 750px) {
   #accountIcon,
-  .user-keuze {
+  .user-keuze,
+  .mood-keuze {
     width: 3.5rem;
     height: 3.5rem;
   }
