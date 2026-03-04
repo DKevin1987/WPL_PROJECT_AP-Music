@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/account.css">
     <script type="module" src="./js/generalJava.js"></script>
+    <script type="module" src="./js/account.js"></script>
 </head>
 
 <body>
@@ -42,8 +43,8 @@
             </form>
 
             <div class="header-accountbutton">
-                <a href="./accountpage.html" class="background-icons"><img class="icon-header"
-                        src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
+                <a href="./accountpage.html" class="background-icons"><img class="icon-header" id="moodIcon"
+                        src="./assets/icons/moods/neutral.png" alt=""></a>
             </div>
             <div class="header-logo">
                 <img src="./assets/images/logo_AP-Music.png" class="logo-header">
@@ -62,22 +63,46 @@
     <main id="mainAccount">
 
         <section class="sideMenu">
-            <img id="accountIcon" src="./assets/icons/person.jpg" alt="">
+            <img class="user-keuze" id="accountIcon" src="./assets/icons/person.jpg" alt="">
             <div id="line"></div>
-            <button id="settingsBtn">
+            <button id="settingsBtn" class="Btn-naam">
                 <p class="keuze-setting">Gebruikersnaam</p>
             </button>
-            <button id="settingsBtn">
-                <p class="keuze-setting">gebruikers Icoon</p>
+            <button id="settingsBtn" class="Btn-icoon">
+                <p class="keuze-setting">Gebruikers Icoon</p>
             </button>
-            <button id="settingsBtn">
+            <button id="settingsBtn" class="Btn-beveiliging">
                 <p class="keuze-setting">Beveiliging</p>
             </button>
-            <button id="settingsBtn">
+            <button id="settingsBtn" class="Btn-mood">
                 <p class="keuze-setting">Mood</p>
             </button>
         </section>
         <section class="mainSetting">
+            <div class="settings-container">
+                <div id="gebruikersnaam-settings" class="hidden">
+                    <p>Gebruikersnaam: Kyaro Van Goethem</p>
+                    <p>E-mail: random@gmail.com</p>
+                </div>
+                <div id="icoon-settings" class="hidden">
+                    <p>Gebruikers icoon aanpassen:</p>
+                    <button class="user-keuze" id="userIcoonStandaard"></button>
+                    <button class="user-keuze" id="userIcoon1"></button>
+                    <button class="user-keuze" id="userIcoon2"></button>
+                    <button class="user-keuze" id="userIcoon3"></button>
+                </div>
+                <div id="beveiliging-settings" class="hidden">
+                    <p>E-mail: random@gmail.com</p>
+                    <p>Wachtwoord: ***********</p>
+                </div>
+                <div id="mood-settings" class="hidden">
+                    <p>Mood aanpassen:</p>
+                    <button class="mood-keuze" id="moodIcoonStandaard"></button>
+                    <button class="mood-keuze" id="moodIcoonHappy"></button>
+                    <button class="mood-keuze" id="moodIcoonSad"></button>
+                    <button class="mood-keuze" id="moodIcoonMad"></button>
+                </div>
+            </div>
         </section>
     </main>
 

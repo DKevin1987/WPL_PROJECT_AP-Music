@@ -1,3 +1,22 @@
+/* main settings gedeelte */
+.hidden {
+  display: none;
+}
+
+.settings-container {
+  width: 70vw;
+  height: 55vh;
+}
+
+#gebruikersnaam-settings > p,
+#icoon-settings > p,
+#beveiliging-settings > p,
+#mood-settings > p {
+  margin-top: 2%;
+  font-size: large;
+}
+
+/* main settings gedeelte einde*/
 .keuze-setting {
   font-size: larger;
 }
@@ -38,6 +57,10 @@
 }
 
 .mainSetting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #d9d9d9;
   opacity: 80%;
   height: 65vh;
@@ -61,6 +84,85 @@
 
 #line {
   height: 3px;
-  width: 15rem;
+  width: 15vw;
   background-color: black;
+}
+
+/* gebruikers icoonen */
+.user-keuze,
+.mood-keuze {
+  margin: 2%;
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.user-keuze:hover,
+.mood-keuze:hover,
+.user-keuze:focus,
+.mood-keuze:focus {
+  border: solid black 2px;
+}
+
+#userIcoonStandaard,
+#moodIcoonStandaard,
+#userIcoon1,
+#moodIcoonHappy,
+#userIcoon2,
+#moodIcoonSad,
+#userIcoon3,
+#moodIcoonMad {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#userIcoonStandaard {
+  background-image: url("../assets/icons/person.jpg");
+}
+#userIcoon1 {
+  background-image: url("../assets/gebruikers-icoon/user1.png");
+}
+#userIcoon2 {
+  background-image: url("../assets/gebruikers-icoon/user2.png");
+}
+#userIcoon3 {
+  background-image: url("../assets/gebruikers-icoon/user3.png");
+}
+/* gebruikers icoonen einde */
+
+/* moodicoonen begin */
+#moodIcoonStandaard {
+  background-image: url("../assets/icons/moods/neutral.png");
+}
+#moodIcoonHappy {
+  background-image: url("../assets/icons/moods/smile.png");
+}
+#moodIcoonSad {
+  background-image: url("../assets/icons/moods/sad.png");
+}
+#moodIcoonMad {
+  background-image: url("../assets/icons/moods/angry.png");
+}
+/* mood icoonen einde */
+
+@media (max-width: 750px) {
+  #accountIcon,
+  .user-keuze,
+  .mood-keuze {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .sideMenu {
+    width: 30vw;
+  }
+
+  #settingsBtn {
+    font-size: small;
+  }
+
+  .settings-container {
+    width: 60vw;
+  }
 }
