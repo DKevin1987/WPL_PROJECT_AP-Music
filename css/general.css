@@ -2,14 +2,17 @@
 
       CSS VOOR ALLE SCHERMEN van 800px tot 1440 px
 */
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
-button:focus{
+footer {
+  text-align: center;
+}
+button:focus {
   border: 3px solid black;
   border-radius: 50%;
 }
-button:hover{
+button:hover {
   border: 3px solid black;
   border-radius: 50%;
 }
@@ -41,12 +44,12 @@ header {
   width: 4rem;
   height: 4rem;
 }
-.header-menuButton:focus{
-  border: 3px solid black ;
+.header-menuButton:focus {
+  border: 3px solid black;
   border-radius: 50%;
 }
-.header-menuButton:hover{
-  border: 3px solid black ;
+.header-menuButton:hover {
+  border: 3px solid black;
   border-radius: 50%;
 }
 .header-search-button {
@@ -59,17 +62,25 @@ header {
   width: 4rem;
   height: 4rem;
 }
-.header-accountbutton:focus{
-  border: 3px solid black ;
+.header-accountbutton:focus {
+  border: 3px solid black;
   border-radius: 50%;
 }
-.header-accountbutton:hover{
-  border: 3px solid black ;
+.header-accountbutton:hover {
+  border: 3px solid black;
   border-radius: 50%;
 }
 .header-logo {
   grid-area: logo;
   margin-left: 4rem;
+}
+.header-logo:hover{
+  border: 3px solid black;
+  border-radius: 25%;
+}
+.header-logo:focus{
+  border: 3px solid black;
+  border-radius: 25%;
 }
 .logo-header {
   width: 6rem;
@@ -99,8 +110,8 @@ header {
   width: 4rem;
   border-radius: 2rem;
 }
-.search-button2:hover{
-  border: 3px solid black ;
+.search-button2:hover {
+  border: 3px solid black;
   border-radius: 50%;
 }
 .search-input {
@@ -154,11 +165,11 @@ header {
 .hidden {
   display: none;
 }
-.background-dropdown:focus{
-  border: 3px solid black ;
+.background-dropdown:focus {
+  border: 3px solid black;
 }
-.background-dropdown:hover{
-  border: 3px solid black ;
+.background-dropdown:hover {
+  border: 3px solid black;
 }
 
 /*
@@ -188,9 +199,8 @@ body {
 }
 
 .aanbeveling {
-  width: 80%;
-  max-width: 55rem;
-  height: 30rem;
+  width: 85%;
+  max-width: 70rem;
   background-color: #9a8f8f;
   border-radius: 2rem;
   text-align: center;
@@ -198,7 +208,12 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-.albumButton:hover{
+.albumButton {
+  display: grid;
+  grid-template-areas: "logo tekst";
+  width: 21rem;
+}
+.albumButton:hover {
   border: 3px solid black;
   border-radius: 5%;
 }
@@ -209,7 +224,18 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-
+.aanbeveling-artiest {
+  height: 50%;
+  width: 13rem;
+}
+.aanbeveling-title {
+  height: 50%;
+  width: 13rem;
+}
+.album-info {
+  border: 1px solid black;
+  border-radius: 5%;
+}
 .aanbeveling-center {
   margin-top: 2rem;
   display: flex;
@@ -226,10 +252,12 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .album-cover {
-  width: 7.5rem;
+  grid-area: logo;
+  width: 8rem;
   height: 7.5rem;
   border-radius: 5%;
 }
@@ -239,7 +267,7 @@ h1 {
 */
 
 .musicplayer {
-  background: linear-gradient(to right, #ada8a8 0%, #c9c7c7 60%, #c9c7c7 100%)
+  background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%)
     no-repeat;
   width: 100%;
   max-width: 1440px;
@@ -267,7 +295,7 @@ h1 {
   align-content: center;
 }
 .music-middle-player {
-  background-color: #d9d9d9;
+  background-color: #f8f3f3;
   width: 10rem;
   height: 3rem;
   display: flex;
@@ -301,7 +329,8 @@ h1 {
 
 /*  MEDIA GEDEELTE    */
 
-@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
   /*  HEADER  */
   .search-input {
     width: 100%;
@@ -311,19 +340,60 @@ h1 {
     width: 4rem;
     height: 4rem;
   }
-  .album-cover {
-    width: 6rem;
-    height: 6rem;
-  }
   .search-form {
     width: 17rem;
   }
-  .search-input{
+  .search-input {
     margin-left: 5%;
   }
   .search-button2 {
     width: 4rem;
     height: 3rem;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+  .aanbeveling{
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  /*  HEADER  */
+  .search-input {
+    width: 100%;
+  }
+  .header-accountbutton {
+    grid-area: 0/01/3/4;
+    width: 4rem;
+    height: 4rem;
+  }
+  .search-form {
+    width: 17rem;
+  }
+  .search-input {
+    margin-left: 5%;
+  }
+  .search-button2 {
+    width: 4rem;
+    height: 3rem;
+  }
+  .album-cover {
+    width: 5rem;
+    height: 5rem;
+  }
+  .aanbeveling{
+    width: 95%;
+  }
+  .aanbeveling-artiest{
+    width: 9rem;
+  }
+  .aanbeveling-title{
+    width: 9rem;
+  }
+  .albumButton{
+    width: 16rem;
   }
 }
 
@@ -338,14 +408,10 @@ h1 {
     width: 4rem;
     height: 4rem;
   }
-  .album-cover {
-    width: 6rem;
-    height: 6rem;
-  }
   .search-form {
     width: 17rem;
   }
-  .search-input{
+  .search-input {
     margin-left: 5%;
   }
   .search-button2 {
@@ -354,9 +420,7 @@ h1 {
   }
 
   /*  MAIN  */
-  .aanbeveling-row2 {
-    margin-bottom: 2rem;
-  }
+  
   .main-item1 {
     order: 2;
     height: 100%;
@@ -364,10 +428,14 @@ h1 {
   .main-item2 {
     order: 1;
   }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+
 }
 /*  IN ORDE   */
 @media screen and (min-width: 600px) and (max-width: 700px) {
-  
   /*   HEADER   */
 
   .header-menuButton {
@@ -418,8 +486,8 @@ h1 {
     margin-bottom: 2rem;
   }
   .album-cover {
-    width: 9rem;
-    height: 9rem;
+    width: 6rem;
+    height: 6rem;
   }
   ::placeholder {
     opacity: 100%;
@@ -463,8 +531,8 @@ h1 {
     margin-bottom: 2rem;
   }
   .album-cover {
-    width: 9rem;
-    height: 9rem;
+    width: 6rem;
+    height: 6rem;
   }
   /*
     MUZIEK PLAYER
@@ -577,8 +645,8 @@ h1 {
     margin-bottom: 2rem;
   }
   .album-cover {
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
   }
   /*
     MUZIEK PLAYER
@@ -668,7 +736,6 @@ h1 {
   .header-logo {
     width: 4.5rem;
     height: 4.5rem;
-    margin-right: 2rem;
   }
   .search-button {
     width: 3rem;
@@ -689,6 +756,10 @@ h1 {
   }
   .aanbeveling-center {
     margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 4rem;
+    height: 4rem;
   }
   /*
     MUZIEK PLAYER

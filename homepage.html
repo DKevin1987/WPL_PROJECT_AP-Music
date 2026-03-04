@@ -10,6 +10,7 @@
     <title>AP-Music</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
+    <script type="module" src="./js/generalJava.js"></script>
 </head>
 
 <body class="body-home">
@@ -30,16 +31,14 @@
                 <button class="search-button2 ">
                     <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
                 </button>
-
             </form>
-
             <div class="header-accountbutton">
                 <a href="./accountpage.html" class="background-icons"><img class="icon-header"
                         src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
             </div>
-            <div class="header-logo">
+            <button class="header-logo">
                 <img src="./assets/images/logo_AP-Music.png" class="logo-header">
-            </div>
+            </button>
         </div>
     </header>
 
@@ -55,52 +54,6 @@
             <a href="./accountpage.html" class="background-dropdown">Mood</a>
             <a class="background-dropdown" href="">UITLOGGEN</a>
         </div>
-
-        <!-- START AANBEVELINGEN  -->
-
-        <div class="aanbeveling main-item1">
-            <h1>Aanbevelingen</h1>
-            <div class="aanbeveling-center">
-                <div class="aanbeveling-row1 aanbeveling-row">
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/AcDc.png" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/beatels.jpg" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/gunsRoses.jpg" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/metallica.jpeg" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                </div>
-                <div class="aanbeveling-row2 aanbeveling-row">
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/Nirvana.png" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                    <button class="albumButton">
-                        <img class="album-cover" src="./assets/album-covers/queen2.jpg" alt="">
-                        <h2>TITEL</h2>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- EINDE AANBEVELINGEN  -->
 
         <section class="musicplayer main-item2">
             <div class="player-container">
@@ -131,49 +84,76 @@
             </div>
         </section>
 
-        <!-- EINDE MUSIC-PLAYER  -->
+        <!-- EINDE MUSIC-PLAYER     HEADER EN SPELER COPY NAAR ANDERE PAGINA'S ALS IEDEREEN DEZE GOED VIND.  -->
 
+        <!-- START AANBEVELINGEN  -->
+
+        <div class="aanbeveling main-item1">
+            <h1>Aanbevelingen</h1>
+            <div class="aanbeveling-center">
+                <div class="aanbeveling-row1 aanbeveling-row">
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/AcDc.png" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/beatels.jpg" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/gunsRoses.jpg" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/metallica.jpeg" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/Nirvana.png" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/queen2.jpg" alt="">
+                        <div class="album-info"><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EINDE AANBEVELINGEN  -->
     </main>
+    <footer>
+    <p>&copy;AP-Music</p>
+  </footer>
 </body>
-<script src="./js/generalJava.js"></script>
-
 </html>
 
 <!--
 
-                <table>
-                    <tr>
-                        <td class="music-left"></td>
-                        <td class="music-left-logo">
-                            <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
-                        </td>
-                        <td class="music-middle-title">TITEL & ARTIEST</td>
-                        <td class="music-middle-right">
-                            <div class="previous-logo">
-                                <button class="player-buttons">
-                                    <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="">
-                                </button>
-                            </div>
-                            <div class="play-logo">
-                                <button class="player-buttons">
-                                    <img class="player-logo" src="./assets/icons/play-icon.png" alt="">
-                                </button>
-                            </div>
-                            <div class="next-logo">
-                                <button class="player-buttons">
-                                    <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="">
-                                </button>
-                            </div>
-                        </td>
-                        <td class="music-right"></td>
-                    </tr>
-                </table>
-
-                
-            <div class="header-homeButton">
-                <button class="background-icons">
-                    <a href="./homepage.html"><img src="./assets/icons/iconmonstr-home-7.svg" alt="Homepage"></a>
-                </button>
-            </div>
-
+                <div class="aanbeveling-row2 aanbeveling-row">
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/Nirvana.png" alt="">
+                        <div><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/pinkFloyd.jpg" alt="">
+                        <div><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/queen1.jpeg" alt="">
+                        <div><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                    <button class="albumButton">
+                        <img class="album-cover" src="./assets/album-covers/queen2.jpg" alt="">
+                        <div><h2 class="aanbeveling-artiest">ARTIEST</h2><p class="aanbeveling-title">TITEL</p></div>
+                    </button>
+                </div>
 -->
