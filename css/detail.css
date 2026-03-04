@@ -22,15 +22,11 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 }
 .main-item1 {
   order: 2;
-  width: 60rem;
   display: grid;
   grid-template-areas:
     "album album details details"
     "album album details details"
     "like like details details";
-}
-section {
-  border: 1px solid black;
 }
 #albumlogo {
   grid-area: album;
@@ -61,7 +57,7 @@ section {
   border: 3px solid black;
 }
 #details {
-  background-color: antiquewhite;
+  background-color: rgb(240, 237, 233);
   grid-area: details;
   width: 35rem;
   height: 100%;
@@ -73,7 +69,9 @@ section {
 .detailLi {
   height: 2rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid black;
+  align-content: center;
 }
 
 #likeButton:hover{
@@ -84,26 +82,161 @@ section {
 }
 p{ color: blue;}
 
-@media screen and (min-width: 800px) and (max-width: 1024px) {
-
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  #albumlogo{
+    width: 20rem;
+    height: 20rem;
+  }
+  #likediv{
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+  }
+  #details{
+    width: 25rem;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  #albumlogo{
+    width: 20rem;
+    height: 20rem;
+  }
+  #likediv{
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+  }
+  #details{
+    width: 20rem;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 800px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 20rem;
+    height: 4rem;
+    align-self: flex-end;
+  }
+  #likeButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 30rem;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 700px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 20rem;
+    height: 4rem;
+    align-self: flex-end;
+  }
+  #likeButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 30rem;
+  }
 }
 
 @media screen and (min-width: 550px) and (max-width: 600px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 20rem;
+    height: 4rem;
+    align-self: flex-end;
+  }
+  #likeButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 30rem;
+  }  
 }
 
 @media screen and (min-width: 450px) and (max-width: 550px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 15rem;
+    height: 4rem;
+    align-self: flex-end;
+  }
+  #likeButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 25rem;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 450px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 10rem;
+    height: 4rem;
+    align-self: flex-end;
+  }
+  #likeButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 20rem;
+  } 
 }
