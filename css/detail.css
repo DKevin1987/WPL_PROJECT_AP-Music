@@ -10,11 +10,19 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 /*          */
 /*  MAIN    */
 /*          */
-.main-item {
+.main-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-item2{
   order: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .main-item1 {
   order: 2;
+  width: 60rem;
   display: grid;
   grid-template-areas:
     "album album details details"
@@ -49,10 +57,13 @@ section {
   border: 1px solid rgb(141, 7, 7);
   border-radius: 1rem;
 }
+#likeButton:focus:hover{
+  border: 3px solid black;
+}
 #details {
   background-color: antiquewhite;
   grid-area: details;
-  width: 40rem;
+  width: 35rem;
   height: 100%;
 }
 #detailUl {
