@@ -1,0 +1,45 @@
+.musicplayer {
+  width: 90%;
+  margin: 3% auto;
+}
+
+#zoekResultaat-container {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+}
+
+.line {
+  background-color: black;
+  width: 5px;
+  height: 60vh;
+}
+#zoekResultaat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90vw;
+  height: 60vh;
+  background-color: #d9d9d9;
+  overflow-y: scroll;
+}
+
+.resultaat {
+  background-color: rgb(165, 160, 160);
+  width: 85vw;
+  height: 5rem;
+  flex-shrink: 0;
+  margin: 1rem;
+}
+
+@media (max-width: 800px) {
+  #zoekResultaat-container,
+  .line,
+  #zoekResultaat {
+    height: 70vh;
+  }
+}
