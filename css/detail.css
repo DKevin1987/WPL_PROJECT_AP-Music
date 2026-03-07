@@ -132,6 +132,7 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
     width: 25rem;
   }
 }
+
 @media screen and (min-width: 800px) and (max-width: 900px) {
   #albumlogo{
     width: 20rem;

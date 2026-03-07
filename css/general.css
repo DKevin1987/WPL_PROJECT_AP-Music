@@ -201,7 +201,7 @@ body {
 .aanbeveling {
   width: 85%;
   max-width: 70rem;
-  background-color: #9a8f8f;
+  background-color: #dbd2d2;
   border-radius: 2rem;
   text-align: center;
   display: flex;
@@ -211,7 +211,8 @@ body {
 .albumButton {
   display: grid;
   grid-template-areas: "logo tekst";
-  width: 21rem;
+  width: 22rem;
+  gap: 1rem;
 }
 .albumButton:hover {
   border: 3px solid black;
@@ -220,7 +221,7 @@ body {
 
 h1 {
   margin-top: 1rem;
-  color: #d9d9d9;
+  color: #1a0303;
   font-size: 2rem;
   font-weight: bold;
 }
