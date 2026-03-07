@@ -61,6 +61,14 @@
   border: 1px solid black;
   border-radius: 10%;
 }
+.likeMeldingButton:hover {
+  border: 3px solid black;
+  border-radius: 10%;
+}
+.likeMeldingButton:focus {
+  border: 3px solid black;
+  border-radius: 10%;
+}
 .hidden {
   display: none;
 }
@@ -77,4 +85,11 @@
 }
 .addPlaylistBevestiging{
     border: 6px solid green;
+}
+.playlistadder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

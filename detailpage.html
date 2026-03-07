@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./css/like-playlist-notification.css">
-    <script type="module" src="./js/generalJava.js"></script>
+    <script type="module" defer src="./js/generalJava.js"></script>
 </head>
 
 <body class="body-home">
@@ -64,8 +64,9 @@
             <div id="albumlogoAndButtons">
                 <div id="albumlogo"></div>
                 <div id="likediv">
-                    <button class="detailButton" id="likeButton"></button>
-                    <button class="detailButton" id="addPlaylistButton"></button>
+                    <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
+                    <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
+                    <button class="detailButton addPlaylistButton playlistButton" id=""></button>
                 </div>
             </div>
             <div id="details">
@@ -148,17 +149,22 @@
         <!-- EINDE LIKE MELDING  -->
 
         <section class="addPlaylistSection">
+
             <div class="addToPlaylistMelding notification hidden">
-                <h2>Wil je deze toevoegen aan een playlist?</h2>
-                <div>
+                <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                <div class="playlistadder">
+                    <p>PLAYLIST-NAAM</p>
                     <button class="notificationButton buttonYes">JA</button>
+                </div>
+                <div>
                     <button class="notificationButton buttonNo">NEE</button>
                 </div>
             </div>
+
             <div class="addPlaylistBevestiging notification hidden">
                 <h2>U hebt deze toegevoegd aan de playlist.</h2>
                 <div>
-                    <button class="notificationButton">OK</button>
+                    <button class="likeMeldingButton">OK</button>
                 </div>
             </div>
         </section>

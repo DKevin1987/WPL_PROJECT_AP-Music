@@ -29,7 +29,8 @@ console.log(buttonRegisterEl);      //werkt
 const registratieInputCheckEl = document.querySelector("#registratieInputCheck");
 console.log(registratieInputCheckEl);   // werkt
 // ELEMENTEN VOOR ERROR AFHANDELING 
-const usernameCheckEl = registratieInputCheckEl.querySelector("#usernameCheck");const emailCheckValidEl = registratieInputCheckEl.querySelector("#emailCheckValid");
+const usernameCheckEl = registratieInputCheckEl.querySelector("#usernameCheck");
+const emailCheckValidEl = registratieInputCheckEl.querySelector("#emailCheckValid");
 const emailCheckEl = registratieInputCheckEl.querySelector("#emailCheck");
 const paswordCheckEl = registratieInputCheckEl.querySelector("#paswordCheck");
 const paswordCheckValidEl = registratieInputCheckEl.querySelector("#paswordCheckValid");

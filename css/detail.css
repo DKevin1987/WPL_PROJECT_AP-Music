@@ -69,25 +69,36 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
   background-size: contain;
   background-color: white;
 }
-#likeButton {
+.likeButtonEmtpy {
   background-image: url("../assets/icons/leegHart.png");
 }
-#likeButton:focus{
+.likeButtonFull {
+  background-image: url("../assets/icons/volHart.png");
+}
+.likeButtonFull:focus{
   border: 3px solid black;
   border-radius: 1rem;
 }
-#likeButton:hover{
+.likeButtonFull:hover{
   border: 3px solid black;
   border-radius: 1rem;
 }
-#addPlaylistButton{
+.likeButtonEmtpy:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonEmtpy:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.addPlaylistButton{
   background-image: url("../assets/icons/plus-icon.png");
 }
-#addPlaylistButton:hover{
+.addPlaylistButton:hover{
   border: 3px solid black;
   border-radius: 1rem;
 }
-#addPlaylistButton:focus{
+.addPlaylistButton:focus{
   border: 3px solid black;
   border-radius: 1rem;
 }
