@@ -1,0 +1,80 @@
+/*                          */
+/*  BUTTONS NOTIFICATION    */
+/*                          */
+
+.notification{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5%;
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  top: 25rem;
+  justify-self: center;
+  text-align: center;
+}
+.notificationButton{
+  width: 5rem;
+  height: 2rem;
+  border-radius: 10%;
+}
+.notificationButton:hover {
+  border: 3px solid black;
+  border-radius: 10%;
+}
+.notificationButton:focus {
+  border: 3px solid black;
+  border-radius: 10%;
+}
+.buttonYes{
+  border: 3px solid green;
+}
+.buttonNo{
+  border: 3px solid red;
+}
+
+/*                          */
+/*      LIKE GEDEELTE       */
+/*                          */
+
+.likeAddMelding {
+  border: 6px solid red;
+  border-radius: 5%;
+}
+.likeDeleteMelding {
+  border: 6px solid red;
+  border-radius: 5%;
+}
+.likeToegevoegdBevestiging {
+  border: 6px solid rgb(14, 155, 14);
+  border-radius: 5%;
+}
+.likeDeleteBevestiging {
+  border: 6px solid rgb(14, 155, 14);
+  border-radius: 5%;
+}
+.likeMeldingButton {
+  width: 5rem;
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+.hidden {
+  display: none;
+}
+/*                                */
+/*  EINDE LIKE GEDEELTE TIJDELIJK */
+/*                                */
+
+/*                                */
+/*  START PLAYLIST MELDING        */
+/*                                */
+
+.addToPlaylistMelding{
+    border: 6px solid red;
+}
+.addPlaylistBevestiging{
+    border: 6px solid green;
+}

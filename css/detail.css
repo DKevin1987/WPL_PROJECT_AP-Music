@@ -7,9 +7,9 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 
 */
 
-/*          */
-/*  MAIN    */
-/*          */
+/*              */
+/*  MAIN ORDER  */
+/*              */
 .main-detail{
   display: flex;
   flex-direction: column;
@@ -28,6 +28,17 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
     "album album details details"
     "like like details details";
 }
+.likeSectionMelding{
+  order: 3;
+  text-align: center;
+}
+.addPlaylistSection{
+  order: 4;
+  text-align: center;
+}
+
+
+
 #albumlogo {
   grid-area: album;
   width: 25rem;
@@ -45,24 +56,43 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
   width: 25rem;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
-#likeButton {
-  width: 10rem;
+.detailButton{
+  width: 5rem;
   height: 3rem;
   text-align: center;
   border: 1px solid rgb(141, 7, 7);
   border-radius: 1rem;
-  background-image: url("../assets/icons/leegHart.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: white;
 }
-#likeButton:focus:hover{
+#likeButton {
+  background-image: url("../assets/icons/leegHart.png");
+}
+#likeButton:focus{
   border: 3px solid black;
+  border-radius: 1rem;
+}
+#likeButton:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+#addPlaylistButton{
+  background-image: url("../assets/icons/plus-icon.png");
+}
+#addPlaylistButton:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+#addPlaylistButton:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
 }
 #details {
-  background-color: rgb(240, 237, 233);
+  background-color: rgb(241, 232, 220);
   grid-area: details;
   width: 35rem;
   height: 100%;
@@ -79,93 +109,14 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
   align-content: center;
 }
 
-/*                          */
-/*  LIKE GEDEELTE TIJDELIJK */
-/*                          */
-#likeButton:hover{
-    border: 3px solid black;
-}
-#likeButton:focus{
-    border: 3px solid black;
-}
-p{ color: blue;}
+/*                                                                      */
+/*  LIKE EN PLAYLIST STAAT IN like-playlist-notification.css TIJDELIJK  */
+/*                                                                      */
 
-.likeSectionMelding{
-  order: 3;
-  text-align: center;
-}
-.likeAddMelding{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 6px solid red;
-  border-radius: 5%;
-  height: 10rem;
-  width: 20rem;
-  position: absolute;
-  top: 25rem;
-  justify-self: center;
-}
-.likeDeleteMelding{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 6px solid red;
-  border-radius: 5%;
-  height: 10rem;
-  width: 20rem;
-  position: absolute;
-  top: 25rem;
-  justify-self: center;
-}
-.likeToegevoegdBevestiging{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 6px solid rgb(14, 155, 14);
-  border-radius: 5%;
-  height: 10rem;
-  width: 20rem;
-  position: absolute;
-  top: 25rem;
-  justify-self: center;
-}
-.likeDeleteBevestiging{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 6px solid rgb(14, 155, 14);
-  border-radius: 5%;
-  height: 10rem;
-  width: 20rem;
-  position: absolute;
-  top: 25rem;
-  justify-self: center;
-}
-.likeMeldingButton{
-  width: 5rem;
-  height: 2rem;
-  border: 1px solid black;
-  border-radius: 10%;
-}
-.likeMeldingButton:hover{
-  border: 3px solid black;
-  border-radius: 10%;
-}
-.likeMeldingButton:focus{
-  border: 3px solid black;
-  border-radius: 10%;
-}
-.hidden{
-  display: none;
-}
-/*                                */
-/*  EINDE LIKE GEDEELTE TIJDELIJK */
-/*                                */
+
+
+
+
 
 @media screen and (min-width: 900px) and (max-width: 1024px) {
   #albumlogo{
@@ -205,16 +156,21 @@ p{ color: blue;}
     " details details "
     " details details ";
   }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
   #albumlogo{
     width: 10rem;
     height: 10rem;
   }
   #likediv{
-    width: 20rem;
-    height: 4rem;
-    align-self: flex-end;
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-self: flex-start;
   }
-  #likeButton{
+  .detailButton{
     width: 4rem;
   }  
   #details{
@@ -231,13 +187,18 @@ p{ color: blue;}
     " details details "
     " details details ";
   }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
   #albumlogo{
     width: 10rem;
     height: 10rem;
   }
   #likediv{
-    width: 20rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
     align-self: flex-end;
   }
   #likeButton{
@@ -257,16 +218,21 @@ p{ color: blue;}
     " details details "
     " details details ";
   }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
   #albumlogo{
     width: 10rem;
     height: 10rem;
   }
   #likediv{
-    width: 20rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
     align-self: flex-end;
   }
-  #likeButton{
+  .detailButton{
     width: 4rem;
   }  
   #details{
@@ -283,16 +249,21 @@ p{ color: blue;}
     " details details "
     " details details ";
   }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
   #albumlogo{
     width: 10rem;
     height: 10rem;
   }
   #likediv{
-    width: 15rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
     align-self: flex-end;
   }
-  #likeButton{
+  .detailButton{
     width: 4rem;
   }  
   #details{
@@ -309,16 +280,21 @@ p{ color: blue;}
     " details details "
     " details details ";
   }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
   #albumlogo{
     width: 10rem;
     height: 10rem;
   }
   #likediv{
     width: 10rem;
-    height: 4rem;
+    height: 10rem;
+    flex-direction: column;
     align-self: flex-end;
   }
-  #likeButton{
+  .detailButton{
     width: 4rem;
   }  
   #details{
