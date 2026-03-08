@@ -7,10 +7,93 @@
     <meta name="author 2" content="Yusufcan Yar">
     <meta name="author 3" content="Kyaro Van Goethem">
     <title>AP-Music</title>
+    <link rel="stylesheet" href="./css/vergelijking_pagina.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
 </head>
 <body>
-    <h1>VERGELIJK-PAGINA TEST</h1>
+<header>
+    <div class="header-inner">
+        <div class="header-menuButton">
+            <div class="background-icons"><img src="./assets/icons/iconmonstr-menu-lined.svg" class="icon-header"></div>
+        </div>
+        
+        <div class="header-logo">
+            <img src="./assets/images/logo_AP-Music.png" class="logo-header">
+        </div>
+
+        <form class="search-form">
+            <input class="search-input" type="text" placeholder="Nummer zoeken?">
+            <button class="search-button2">
+                <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
+            </button>
+        </form>
+
+        <div class="header-accountbutton">
+            <a href="./accountpage.html" class="background-icons">
+                <img src="./assets/icons/iconmonstr-weather-58.svg" class="icon-header">
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="vergelijking-content">
+    <div class="vergelijking-grid">
+        <section class="vergelijking-card">
+            <div class="vergelijking-art">
+                <img src="./assets/album-covers/metallica.jpeg" alt="Metallica">
+            </div>
+            <div class="vergelijking-text">
+                <h2>Title</h2>
+                <p>tekst</p>
+                <div class="stats-bar">stats</div>
+                <div class="stats-bar">stats</div>
+                <div class="stats-bar">stats</div>
+            </div>
+        </section>
+
+        <section class="vergelijking-card">
+            <div class="vergelijking-art">
+                <img src="./assets/album-covers/Nirvana.png" alt="Nirvana">
+            </div>
+            <div class="vergelijking-text">
+                <h2>Title</h2>
+                <p>tekst</p>
+                <div class="stats-bar">stats</div>
+                <div class="stats-bar">stats</div>
+                <div class="stats-bar">stats</div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<section class="musicplayer main-item2">
+            <div class="player-container">
+                <div class="music-left-logo">
+                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
+                </div>
+                <div class="music-middle-title">
+                    <h3 class="title-artist">ARTIEST</h3>
+                    <p>TITEL</p>
+                </div>
+                <div class="music-middle-player">
+                    <div class="previous-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="">
+                        </button>
+                    </div>
+                    <div class="play-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/play-icon.png" alt="">
+                        </button>
+                    </div>
+                    <div class="next-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 </html>
