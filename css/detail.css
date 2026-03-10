@@ -7,9 +7,9 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 
 */
 
-/*          */
-/*  MAIN    */
-/*          */
+/*              */
+/*  MAIN ORDER  */
+/*              */
 .main-detail{
   display: flex;
   flex-direction: column;
@@ -22,16 +22,23 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 }
 .main-item1 {
   order: 2;
-  width: 60rem;
   display: grid;
   grid-template-areas:
     "album album details details"
     "album album details details"
     "like like details details";
 }
-section {
-  border: 1px solid black;
+.likeSectionMelding{
+  order: 3;
+  text-align: center;
 }
+.addPlaylistSection{
+  order: 4;
+  text-align: center;
+}
+
+
+
 #albumlogo {
   grid-area: album;
   width: 25rem;
@@ -49,19 +56,54 @@ section {
   width: 25rem;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
-#likeButton {
-  width: 10rem;
+.detailButton{
+  width: 5rem;
   height: 3rem;
   text-align: center;
   border: 1px solid rgb(141, 7, 7);
   border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
 }
-#likeButton:focus:hover{
+.likeButtonEmtpy {
+  background-image: url("../assets/icons/leegHart.png");
+}
+.likeButtonFull {
+  background-image: url("../assets/icons/volHart.png");
+}
+.likeButtonFull:focus{
   border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonFull:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonEmtpy:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonEmtpy:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.addPlaylistButton{
+  background-image: url("../assets/icons/plus-icon.png");
+}
+.addPlaylistButton:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.addPlaylistButton:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
 }
 #details {
-  background-color: antiquewhite;
+  background-color: rgb(241, 232, 220);
   grid-area: details;
   width: 35rem;
   height: 100%;
@@ -73,37 +115,201 @@ section {
 .detailLi {
   height: 2rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid black;
+  align-content: center;
 }
 
-#likeButton:hover{
-    border: 3px solid black;
-}
-#likeButton:focus{
-    border: 3px solid black;
-}
-p{ color: blue;}
+/*                                                                      */
+/*  LIKE EN PLAYLIST STAAT IN like-playlist-notification.css TIJDELIJK  */
+/*                                                                      */
 
-@media screen and (min-width: 800px) and (max-width: 1024px) {
 
+
+
+
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  #albumlogo{
+    width: 20rem;
+    height: 20rem;
+  }
+  #likediv{
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+  }
+  #details{
+    width: 25rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  #albumlogo{
+    width: 20rem;
+    height: 20rem;
+  }
+  #likediv{
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+  }
+  #details{
+    width: 20rem;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 800px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .detailButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 30rem;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 700px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+  #likeButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 30rem;
+  }
 }
 
 @media screen and (min-width: 550px) and (max-width: 600px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+  .detailButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 30rem;
+  }  
 }
 
 @media screen and (min-width: 450px) and (max-width: 550px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+  .detailButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 25rem;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 450px) {
-    
+  .main-item1 {
+  order: 2;
+  display: grid;
+  grid-template-areas:
+    " album like  "
+    " details details "
+    " details details ";
+  }
+  #albumlogoAndButtons{
+    display: flex;
+    flex-direction: row;
+  }
+  #albumlogo{
+    width: 10rem;
+    height: 10rem;
+  }
+  #likediv{
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+  .detailButton{
+    width: 4rem;
+  }  
+  #details{
+    width: 20rem;
+  } 
 }

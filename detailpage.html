@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/detail.css">
-    <script type="module" src="./js/generalJava.js"></script>
+    <link rel="stylesheet" href="./css/like-playlist-notification.css">
+    <script type="module" defer src="./js/generalJava.js"></script>
 </head>
 
 <body class="body-home">
@@ -40,7 +41,7 @@
                         src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
             </div>
             <div class="header-logo">
-                <img src="./assets/images/logo_AP-Music.png" class="logo-header">
+                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header"></a>
             </div>
         </div>
     </header>
@@ -60,9 +61,13 @@
         <!-- EINDE DROPDOWN  -->
 
         <section class="main-item1">
-            <div id="albumlogo"></div>
-            <div id="likediv">
-                <button id="likeButton">LIKE</button>
+            <div id="albumlogoAndButtons">
+                <div id="albumlogo"></div>
+                <div id="likediv">
+                    <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
+                    <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
+                    <button class="detailButton addPlaylistButton playlistButton" id=""></button>
+                </div>
             </div>
             <div id="details">
                 <ul id="detailUl">
@@ -111,8 +116,63 @@
 
         <!-- EINDE MUSIC-PLAYER  -->
 
+
+        <!-- START LIKE MELDING  -->
+        <section class="likeSectionMelding">
+            <div class="notification likeAddMelding hidden">
+                <h2>Wil je deze toevoegen aan favorieten?</h2>
+                <div>
+                    <button class="notificationButton buttonYes">JA</button>
+                    <button class="notificationButton buttonNo">NEE</button>
+                </div>
+            </div>
+            <div class="notification likeDeleteMelding hidden">
+                <h2>Wil je deze verwijderen aan favorieten?</h2>
+                <div>
+                    <button class="notificationButton buttonYes">JA</button>
+                    <button class="notificationButton buttonNo">NEE</button>
+                </div>
+            </div>
+            <div class="notification likeToegevoegdBevestiging hidden">
+                <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                <div>
+                    <button class="likeMeldingButton">OK</button>
+                </div>
+            </div>
+            <div class="notification likeDeleteBevestiging hidden">
+                <h2>U hebt deze verwijderd uit favorieten.</h2>
+                <div>
+                    <button class="likeMeldingButton">OK</button>
+                </div>
+            </div>
+        </section>
+        <!-- EINDE LIKE MELDING  -->
+
+        <section class="addPlaylistSection">
+
+            <div class="addToPlaylistMelding notification hidden">
+                <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                <div class="playlistadder">
+                    <p>PLAYLIST-NAAM</p>
+                    <button class="notificationButton buttonYes">JA</button>
+                </div>
+                <div>
+                    <button class="notificationButton buttonNo">NEE</button>
+                </div>
+            </div>
+
+            <div class="addPlaylistBevestiging notification hidden">
+                <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                <div>
+                    <button class="likeMeldingButton">OK</button>
+                </div>
+            </div>
+        </section>
     
     </main>
+    <footer>
+    <p>&copy;AP-Music</p>
+  </footer>
 </body>
 
 </html>
