@@ -8,14 +8,14 @@ body {
 footer {
   text-align: center;
 }
-button:focus {
+/* button:focus {
   border: 3px solid black;
   border-radius: 50%;
 }
 button:hover {
   border: 3px solid black;
   border-radius: 50%;
-}
+} */
 /*
 HEADER CSS
 */
@@ -74,11 +74,11 @@ header {
   grid-area: logo;
   margin-left: 4rem;
 }
-.header-logo:hover{
+.header-logo:hover {
   border: 3px solid black;
   border-radius: 25%;
 }
-.header-logo:focus{
+.header-logo:focus {
   border: 3px solid black;
   border-radius: 25%;
 }
@@ -330,7 +330,6 @@ h1 {
 
 /*  MEDIA GEDEELTE    */
 
-
 @media screen and (min-width: 900px) and (max-width: 1000px) {
   /*  HEADER  */
   .search-input {
@@ -355,7 +354,7 @@ h1 {
     width: 6rem;
     height: 6rem;
   }
-  .aanbeveling{
+  .aanbeveling {
     width: 95%;
   }
 }
@@ -384,16 +383,16 @@ h1 {
     width: 5rem;
     height: 5rem;
   }
-  .aanbeveling{
+  .aanbeveling {
     width: 95%;
   }
-  .aanbeveling-artiest{
+  .aanbeveling-artiest {
     width: 9rem;
   }
-  .aanbeveling-title{
+  .aanbeveling-title {
     width: 9rem;
   }
-  .albumButton{
+  .albumButton {
     width: 16rem;
   }
 }
@@ -421,7 +420,7 @@ h1 {
   }
 
   /*  MAIN  */
-  
+
   .main-item1 {
     order: 2;
     height: 100%;
@@ -433,7 +432,6 @@ h1 {
     width: 6rem;
     height: 6rem;
   }
-
 }
 /*  IN ORDE   */
 @media screen and (min-width: 600px) and (max-width: 700px) {
