@@ -1,106 +1,77 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author 1" content="Dom Kevin" />
-        <meta name="author 2" content="Opong Nana" />
-    <meta name="author 3" content="Kyaro Van Goethem" />
-    <title>AP-Music</title>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./css/inlog_registratie.css" />
-    <script type="module" src="./js/inlog.js"></script>
-  </head>
-  <body>
-    <main class="main-container">
-      <section class="section-box">
-        <!-- LOGO EN TITEL  -->
 
-        <div class="logo-container">
-          <figure>
-            <img
-              class="Logo"
-              src="./assets/images/logo_AP-Music.png"
-              alt="Logo AP-Music"
-            />
-          </figure>
-        </div>
-        <h1>Inloggen bij AP-Music</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author 1" content="Dom Kevin" />
+  <meta name="author 2" content="Opong Nana" />
+  <meta name="author 3" content="Kyaro Van Goethem" />
+  <title>AP-Music</title>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/inlog_registratie.css" />
+  <script type="module" src="./js/inlog.js"></script>
+</head>
 
-        <!-- INLOG FORMULIER -->
+<body>
+  <main class="main-container">
+    <section class="section-box">
+      <!-- LOGO EN TITEL  -->
 
-        <form action="" class="form-container" id="inlogform">
-          <label for="useremail"
-            ><img class="icon" src="./assets/icons/email.jpg" alt="" />
-            Email</label
-          >
-          <input
-            type="email"
-            name="Email"
-            id="useremail"
-            required
-            placeholder="abc@email.be"
-            value=""
-          />
-          <label for="userpasword"
-            ><img class="icon" src="./assets/icons/slot.jpg" alt="" />
-            Wachtwoord</label
-          >
-          <input
-            type="password"
-            name="Wachtwoord"
-            id="userpasword"
-            required
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-            placeholder="Wachtwoord"
-            value=""
-          />
-          <button id="inlogButton" class="buttonInlog" type="submit">
-            Inloggen
-          </button>
-          <button class="buttonRegistreren">
-            <a href="./registratie.html">Registreren</a>
-          </button>
-          <button class="buttonRecovery">Wachtwoord Vergeten?</button>
-        </form>
-      </section>
+      <div class="logo-container">
+        <figure>
+          <img class="Logo" src="./assets/images/logo_AP-Music.png" alt="Logo AP-Music" />
+        </figure>
+      </div>
+      <h1>Inloggen bij AP-Music</h1>
 
-      <!-- INLOG FORMULIER ERROR DEEL -->
+      <!-- INLOG FORMULIER -->
 
-      <section class="hidden" id="inlogInputCheck">
-        <div class="hidden" id="emailError">
-          <h3>Foutieve Email.</h3>
-          <p>Deze email bestaat niet in ons systeem.</p>
-        </div>
-        <div class="hidden" id="paswordError">
-          <h3>Foutief Paswoord.</h3>
-          <p>Dit paswoord hoort niet bij dit email-adres.</p>
-        </div>
-        <button class="hidden buttonError" id="buttonError">OK</button>
-      </section>
+      <form action="" class="form-container" id="inlogform">
+        <label for="useremail"><img class="icon" src="./assets/icons/email.jpg" alt="" />
+          Email</label>
+        <input type="email" name="Email" id="useremail" required placeholder="abc@email.be" value="" />
+        <label for="userpasword"><img class="icon" src="./assets/icons/slot.jpg" alt="" />
+          Wachtwoord</label>
+        <input type="password" name="Wachtwoord" id="userpasword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+          placeholder="Wachtwoord" value="" />
+        <button id="inlogButton" class="buttonInlog" type="submit">
+          Inloggen
+        </button>
+        <button class="buttonRegistreren">
+          <a href="./registratie.html">Registreren</a>
+        </button>
+        <button class="buttonRecovery">Wachtwoord Vergeten?</button>
+      </form>
+    </section>
 
-      <!-- RESET PASWORD DEEL -->
+    <!-- INLOG FORMULIER ERROR DEEL -->
 
-      <section class="sectionPaswordReset hidden">
-        <h3>PASWOORD RESET.</h3>
-        <form action="">
-          <label for="resetEmailLabel"
-            ><img
-              class="icon"
-              src="./assets/icons/email.jpg"
-              alt=""
-            />Email</label
-          >
-          <input
-            id="resetEmailLabel"
-            type="text"
-            value=""
-            placeholder="abc@music.be"
-          />
-          <button class="buttonInlog" type="submit">Submit</button>
-          <button id="buttonCancle">Anuleren</button>
-        </form>
-      </section>
-    </main>
-  </body>
+    <section class="hidden" id="inlogInputCheck">
+      <div class="hidden" id="emailError">
+        <h3>Foutieve Email.</h3>
+        <p>Deze email bestaat niet in ons systeem.</p>
+      </div>
+      <div class="hidden" id="paswordError">
+        <h3>Foutief Paswoord.</h3>
+        <p>Dit paswoord hoort niet bij dit email-adres.</p>
+      </div>
+      <button class="hidden buttonError" id="buttonError">OK</button>
+    </section>
+
+    <!-- RESET PASWORD DEEL -->
+
+    <section class="sectionPaswordReset hidden">
+      <h3>PASWOORD RESET.</h3>
+      <form action="">
+        <label for="resetEmailLabel"><img class="icon" src="./assets/icons/email.jpg" alt="" />Email</label>
+        <input id="resetEmailLabel" type="text" value="" placeholder="abc@music.be" />
+        <button class="buttonInlog" type="submit">Submit</button>
+        <button id="buttonCancle">Anuleren</button>
+      </form>
+    </section>
+  </main>
+</body>
+
 </html>

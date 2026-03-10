@@ -3,10 +3,10 @@
       CSS VOOR ALLE SCHERMEN van 800px tot 1440 px
 */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 footer {
-    text-align: center;
+  text-align: center;
 }
 /* button:focus {
   border: 3px solid black;
@@ -20,158 +20,182 @@ button:hover {
 HEADER CSS
 */
 header {
-    background-color: rgb(165, 160, 160);
-    width: 100%;
-    height: 8rem;
-    margin: auto;
-    align-content: center;
-    justify-content: center;
-    position: sticky;
-    top: 0rem;
+  background-color: rgb(165, 160, 160);
+  width: 100%;
+  height: 8rem;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+  position: sticky;
+  top: 0rem;
 }
 .header-inner {
-    max-width: 1440px;
-    margin: auto;
-    display: grid;
-    grid-template-areas: "logo search  account menu ";
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-template-areas: "logo search  account menu ";
+  align-items: center;
+  justify-content: space-between;
 }
 .header-menuButton {
-    grid-area: menu;
-    margin-right: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    width: 4rem;
-    height: 4rem;
+  grid-area: menu;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  width: 4rem;
+  height: 4rem;
 }
 .header-menuButton:focus {
-    border: 3px solid black;
-    border-radius: 50%;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 .header-menuButton:hover {
-    border: 3px solid black;
-    border-radius: 50%;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 .header-search-button {
-    /*   HIDDEN BUTTON VOOR MOBILE ALLEEN   */
-    display: none;
+  /*   HIDDEN BUTTON VOOR MOBILE ALLEEN   */
+  display: none;
 }
 .header-accountbutton {
-    grid-area: account;
-    align-content: end;
-    width: 4rem;
-    height: 4rem;
+  grid-area: account;
+  align-content: end;
+  width: 4rem;
+  height: 4rem;
 }
 .header-accountbutton:focus {
-    border: 3px solid black;
-    border-radius: 50%;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 .header-accountbutton:hover {
-    border: 3px solid black;
-    border-radius: 50%;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 .header-logo {
-    grid-area: logo;
-    margin-left: 4rem;
+  grid-area: logo;
+  margin-left: 4rem;
 }
 .header-logo:hover {
-    border: 3px solid black;
-    border-radius: 25%;
+  border: 3px solid black;
+  border-radius: 25%;
 }
 .header-logo:focus {
-    border: 3px solid black;
-    border-radius: 25%;
+  border: 3px solid black;
+  border-radius: 25%;
 }
 .logo-header {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 25%;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 25%;
 }
 .background-icons {
-    background-color: #d9d9d9;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .icon-header {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
+
+.bi::before,
+[class*=" bi-"]::before,
+[class^="bi-"]::before {
+  /* display: inline-block; */
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  /* line-height: 1;
+  vertical-align: -0.125em; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2rem;
+}
+
+.bi-search:before {
+  align-self: center;
+}
+
 .search-button {
-    background: #d9d9d9;
+  background: #d9d9d9;
 }
 .search-button2 {
-    background: #d9d9d9;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9d9d9;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
 }
 .search-button2:hover {
-    border: 3px solid black;
-    border-radius: 50%;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 .search-input {
-    background: #d9d9d9;
-    border-radius: 2rem;
-    height: 4rem;
-    width: 15rem;
-    margin-left: 20%;
-    text-align: left;
+  background: #d9d9d9;
+  border-radius: 2rem;
+  height: 4rem;
+  width: 15rem;
+  margin-left: 20%;
+  text-align: left;
 }
 .search-form {
-    width: 25rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #d9d9d9;
-    border-radius: 2rem;
-    padding: 0.5rem;
+  width: 25rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #d9d9d9;
+  border-radius: 2rem;
+  padding: 0.5rem;
 }
 ::placeholder {
-    opacity: 50%;
+  opacity: 50%;
 }
 /*
 /* header dropdown 
 */
 
 .menu {
-    align-items: center;
-    position: absolute;
-    top: 7rem;
-    right: 2rem;
-    width: 15rem;
-    background: #c0baba;
-    padding: 15px;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  align-items: center;
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+  width: 15rem;
+  background: #c0baba;
+  padding: 15px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .background-dropdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d9d9d9;
-    width: 10rem;
-    height: 2rem;
-    border-radius: 2rem;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
 }
 .hidden {
-    display: none;
+  display: none;
 }
 .background-dropdown:focus {
-    border: 3px solid black;
+  border: 3px solid black;
 }
 .background-dropdown:hover {
-    border: 3px solid black;
+  border: 3px solid black;
 }
 
 /*
@@ -185,84 +209,84 @@ TEKST CSS
 BACKGROUND KLEUREN + KLEUREN
 */
 body {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Aanbevelingen main*/
 
 .mainHomePage {
-    margin: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .aanbeveling {
-    width: 85%;
-    max-width: 70rem;
-    background-color: #dbd2d2;
-    border-radius: 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  width: 85%;
+  max-width: 70rem;
+  background-color: #dbd2d2;
+  border-radius: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 .albumButton {
-    display: grid;
-    grid-template-areas: "logo tekst";
-    width: 22rem;
-    gap: 1rem;
+  display: grid;
+  grid-template-areas: "logo tekst";
+  width: 22rem;
+  gap: 1rem;
 }
 .albumButton:hover {
-    border: 3px solid black;
-    border-radius: 5%;
+  border: 3px solid black;
+  border-radius: 5%;
 }
 
 h1 {
-    margin-top: 1rem;
-    color: #1a0303;
-    font-size: 2rem;
-    font-weight: bold;
+  margin-top: 1rem;
+  color: #1a0303;
+  font-size: 2rem;
+  font-weight: bold;
 }
 .aanbeveling-artiest {
-    height: 50%;
-    width: 13rem;
+  height: 50%;
+  width: 13rem;
 }
 .aanbeveling-title {
-    height: 50%;
-    width: 13rem;
+  height: 50%;
+  width: 13rem;
 }
 .album-info {
-    border: 1px solid black;
-    border-radius: 5%;
+  border: 1px solid black;
+  border-radius: 5%;
 }
 .aanbeveling-center {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .aanbeveling-row {
-    width: 90%;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
+  width: 90%;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .album-cover {
-    grid-area: logo;
-    width: 8rem;
-    height: 7.5rem;
-    border-radius: 5%;
+  grid-area: logo;
+  width: 8rem;
+  height: 7.5rem;
+  border-radius: 5%;
 }
 
 /*
@@ -270,34 +294,521 @@ h1 {
 */
 
 .musicplayer {
-    background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%) no-repeat;
-    width: 90%;
-    max-width: 1440px;
-    background-color: rgb(230, 241, 241);
-    height: 4rem;
-    border-radius: 3rem;
-    justify-content: center;
-    align-content: center;
+  background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%)
+    no-repeat;
+  width: 90%;
+  max-width: 1440px;
+  background-color: rgb(230, 241, 241);
+  height: 4rem;
+  border-radius: 3rem;
+  justify-content: center;
+  align-content: center;
 }
 .player-container {
-    display: grid;
-    grid-template-areas: "logo title title title title title title player player";
-    gap: 1rem;
+  display: grid;
+  grid-template-areas: "logo title title title title title title player player";
+  gap: 1rem;
 }
 .music-left-logo {
-    width: 3rem;
-    height: 3rem;
-    grid-area: logo;
-    margin-left: 3rem;
+  width: 3rem;
+  height: 3rem;
+  grid-area: logo;
+  margin-left: 3rem;
 }
 .music-middle-title {
+  grid-area: title;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+.music-middle-player {
+  background-color: #f8f3f3;
+  width: 10rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border-radius: 2.5rem;
+  align-items: center;
+  justify-content: space-around;
+  grid-area: player;
+}
+.title-artist {
+  font-size: 1.5rem;
+}
+.music-logo {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+  border-radius: 3rem;
+}
+.music-right {
+  border: #df1b1b solid 0.2rem;
+  width: 1rem;
+}
+.player-buttons {
+  height: 2rem;
+  width: 2rem;
+}
+.player-logo {
+  border-radius: 2.5rem;
+}
+
+/*  MEDIA GEDEELTE    */
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  /*  HEADER  */
+  .search-input {
+    width: 100%;
+  }
+  .header-accountbutton {
+    grid-area: 0/01/3/4;
+    width: 4rem;
+    height: 4rem;
+  }
+  .search-form {
+    width: 17rem;
+  }
+  .search-input {
+    margin-left: 5%;
+  }
+  .search-button2 {
+    width: 4rem;
+    height: 3rem;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+  .aanbeveling {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  /*  HEADER  */
+  .search-input {
+    width: 100%;
+  }
+  .header-accountbutton {
+    grid-area: 0/01/3/4;
+    width: 4rem;
+    height: 4rem;
+  }
+  .search-form {
+    width: 17rem;
+  }
+  .search-input {
+    margin-left: 5%;
+  }
+  .search-button2 {
+    width: 4rem;
+    height: 3rem;
+  }
+  .album-cover {
+    width: 5rem;
+    height: 5rem;
+  }
+  .aanbeveling {
+    width: 95%;
+  }
+  .aanbeveling-artiest {
+    width: 9rem;
+  }
+  .aanbeveling-title {
+    width: 9rem;
+  }
+  .albumButton {
+    width: 16rem;
+  }
+}
+
+/*  IN ORDE BIJNA  */
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  /*    HEADER    */
+  .search-input {
+    width: 100%;
+  }
+  .header-accountbutton {
+    grid-area: 0/01/3/4;
+    width: 4rem;
+    height: 4rem;
+  }
+  .search-form {
+    width: 17rem;
+  }
+  .search-input {
+    margin-left: 5%;
+  }
+  .search-button2 {
+    width: 4rem;
+    height: 3rem;
+  }
+
+  /*  MAIN  */
+
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+/*  IN ORDE   */
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  /*   HEADER   */
+
+  .header-menuButton {
+    grid-area: 0/1/0/1;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+  }
+  .header-homeButton {
+    grid-area: 0/1/1/2;
+    width: 3rem;
+    height: 3rem;
+  }
+  .search-form {
+    grid-area: 0/1/2/3;
+    width: 10rem;
+  }
+  .search-input {
+    width: 100%;
+  }
+  .header-accountbutton {
+    grid-area: 0/01/3/4;
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo {
+    grid-area: 0/1/4/5;
+    margin-right: 2rem;
+  }
+  .search-button2 {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /*   MAIN   */
+  .mainHomePage {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+  ::placeholder {
+    opacity: 100%;
+  }
+}
+
+/*  NAKIJKEN  */
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .body-home {
+    height: 100%;
+  }
+  .button-mobile {
+    height: 100%;
+    width: 100%;
+  }
+  /*  HEADER  */
+  .search-form {
+    display: none;
+  }
+  .header-search-button {
+    display: contents;
+  }
+  .search-button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+
+  /*  MAIN  */
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+  .aanbeveling {
+    width: 95%;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+  /*
+    MUZIEK PLAYER
+*/
+
+  .musicplayer {
+    height: 5rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+    margin-left: 3rem;
+  }
+  .music-middle-title {
     grid-area: title;
     width: 100%;
     text-align: center;
     align-content: center;
+    display: none;
+  }
+  .music-middle-player {
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    border-radius: 2.5rem;
+  }
+  .music-right {
+    border: #df1b1b solid 0.2rem;
+    width: 1rem;
+  }
+  .player-buttons {
+    height: 3rem;
+    width: 3rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
-.music-middle-player {
-    background-color: #f8f3f3;
+
+/*  IN ORDE  */
+@media screen and (min-width: 450px) and (max-width: 550px) {
+  .body-home {
+    height: 100%;
+  }
+  .button-mobile {
+    height: 100%;
+    width: 100%;
+  }
+  /*  HEADER  */
+  .search-form {
+    display: none;
+  }
+  .header-menuButton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-homeButton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-search-button {
+    display: contents;
+    margin-right: 3rem;
+  }
+  .header-accountbutton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .search-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+  }
+
+  /*  MAIN  */
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+  .aanbeveling {
+    width: 95%;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 5rem;
+    height: 5rem;
+  }
+  /*
+    MUZIEK PLAYER
+*/
+
+  .musicplayer {
+    height: 4rem;
+    border-radius: 3rem;
+    align-content: center;
+    justify-content: center;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 3rem;
+    height: 3rem;
+    grid-area: logo;
+    margin-left: 1rem;
+  }
+  .music-middle-title {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: none;
+  }
+  .music-middle-player {
+    width: 13rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: player;
+  }
+  .title-artist {
+    font-size: 1.5rem;
+  }
+  .music-logo {
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+    border-radius: 2.5rem;
+  }
+  .player-buttons {
+    height: 2rem;
+    width: 2rem;
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
+}
+/*  IN ORDE  */
+@media screen and (min-width: 375px) and (max-width: 450px) {
+  .body-home {
+    height: 100%;
+  }
+  .button-mobile {
+    height: 100%;
+    width: 100%;
+  }
+  /*  HEADER  */
+  .search-form {
+    display: none;
+  }
+  .header-menuButton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-homeButton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-search-button {
+    display: contents;
+    margin-right: 3rem;
+  }
+  .header-accountbutton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header-logo {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .search-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+  }
+
+  /*  MAIN  */
+  .main-item1 {
+    order: 2;
+    height: 100%;
+  }
+  .main-item2 {
+    order: 1;
+  }
+  .aanbeveling {
+    width: 95%;
+  }
+  .aanbeveling-center {
+    margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 4rem;
+    height: 4rem;
+  }
+  /*
+    MUZIEK PLAYER
+*/
+
+  .musicplayer {
+    height: 4rem;
+    border-radius: 2rem;
+  }
+  .player-container {
+    display: grid;
+    grid-template-areas: "logo player player";
+    gap: 1rem;
+  }
+  .music-left-logo {
+    width: 3rem;
+    height: 3rem;
+    grid-area: logo;
+    margin-left: 1rem;
+  }
+  .music-middle-title {
+    display: none;
+  }
+  .music-middle-player {
     width: 10rem;
     height: 3rem;
     display: flex;
@@ -307,504 +818,18 @@ h1 {
     align-items: center;
     justify-content: space-around;
     grid-area: player;
-}
-.title-artist {
-    font-size: 1.5rem;
-}
-.music-logo {
+  }
+  .music-logo {
     width: 3rem;
     height: 3rem;
     align-self: center;
-    border-radius: 3rem;
-}
-.music-right {
-    border: #df1b1b solid 0.2rem;
-    width: 1rem;
-}
-.player-buttons {
+    border-radius: 2.5rem;
+  }
+  .player-buttons {
     height: 2rem;
     width: 2rem;
-}
-.player-logo {
-    border-radius: 2.5rem;
-}
-
-/*  MEDIA GEDEELTE    */
-
-@media screen and (min-width: 900px) and (max-width: 1000px) {
-    /*  HEADER  */
-    .search-input {
-        width: 100%;
-    }
-    .header-accountbutton {
-        grid-area: 0/01/3/4;
-        width: 4rem;
-        height: 4rem;
-    }
-    .search-form {
-        width: 17rem;
-    }
-    .search-input {
-        margin-left: 5%;
-    }
-    .search-button2 {
-        width: 4rem;
-        height: 3rem;
-    }
-    .album-cover {
-        width: 6rem;
-        height: 6rem;
-    }
-    .aanbeveling {
-        width: 95%;
-    }
-}
-
-@media screen and (min-width: 800px) and (max-width: 900px) {
-    /*  HEADER  */
-    .search-input {
-        width: 100%;
-    }
-    .header-accountbutton {
-        grid-area: 0/01/3/4;
-        width: 4rem;
-        height: 4rem;
-    }
-    .search-form {
-        width: 17rem;
-    }
-    .search-input {
-        margin-left: 5%;
-    }
-    .search-button2 {
-        width: 4rem;
-        height: 3rem;
-    }
-    .album-cover {
-        width: 5rem;
-        height: 5rem;
-    }
-    .aanbeveling {
-        width: 95%;
-    }
-    .aanbeveling-artiest {
-        width: 9rem;
-    }
-    .aanbeveling-title {
-        width: 9rem;
-    }
-    .albumButton {
-        width: 16rem;
-    }
-}
-
-/*  IN ORDE BIJNA  */
-@media screen and (min-width: 700px) and (max-width: 800px) {
-    /*    HEADER    */
-    .search-input {
-        width: 100%;
-    }
-    .header-accountbutton {
-        grid-area: 0/01/3/4;
-        width: 4rem;
-        height: 4rem;
-    }
-    .search-form {
-        width: 17rem;
-    }
-    .search-input {
-        margin-left: 5%;
-    }
-    .search-button2 {
-        width: 4rem;
-        height: 3rem;
-    }
-
-    /*  MAIN  */
-
-    .main-item1 {
-        order: 2;
-        height: 100%;
-    }
-    .main-item2 {
-        order: 1;
-    }
-    .album-cover {
-        width: 6rem;
-        height: 6rem;
-    }
-}
-/*  IN ORDE   */
-@media screen and (min-width: 600px) and (max-width: 700px) {
-    /*   HEADER   */
-
-    .header-menuButton {
-        grid-area: 0/1/0/1;
-        width: 3rem;
-        height: 3rem;
-        justify-content: center;
-    }
-    .header-homeButton {
-        grid-area: 0/1/1/2;
-        width: 3rem;
-        height: 3rem;
-    }
-    .search-form {
-        grid-area: 0/1/2/3;
-        width: 10rem;
-    }
-    .search-input {
-        width: 100%;
-    }
-    .header-accountbutton {
-        grid-area: 0/01/3/4;
-        width: 3rem;
-        height: 3rem;
-    }
-    .header-logo {
-        grid-area: 0/1/4/5;
-        margin-right: 2rem;
-    }
-    .search-button2 {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    /*   MAIN   */
-    .mainHomePage {
-        display: flex;
-        flex-direction: column;
-    }
-    .main-item1 {
-        order: 2;
-        height: 100%;
-    }
-    .main-item2 {
-        order: 1;
-    }
-    .aanbeveling-center {
-        margin-bottom: 2rem;
-    }
-    .album-cover {
-        width: 6rem;
-        height: 6rem;
-    }
-    ::placeholder {
-        opacity: 100%;
-    }
-}
-
-/*  NAKIJKEN  */
-@media screen and (min-width: 550px) and (max-width: 600px) {
-    .body-home {
-        height: 100%;
-    }
-    .button-mobile {
-        height: 100%;
-        width: 100%;
-    }
-    /*  HEADER  */
-    .search-form {
-        display: none;
-    }
-    .header-search-button {
-        display: contents;
-    }
-    .search-button {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 2rem;
-    }
-
-    /*  MAIN  */
-    .main-item1 {
-        order: 2;
-        height: 100%;
-    }
-    .main-item2 {
-        order: 1;
-    }
-    .aanbeveling {
-        width: 95%;
-    }
-    .aanbeveling-center {
-        margin-bottom: 2rem;
-    }
-    .album-cover {
-        width: 6rem;
-        height: 6rem;
-    }
-    /*
-    MUZIEK PLAYER
-*/
-
-    .musicplayer {
-        height: 5rem;
-        border-radius: 3rem;
-        align-content: center;
-        justify-content: center;
-    }
-    .player-container {
-        display: grid;
-        grid-template-areas: "logo player player";
-        gap: 1rem;
-    }
-    .music-left-logo {
-        width: 4rem;
-        height: 4rem;
-        grid-area: logo;
-        margin-left: 3rem;
-    }
-    .music-middle-title {
-        grid-area: title;
-        width: 100%;
-        text-align: center;
-        align-content: center;
-        display: none;
-    }
-    .music-middle-player {
-        width: 18rem;
-        height: 4rem;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        border-radius: 2.5rem;
-        align-items: center;
-        justify-content: space-around;
-        grid-area: player;
-    }
-    .title-artist {
-        font-size: 1.5rem;
-    }
-    .music-logo {
-        width: 4rem;
-        height: 4rem;
-        align-self: center;
-        border-radius: 2.5rem;
-    }
-    .music-right {
-        border: #df1b1b solid 0.2rem;
-        width: 1rem;
-    }
-    .player-buttons {
-        height: 3rem;
-        width: 3rem;
-    }
-    .player-logo {
-        border-radius: 2rem;
-    }
-}
-
-/*  IN ORDE  */
-@media screen and (min-width: 450px) and (max-width: 550px) {
-    .body-home {
-        height: 100%;
-    }
-    .button-mobile {
-        height: 100%;
-        width: 100%;
-    }
-    /*  HEADER  */
-    .search-form {
-        display: none;
-    }
-    .header-menuButton {
-        width: 3rem;
-        height: 3rem;
-    }
-    .header-homeButton {
-        width: 3rem;
-        height: 3rem;
-    }
-    .header-search-button {
-        display: contents;
-        margin-right: 3rem;
-    }
-    .header-accountbutton {
-        width: 3rem;
-        height: 3rem;
-    }
-    .search-button {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 1.5rem;
-    }
-
-    /*  MAIN  */
-    .main-item1 {
-        order: 2;
-        height: 100%;
-    }
-    .main-item2 {
-        order: 1;
-    }
-    .aanbeveling {
-        width: 95%;
-    }
-    .aanbeveling-center {
-        margin-bottom: 2rem;
-    }
-    .album-cover {
-        width: 5rem;
-        height: 5rem;
-    }
-    /*
-    MUZIEK PLAYER
-*/
-
-    .musicplayer {
-        height: 4rem;
-        border-radius: 3rem;
-        align-content: center;
-        justify-content: center;
-    }
-    .player-container {
-        display: grid;
-        grid-template-areas: "logo player player";
-        gap: 1rem;
-    }
-    .music-left-logo {
-        width: 3rem;
-        height: 3rem;
-        grid-area: logo;
-        margin-left: 1rem;
-    }
-    .music-middle-title {
-        grid-area: title;
-        width: 100%;
-        text-align: center;
-        align-content: center;
-        display: none;
-    }
-    .music-middle-player {
-        width: 13rem;
-        height: 3rem;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        border-radius: 2.5rem;
-        align-items: center;
-        justify-content: space-around;
-        grid-area: player;
-    }
-    .title-artist {
-        font-size: 1.5rem;
-    }
-    .music-logo {
-        width: 3rem;
-        height: 3rem;
-        align-self: center;
-        border-radius: 2.5rem;
-    }
-    .player-buttons {
-        height: 2rem;
-        width: 2rem;
-    }
-    .player-logo {
-        border-radius: 2rem;
-    }
-}
-/*  IN ORDE  */
-@media screen and (min-width: 375px) and (max-width: 450px) {
-    .body-home {
-        height: 100%;
-    }
-    .button-mobile {
-        height: 100%;
-        width: 100%;
-    }
-    /*  HEADER  */
-    .search-form {
-        display: none;
-    }
-    .header-menuButton {
-        width: 3rem;
-        height: 3rem;
-    }
-    .header-homeButton {
-        width: 3rem;
-        height: 3rem;
-    }
-    .header-search-button {
-        display: contents;
-        margin-right: 3rem;
-    }
-    .header-accountbutton {
-        width: 3rem;
-        height: 3rem;
-    }
-    .header-logo {
-        width: 4.5rem;
-        height: 4.5rem;
-    }
-    .search-button {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 1.5rem;
-    }
-
-    /*  MAIN  */
-    .main-item1 {
-        order: 2;
-        height: 100%;
-    }
-    .main-item2 {
-        order: 1;
-    }
-    .aanbeveling {
-        width: 95%;
-    }
-    .aanbeveling-center {
-        margin-bottom: 2rem;
-    }
-    .album-cover {
-        width: 4rem;
-        height: 4rem;
-    }
-    /*
-    MUZIEK PLAYER
-*/
-
-    .musicplayer {
-        height: 4rem;
-        border-radius: 2rem;
-    }
-    .player-container {
-        display: grid;
-        grid-template-areas: "logo player player";
-        gap: 1rem;
-    }
-    .music-left-logo {
-        width: 3rem;
-        height: 3rem;
-        grid-area: logo;
-        margin-left: 1rem;
-    }
-    .music-middle-title {
-        display: none;
-    }
-    .music-middle-player {
-        width: 10rem;
-        height: 3rem;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        border-radius: 2.5rem;
-        align-items: center;
-        justify-content: space-around;
-        grid-area: player;
-    }
-    .music-logo {
-        width: 3rem;
-        height: 3rem;
-        align-self: center;
-        border-radius: 2.5rem;
-    }
-    .player-buttons {
-        height: 2rem;
-        width: 2rem;
-    }
-    .player-logo {
-        border-radius: 2rem;
-    }
+  }
+  .player-logo {
+    border-radius: 2rem;
+  }
 }
