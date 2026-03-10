@@ -8,14 +8,6 @@ body {
 footer {
     text-align: center;
 }
-/* button:focus {
-  border: 3px solid black;
-  border-radius: 50%;
-}
-button:hover {
-  border: 3px solid black;
-  border-radius: 50%;
-} */
 /*
 HEADER CSS
 */
@@ -33,9 +25,15 @@ header {
     max-width: 1440px;
     margin: auto;
     display: grid;
-    grid-template-areas: "logo search  account menu ";
+    grid-template-areas: "logo buttons ";
     align-items: center;
     justify-content: space-between;
+}
+.header-buttons{
+    grid-area: buttons;
+    display: grid;
+    grid-template-areas: "search account menu ";
+    width: 20rem;
 }
 .header-menuButton {
     grid-area: menu;
@@ -45,6 +43,7 @@ header {
     gap: 3rem;
     width: 4rem;
     height: 4rem;
+    gap: 2rem;
 }
 .header-menuButton:focus {
     border: 3px solid black;
@@ -55,12 +54,12 @@ header {
     border-radius: 50%;
 }
 .header-search-button {
+    grid-area: search;
+
     /*   HIDDEN BUTTON VOOR MOBILE ALLEEN   */
-    display: none;
 }
 .header-accountbutton {
     grid-area: account;
-    align-content: end;
     width: 4rem;
     height: 4rem;
 }
@@ -104,7 +103,20 @@ header {
     height: 2rem;
 }
 .search-button {
-    background: #d9d9d9;
+    background-color: #d9d9d9;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    background-image: url("./assets/icons/iconmonstr-magnifier-lined.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.search-button:hover {
+    border: 3px solid black;
+}
+.search-button:focus {
+    border: 3px solid black;
 }
 .search-button2 {
     background: #d9d9d9;
@@ -190,7 +202,66 @@ body {
 }
 
 /* Aanbevelingen main*/
-
+.detailButton{
+  width: 3.5rem;
+  height: 2rem;
+  text-align: center;
+  border: 1px solid rgb(141, 7, 7);
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+.likeButtonEmtpy {
+  background-image: url("../assets/icons/leegHart.png");
+}
+.likeButtonFull {
+  background-image: url("../assets/icons/volHart.png");
+}
+.addPlaylistButton{
+  background-image: url("../assets/icons/plus-icon.png");
+}
+.playbutton:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.playbutton:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.infobutton:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.infobutton:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonFull:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonFull:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonEmtpy:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.likeButtonEmtpy:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.addPlaylistButton:hover{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+.addPlaylistButton:focus{
+  border: 3px solid black;
+  border-radius: 1rem;
+}
 .mainHomePage {
     margin: 2rem;
     display: flex;
@@ -199,71 +270,76 @@ body {
     flex-direction: column;
     gap: 2rem;
 }
-
 .aanbeveling {
-    width: 85%;
-    max-width: 70rem;
+    width: 100%;
     background-color: #dbd2d2;
     border-radius: 2rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
-.albumButton {
+.aanbevelingLiedje {
+    border: 1px solid black;
+    padding: 0.5rem;
     display: grid;
-    grid-template-areas: "logo tekst";
-    width: 22rem;
-    gap: 1rem;
+    max-width: 35rem;
+    grid-template-areas:
+        "albumicon likedivhome likedivhome"
+        "albumicon albuminfo albuminfo"
+        "albumicon albuminfo albuminfo";
 }
-.albumButton:hover {
-    border: 3px solid black;
-    border-radius: 5%;
+.likedivHome {
+    grid-area: likedivhome;
+    display: flex;
+    background-color: #959595;
+    height: 3rem;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.album-info {
+    grid-area: albuminfo;
+    width: 95%;
+}
+.albumIcon {
+    grid-area: albumicon;
+    gap: 1rem;
+    width: 10rem;
+    height: 10rem;
+    background-image: url("../assets/album-covers/AcDc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-h1 {
+.h1titel {
     margin-top: 1rem;
     color: #1a0303;
     font-size: 2rem;
     font-weight: bold;
 }
 .aanbeveling-artiest {
-    height: 50%;
-    width: 13rem;
+    padding: 0.5rem;
+    height: 40%;
+    width: 100%;
+    border: 1px solid black;
 }
 .aanbeveling-title {
-    height: 50%;
-    width: 13rem;
+    padding: 0.5rem;
+    height: 60%;
+    width: 100%;
+    border: 1px solid black;
 }
 .album-info {
     border: 1px solid black;
-    border-radius: 5%;
 }
-.aanbeveling-center {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.aanbeveling-row {
-    width: 90%;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-}
+/*
 
-.album-cover {
-    grid-area: logo;
-    width: 8rem;
-    height: 7.5rem;
-    border-radius: 5%;
-}
+*/
 
 /*
     MUZIEK PLAYER
@@ -271,7 +347,7 @@ h1 {
 
 .musicplayer {
     background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%) no-repeat;
-    width: 90%;
+    width: 100%;
     max-width: 1440px;
     background-color: rgb(230, 241, 241);
     height: 4rem;
