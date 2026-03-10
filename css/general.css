@@ -201,7 +201,7 @@ body {
 .aanbeveling {
   width: 85%;
   max-width: 70rem;
-  background-color: #9a8f8f;
+  background-color: #dbd2d2;
   border-radius: 2rem;
   text-align: center;
   display: flex;
@@ -211,7 +211,8 @@ body {
 .albumButton {
   display: grid;
   grid-template-areas: "logo tekst";
-  width: 21rem;
+  width: 22rem;
+  gap: 1rem;
 }
 .albumButton:hover {
   border: 3px solid black;
@@ -220,7 +221,7 @@ body {
 
 h1 {
   margin-top: 1rem;
-  color: #d9d9d9;
+  color: #1a0303;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -269,7 +270,7 @@ h1 {
 .musicplayer {
   background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%)
     no-repeat;
-  width: 100%;
+  width: 90%;
   max-width: 1440px;
   background-color: rgb(230, 241, 241);
   height: 4rem;
@@ -653,7 +654,7 @@ h1 {
 */
 
   .musicplayer {
-    height: 5rem;
+    height: 4rem;
     border-radius: 3rem;
     align-content: center;
     justify-content: center;
@@ -664,8 +665,8 @@ h1 {
     gap: 1rem;
   }
   .music-left-logo {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     grid-area: logo;
     margin-left: 1rem;
   }
@@ -677,8 +678,8 @@ h1 {
     display: none;
   }
   .music-middle-player {
-    width: 18rem;
-    height: 4rem;
+    width: 13rem;
+    height: 3rem;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -691,14 +692,14 @@ h1 {
     font-size: 1.5rem;
   }
   .music-logo {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     align-self: center;
     border-radius: 2.5rem;
   }
   .player-buttons {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
   }
   .player-logo {
     border-radius: 2rem;
