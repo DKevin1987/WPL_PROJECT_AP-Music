@@ -9,7 +9,6 @@
     <meta name="author 3" content="Kyaro Van Goethem">
     <title>AP-Music</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/account.css">
     <script type="module" src="./js/generalJava.js"></script>
@@ -25,24 +24,21 @@
                         src="./assets/icons/iconmonstr-menu-lined.svg" alt="">
                 </button>
             </div>
-            <div class="header-search-button">
-                <button class="search-button">
-                    <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
-                </button>
-            </div>
-            <form class="search-form" action="">
+            <form class="search-form" action="./searchpage.html">
                 <input class="search-input" type="text" placeholder="Nummer zoeken?" value="" />
                 <button class="search-button2 ">
-                    <i class="bi bi-search"></i>
+                    </a><img class="icon-header" src="./assets/icons/iconmonstr-magnifier-lined-240.png" alt="">
                 </button>
+
             </form>
+
             <div class="header-accountbutton">
-                <a href="./accountpage.html" class="background-icons"><img class="icon-header" id="moodIcon"
+                <a href="./accountpage.html" class="background-icons"><img id="moodIcon" class="icon-header"
                         src="./assets/icons/moods/smile.png" alt=""></a>
             </div>
-            <button class="header-logo">
-                <a href="homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header"></a>
-            </button>
+            <div class="header-logo">
+                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header"></a>
+            </div>
         </div>
     </header>
     <div id="dropdownMenu" class="menu hidden ">
@@ -79,7 +75,7 @@
                     <p>E-mail: random@gmail.com</p>
                 </div>
                 <div id="icoon-settings" class="hidden">
-                    <p>Gebruikers icoon aanpassen:</p>
+                    <p>Gebruikers icoon aanpassen</p>
                     <button class="user-keuze" id="userIcoonStandaard"></button>
                     <button class="user-keuze" id="userIcoon1"></button>
                     <button class="user-keuze" id="userIcoon2"></button>
@@ -90,7 +86,7 @@
                     <p>Wachtwoord: ***********</p>
                 </div>
                 <div id="mood-settings" class="hidden">
-                    <p>Mood aanpassen:</p>
+                    <p>Mood aanpassen</p>
                     <button class="mood-keuze" id="moodIcoonStandaard"></button>
                     <button class="mood-keuze" id="moodIcoonHappy"></button>
                     <button class="mood-keuze" id="moodIcoonSad"></button>

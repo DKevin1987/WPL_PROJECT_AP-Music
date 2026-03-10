@@ -104,26 +104,6 @@ header {
   height: 2rem;
 }
 
-.bi::before,
-[class*=" bi-"]::before,
-[class^="bi-"]::before {
-  /* display: inline-block; */
-  font-family: bootstrap-icons !important;
-  font-style: normal;
-  font-weight: 400 !important;
-  font-variant: normal;
-  text-transform: none;
-  /* line-height: 1;
-  vertical-align: -0.125em; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 2rem;
-}
-
-.bi-search:before {
-  align-self: center;
-}
-
 .search-button {
   background: #d9d9d9;
 }
