@@ -13,31 +13,34 @@
     <script type="module" defer src="./js/generalJava.js"></script>
 </head>
 
-    <body class="body-home">
-        <header>
-            <div class="header-inner">
-                <div class="header-logo">
-                    <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header" /></a>
+<body class="body-home">
+    <header>
+        <div class="header-inner">
+            <div class="header-logo">
+                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header" /></a>
+            </div>
+            <form class="header-search search-form hidden" action="">
+                <input class="search-input" type="search" placeholder="Nummer zoeken?" value="" />
+                <button class="search-button2">OK</button>
+            </form>
+            <div class="header-buttons">
+                <div class="header-search-button">
+                    <button class="search-button">
+                        <img src="./assets/icons/iconmonstr-magnifier-lined-240.png" class="icon-header" />
+                    </button>
                 </div>
-                <div class="header-buttons">
-                    <div class="header-search-button">
-                        <button class="search-button">
-                            <a href="./searchpage.html"><img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header" /></a>
-                        </button>
-                    </div>
-                    <div class="header-accountbutton">
-                        <a href="./accountpage.html" class="background-icons"
-                            ><img class="icon-header" src="./assets/icons/iconmonstr-weather-58.svg" alt=""
-                        /></a>
-                    </div>
-                    <div class="header-menuButton">
-                        <button id="menu-button" class="background-icons">
-                            <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
-                        </button>
-                    </div>
+                <div class="header-accountbutton">
+                    <a href="./accountpage.html" class="background-icons"><img class="icon-header" id="moodIcon"
+                            src="./assets/icons/moods/smile.png" alt="" /></a>
+                </div>
+                <div class="header-menuButton">
+                    <button id="menu-button" class="background-icons">
+                        <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
+                    </button>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
     <!-- START MAIN  -->
 
@@ -69,7 +72,7 @@
                     </div>
                     <div class="play-logo">
                         <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons/play-icon.png" alt="" />
+                            <img class="player-logo" src="./assets/icons//playIcon.png" alt="" />
                         </button>
                     </div>
                     <div class="next-logo">
@@ -83,7 +86,7 @@
 
         <!-- EINDE MUSIC-PLAYER     HEADER EN SPELER COPY NAAR ANDERE PAGINA'S ALS IEDEREEN DEZE GOED VIND.  -->
 
-            <!-- START GAME  -->
+        <!-- START GAME  -->
 
         <!-- EINDE GAME  -->
     </main>
