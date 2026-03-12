@@ -886,6 +886,12 @@ header {
   .body-home {
     height: 100%;
   }
+
+  .icon-header {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .button-mobile {
     height: 100%;
     width: 100%;
