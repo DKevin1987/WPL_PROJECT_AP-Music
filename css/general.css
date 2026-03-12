@@ -162,7 +162,6 @@ header {
 /*
 /* header dropdown 
 */
-
 .menu {
   align-items: center;
   position: absolute;
@@ -264,6 +263,7 @@ header {
     max-width: 1440px;
     margin: 2rem;
     display: flex;
+    justify-self: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
