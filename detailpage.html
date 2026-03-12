@@ -1,176 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author 1" content="Dom Kevin" />
+        <meta name="author 2" content="Opong Nana" />
+        <meta name="author 3" content="Kyaro Van Goethem" />
+        <title>AP-Music</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/general.css" />
+        <link rel="stylesheet" href="./css/detail.css" />
+        <link rel="stylesheet" href="./css/like-playlist-notification.css" />
+        <script type="module" defer src="./js/generalJava.js"></script>
+        <script type="module" src="./js/like-playlistJava.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author 1" content="Dom Kevin">
-    <meta name="author 2" content="Opong Nana" />
-    <meta name="author 3" content="Kyaro Van Goethem">
-    <title>AP-Music</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/detail.css">
-    <link rel="stylesheet" href="./css/like-playlist-notification.css">
-    <script type="module" defer src="./js/generalJava.js"></script>
-    <script type="module" src="./js/like-playlistJava.js"></script>
-</head>
-
-<body class="body-home">
-    <header>
-        <div class="header-inner">
-            <div class="header-menuButton">
-                <button id="menu-button" class="background-icons"><img class="icon-header"
-                        src="./assets/icons/iconmonstr-menu-lined.svg" alt="">
-                </button>
-            </div>
-            <form class="search-form" action="./searchpage.html">
-                <input class="search-input" type="text" placeholder="Nummer zoeken?" value="" />
-                <button class="search-button2 ">
-                    </a><img class="icon-header" src="./assets/icons/iconmonstr-magnifier-lined-240.png" alt="">
-                </button>
-
-            </form>
-
-            <div class="header-accountbutton">
-                <a href="./accountpage.html" class="background-icons"><img id="moodIcon" class="icon-header"
-                        src="./assets/icons/moods/smile.png" alt=""></a>
-            </div>
-            <div class="header-logo">
-                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header"></a>
-            </div>
-        </div>
-    </header>
-
-    <!-- START MAIN + START DROPDOWN  -->
-    <main class="main-detail">
-        <div id="dropdownMenu" class="menu hidden ">
-            <a href="./accountpage.html" class="background-dropdown">Account</a>
-            <a class="background-dropdown">Favorieten</a>
-            <a class="background-dropdown">Muziek Spel</a>
-            <a class="background-dropdown">Geschiedenis</a>
-            <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
-            <a href="./accountpage.html" class="background-dropdown">Mood</a>
-            <a class="background-dropdown" href="">UITLOGGEN</a>
-        </div>
-
-        <!-- EINDE DROPDOWN  -->
-
-        <section class="main-item1">
-            <div id="albumlogoAndButtons">
-                <div id="albumlogo"></div>
-                <div id="likediv">
-                    <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
-                    <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
-                    <button class="detailButton addPlaylistButton playlistButton" id=""></button>
+    <body class="body-home">
+        <header>
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header" /></a>
                 </div>
-            </div>
-            <div id="details">
-                <ul id="detailUl">
-                    <li class="detailLi">
-                        <p>ARTIEST</p>
-                    </li>
-                    <li class="detailLi">ALBUM</li>
-                    <li class="detailLi">TITEL</li>
-                    <li class="detailLi">Afspeeltijd</li>
-                    <li class="detailLi">instrumental</li>
-                    <li class="detailLi">Energie</li>
-                    <li class="detailLi">tempo</li>
-                    <li class="detailLi">dansbaar</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- START MUSICPLAYER  -->
-
-        <section class="musicplayer main-item2">
-            <div class="player-container">
-                <div class="music-left-logo">
-                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
-                </div>
-                <div class="music-middle-title">
-                    <h3 class="title-artist">ARTIEST</h3>
-                    <p>TITEL</p>
-                </div>
-                <div class="music-middle-player">
-                    <div class="previous-logo">
-                        <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="">
+                <div class="header-buttons">
+                    <div class="header-search-button">
+                        <button class="search-button">
+                            <a href="./searchpage.html"><img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header" /></a>
                         </button>
                     </div>
-                    <div class="play-logo">
-                        <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons/play-icon.png" alt="">
-                        </button>
+                    <div class="header-accountbutton">
+                        <a href="./accountpage.html" class="background-icons"
+                            ><img class="icon-header" src="./assets/icons/iconmonstr-weather-58.svg" alt=""
+                        /></a>
                     </div>
-                    <div class="next-logo">
-                        <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="">
+                    <div class="header-menuButton">
+                        <button id="menu-button" class="background-icons">
+                            <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
                         </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- EINDE MUSIC-PLAYER  -->
-
-
-        <!-- START LIKE MELDING  -->
-        <section class="likeSectionMelding">
-            <div class="notification likeAddMelding hidden">
-                <h2>Wil je deze toevoegen aan favorieten?</h2>
-                <div>
-                    <button class="notificationButton buttonYes">JA</button>
-                    <button class="notificationButton buttonNo">NEE</button>
-                </div>
-            </div>
-            <div class="notification likeDeleteMelding hidden">
-                <h2>Wil je deze verwijderen aan favorieten?</h2>
-                <div>
-                    <button class="notificationButton buttonYes">JA</button>
-                    <button class="notificationButton buttonNo">NEE</button>
-                </div>
-            </div>
-            <div class="notification likeToegevoegdBevestiging hidden">
-                <h2>U hebt deze toegevoegd aan favorieten.</h2>
-                <div>
-                    <button class="likeMeldingButton">OK</button>
-                </div>
-            </div>
-            <div class="notification likeDeleteBevestiging hidden">
-                <h2>U hebt deze verwijderd uit favorieten.</h2>
-                <div>
-                    <button class="likeMeldingButton">OK</button>
-                </div>
-            </div>
-        </section>
-        <!-- EINDE LIKE MELDING  -->
-
-        <section class="addPlaylistSection">
-
-            <div class="addToPlaylistMelding notification hidden">
-                <h2>Aan welke playlist wil je deze toevoegen?</h2>
-                <div class="playlistadder">
-                    <p>PLAYLIST-NAAM</p>
-                    <button class="notificationButton buttonYes">JA</button>
-                </div>
-                <div>
-                    <button class="notificationButton buttonNo">NEE</button>
-                </div>
+        <!-- START MAIN + START DROPDOWN  -->
+        <main class="main-detail">
+            <div id="dropdownMenu" class="menu hidden">
+                <a href="./accountpage.html" class="background-dropdown">Account</a>
+                <a class="background-dropdown">Favorieten</a>
+                <a class="background-dropdown">Muziek Spel</a>
+                <a class="background-dropdown">Geschiedenis</a>
+                <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
+                <a href="./accountpage.html" class="background-dropdown">Mood</a>
+                <a class="background-dropdown" href="">UITLOGGEN</a>
             </div>
 
-            <div class="addPlaylistBevestiging notification hidden">
-                <h2>U hebt deze toegevoegd aan de playlist.</h2>
-                <div>
-                    <button class="likeMeldingButton">OK</button>
+            <!-- EINDE DROPDOWN  -->
+
+            <section class="main-item1">
+                <div id="albumlogoAndButtons">
+                    <div id="albumlogo"></div>
+                    <div class="likediv">
+                        <button class="likeButton detailButton likeButtonEmtpy" id=""></button>
+                        <button class="likeButton detailButton likeButtonFull hidden" id=""></button>
+                        <button class="detailButton addPlaylistButton playlistButton" id=""></button>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div id="details">
+                    <ul id="detailUl">
+                        <li class="detailLi"><p>ARTIEST</p></li>
+                        <li class="detailLi">ALBUM</li>
+                        <li class="detailLi">TITEL</li>
+                        <li class="detailLi">Afspeeltijd</li>
+                        <li class="detailLi">instrumental</li>
+                        <li class="detailLi">Energie</li>
+                        <li class="detailLi">tempo</li>
+                        <li class="detailLi">dansbaar</li>
+                    </ul>
+                </div>
+            </section>
 
-    </main>
-    <footer>
-        <p>&copy;AP-Music</p>
-    </footer>
-</body>
+            <!-- START MUSICPLAYER  -->
 
+            <section class="musicplayer main-item2">
+                <div class="player-container">
+                    <div class="music-left-logo">
+                        <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="" />
+                    </div>
+                    <div class="music-middle-title">
+                        <h3 class="title-artist">ARTIEST</h3>
+                        <p>TITEL</p>
+                    </div>
+                    <div class="music-middle-player">
+                        <div class="previous-logo">
+                            <button class="player-buttons">
+                                <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="play-logo">
+                            <button class="player-buttons">
+                                <img class="player-logo" src="./assets/icons/play-icon.png" alt="" />
+                            </button>
+                        </div>
+                        <div class="next-logo">
+                            <button class="player-buttons">
+                                <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EINDE MUSIC-PLAYER  -->
+
+            <!-- START LIKE MELDING  -->
+            <section class="likeSectionMelding">
+                <div class="notification likeAddMelding hidden">
+                    <h2>Wil je deze toevoegen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteMelding hidden">
+                    <h2>Wil je deze verwijderen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeToegevoegdBevestiging hidden">
+                    <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteBevestiging hidden">
+                    <h2>U hebt deze verwijderd uit favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+            </section>
+            <!-- EINDE LIKE MELDING  -->
+
+            <section class="addPlaylistSection">
+                <div class="addToPlaylistMelding notification hidden">
+                    <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                    <div class="playlistadder">
+                        <p>PLAYLIST-NAAM</p>
+                        <button class="notificationButton buttonYes">JA</button>
+                    </div>
+                    <div>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+
+                <div class="addPlaylistBevestiging notification hidden">
+                    <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy;AP-Music</p>
+        </footer>
+    </body>
 </html>
