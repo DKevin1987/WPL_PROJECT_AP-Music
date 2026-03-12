@@ -9,7 +9,10 @@
     <title>AP-Music</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
-<link rel="stylesheet" href="./css/vergelijking_pagina.css">    
+    <link rel="stylesheet" href="./css/vergelijking_pagina.css"> 
+    <link rel="stylesheet" href="./css/like-playlist-notification.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <script type="module" src="./js/like-playlist-noyificaction-vergelijkings_pagina.js"></script>
 </head>
 <body>
 <header>
@@ -44,8 +47,8 @@
                     <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
                 </div>
                 <div class="music-middle-title">
-                    <h3 class="title-artist">ARTIEST</h3>
-                    <p>TITEL</p>
+                    <h3 class="title-artist">AC/DC</h3>
+                    <p>Thunderstruck</p>
                 </div>
                 <div class="music-middle-player">
                     <div class="previous-logo">
@@ -67,17 +70,71 @@
             </div>
     </section>
     <div class="vergelijking-grid">
+        
         <section class="vergelijking-card">
             <div class="vergelijking-art">
                 <img src="./assets/album-covers/metallica.jpeg" alt="Metallica">
             </div>
             <div class="vergelijking-text">
-                <h2>Title</h2>
-                <p>tekst</p>
-                <div class="stats-bar">stats</div>
-                <div class="stats-bar">stats</div>
-                <div class="stats-bar">stats</div>
+                <h2>Master of Puppets</h2>
+                <p>Metallica</p>
+                <div class="stats-bar">Jaar: 1986</div>
+                <div class="stats-bar">Genre: Thrash Metal</div>
+                <div class="stats-bar last">Duur: 8:36</div>
+                <div id="likediv">
+                    <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
+                    <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
+                    <button class="detailButton addPlaylistButton playlistButton " id=""></button>
+                </div>
             </div>
+            <section class="likeSectionMelding">
+                <div class="notification likeAddMelding hidden">
+                    <h2>Wil je deze toevoegen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteMelding hidden">
+                    <h2>Wil je deze verwijderen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeToegevoegdBevestiging hidden">
+                    <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteBevestiging hidden">
+                    <h2>U hebt deze verwijderd uit favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+            </section>
+            <section class="addPlaylistSection">
+
+            <div class="addToPlaylistMelding notification hidden">
+                <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                <div class="playlistadder">
+                    <p>PLAYLIST-NAAM</p>
+                    <button class="notificationButton buttonYes">JA</button>
+                </div>
+                <div>
+                    <button class="notificationButton buttonNo">NEE</button>
+                </div>
+            </div>
+
+            <div class="addPlaylistBevestiging notification hidden">
+                <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                <div>
+                    <button class="likeMeldingButton">OK</button>
+                </div>
+            </div>
+        </section>
         </section>
 
         <section class="vergelijking-card">
@@ -85,12 +142,65 @@
                 <img src="./assets/album-covers/Nirvana.png" alt="Nirvana">
             </div>
             <div class="vergelijking-text">
-                <h2>Title</h2>
-                <p>tekst</p>
-                <div class="stats-bar">stats</div>
-                <div class="stats-bar">stats</div>
-                <div class="stats-bar">stats</div>
+                <h2>Smells Like Teen Spirit</h2>
+                <p>Nirvana</p>
+                <div class="stats-bar">Jaar: 1991</div>
+                <div class="stats-bar">Genre: Grunge</div>
+                <div class="stats-bar">Duur: 5:01</div>
+                <div id="likediv">
+                    <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
+                    <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
+                    <button class="detailButton addPlaylistButton playlistButton " id=""></button>
+                </div>
             </div>
+            <section class="likeSectionMelding">
+                <div class="notification likeAddMelding hidden">
+                    <h2>Wil je deze toevoegen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteMelding hidden">
+                    <h2>Wil je deze verwijderen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeToegevoegdBevestiging hidden">
+                    <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteBevestiging hidden">
+                    <h2>U hebt deze verwijderd uit favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+            </section>
+            <section class="addPlaylistSection">
+
+            <div class="addToPlaylistMelding notification hidden">
+                <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                <div class="playlistadder">
+                    <p>PLAYLIST-NAAM</p>
+                    <button class="notificationButton buttonYes">JA</button>
+                </div>
+                <div>
+                    <button class="notificationButton buttonNo">NEE</button>
+                </div>
+            </div>
+
+            <div class="addPlaylistBevestiging notification hidden">
+                <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                <div>
+                    <button class="likeMeldingButton">OK</button>
+                </div>
+            </div>
+        </section>
         </section>
     </div>
 </main>
