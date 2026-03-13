@@ -7,7 +7,7 @@ const inlogInputCheckEl = document.querySelector("#inlogInputCheck");
 
 // tijdelijke array's om JS te testen met 2 users erin.
 const userEmailArray = ["admin@ap-music.be", "test@ap-music.be"];
-const userPaswordArray = ["adminPasword", "TestPasword"];
+const userPaswordArray = ["adminPasword15", "TestPasword15"];
 
 // GEDEELTE VOOR INLOG-PAGINA
 const userEmailEl = inlogformEl.querySelector("#useremail");
