@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author 1" content="Dom Kevin">
-    <meta name="author 2" content="Yusufcan Yar">
+    <meta name="author 2" content="Opong Nana" />
     <meta name="author 3" content="Kyaro Van Goethem">
     <title>AP-Music</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
+    <script type="module" src="./js/generalJava.js"></script>
+
 </head>
+
 <body>
     <header>
         <div class="header-inner">
-            <div class="header-menuButton">
-                <button id="menu-button" class="background-icons"><img class="icon-header"
-                        src="./assets/icons/iconmonstr-menu-lined.svg" alt="">
-                </button>
-            </div>
-            <div class="header-search-button">
-                <button class="search-button">
-                    <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
-                </button>
-            </div>
-            <form class="search-form" action="">
-                <input class="search-input" type="text" placeholder="Nummer zoeken?" value="" />
-                <button class="search-button2 ">
-                    <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header">
-                </button>
-            </form>
-            <div class="header-accountbutton">
-                <a href="./accountpage.html" class="background-icons"><img class="icon-header"
-                        src="./assets/icons/iconmonstr-weather-58.svg" alt=""></a>
-            </div>
             <div class="header-logo">
-                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header"></a>
+                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header" /></a>
+            </div>
+            <form class="header-search search-form hidden" action="">
+                <input class="search-input" type="search" placeholder="Nummer zoeken?" value="" />
+                <button class="search-button2">OK</button>
+            </form>
+            <div class="header-buttons">
+                <div class="header-search-button">
+                    <button class="search-button">
+                        <img src="./assets/icons/iconmonstr-magnifier-lined-240.png" class="icon-header" />
+                    </button>
+                </div>
+                <div class="header-accountbutton">
+                    <a href="./accountpage.html" class="background-icons"><img class="icon-header" id="moodIcon"
+                            src="./assets/icons/moods/smile.png" alt="" /></a>
+                </div>
+                <div class="header-menuButton">
+                    <button id="menu-button" class="background-icons">
+                        <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
+                    </button>
+                </div>
             </div>
         </div>
     </header>
-
+    <div id="dropdownMenu" class="menu hidden">
+        <a href="./accountpage.html" class="background-dropdown">Account</a>
+        <a class="background-dropdown">Favorieten</a>
+        <a class="background-dropdown">Muziek Spel</a>
+        <a class="background-dropdown">Geschiedenis</a>
+        <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
+        <a href="./accountpage.html" class="background-dropdown">Mood</a>
+        <a class="background-dropdown" href="">UITLOGGEN</a>
+    </div>
     <main>
-        
+        <section class="musicplayer main-item2">
+            <div class="player-container">
+                <div class="music-left-logo">
+                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="" />
+                </div>
+                <div class="music-middle-title">
+                    <h3 class="title-artist">ARTIEST</h3>
+                    <p>TITEL</p>
+                </div>
+                <div class="music-middle-player">
+                    <div class="previous-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="" />
+                        </button>
+                    </div>
+                    <div class="play-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons//playIcon.png" alt="" />
+                        </button>
+                    </div>
+                    <div class="next-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
+
 </html>
