@@ -1,9 +1,11 @@
 .musicplayer {
   width: 90%;
-  margin: 2% auto;
+  margin: 1% auto;
 }
 
 .playlist-container {
+  position: relative;
+  z-index: 1;
   padding: 2%;
   margin: auto;
   width: 80vw;
@@ -16,8 +18,32 @@
   justify-content: center;
   overflow-y: scroll;
 }
-.playBtn {
-  z-index: 1;
+
+.playlist {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: solid black 2px;
+  border-radius: 5% 5% 0 0;
+  width: 8rem;
+  height: 11rem;
+}
+
+.playlist-buttons {
+  border-bottom: solid black 2px;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+  background-color: #f7f2f2;
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-icon {
+  margin: 6%;
+  height: 2rem;
+  width: 2rem;
 }
 
 .playlistBtn {
@@ -35,10 +61,9 @@
 }
 
 .playlistCover {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 5%;
-  z-index: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 5% 5% 0 0;
 }
 
 #addIcon {
@@ -46,18 +71,160 @@
   height: 5rem;
 }
 
+.music-playlist {
+  background: red;
+  z-index: 2;
+  padding: 2%;
+  margin: auto;
+  width: 80vw;
+  height: 60vh;
+  background-color: #f0dfdf;
+  display: flex;
+  gap: 3%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: scroll;
+}
+/* begin van de nummers in de playlisten */
+.resultaat {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10%;
+  background-color: rgb(165, 160, 160);
+  width: 79vw;
+  height: 6rem;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+.resultaat-cover {
+  margin: 0 5% 0 5%;
+  border-radius: 5%;
+}
+.resultaat-tekst {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+.like,
+.like-btn,
+.play,
+.play-btn {
+  width: 40px;
+  height: 40px;
+}
+
+.like-btn,
+.play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.Title {
+  font-weight: bold;
+  font-size: larger;
+}
+.returnArrow {
+  margin-left: 5%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 850px) {
-  .playlist-container {
+  .returnArrow {
+    margin-left: 5%;
+    height: 2rem;
+    width: 2rem;
+  }
+  .resultaat {
+    gap: 8%;
+  }
+  .resultaat-cover {
+    width: 80px;
+    height: 80px;
+  }
+
+  .like,
+  .like-btn,
+  .play,
+  .play-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .resultaat-tekst {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .like-btn:hover,
+  .like-btn:focus,
+  .play-btn:hover,
+  .play-btn:focus {
+    transform: none;
+  }
+
+  .playlist-container,
+  .music-playlist {
     height: 70vh;
   }
   .playlistCover,
   .playlistBtn {
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
   }
 
   #addIcon {
     width: 4rem;
     height: 4rem;
   }
+
+  .playlist {
+    width: 6rem;
+    height: 8.5rem;
+    justify-content: flex-end;
+  }
+
+  .playlist-buttons {
+    width: 6rem;
+    height: 2.5rem;
+  }
+
+  .playlist-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .music-playlist {
+    top: 55%;
+    left: 50%;
+    width: 80vw;
+    height: 67vh;
+  }
 }
+/* @media (max-width: 450px) {
+  .music-playlist {
+    top: 58%;
+    left: 50%;
+    width: 80vw;
+    height: 71vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .music-playlist {
+    top: 60%;
+    left: 50%;
+    width: 80vw;
+    height: 71vh;
+  }
+} */
