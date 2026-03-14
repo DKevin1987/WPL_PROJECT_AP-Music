@@ -10,6 +10,8 @@
     <title>AP-Music</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/geuss_game.css">
+    <script type="module" src="./js/geuss_game.js" defer></script>
     <script type="module" defer src="./js/generalJava.js"></script>
 </head>
 
@@ -48,7 +50,7 @@
         <div id="dropdownMenu" class="menu hidden">
             <a href="./accountpage.html" class="background-dropdown">Account</a>
             <a class="background-dropdown">Favorieten</a>
-            <a class="background-dropdown">Muziek Spel</a>
+            <a href="./game.html" class="background-dropdown">Muziek Spel</a>
             <a class="background-dropdown">Geschiedenis</a>
             <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
             <a href="./accountpage.html" class="background-dropdown">Mood</a>
@@ -83,11 +85,46 @@
                 </div>
             </div>
         </section>
-
+</section>
         <!-- EINDE MUSIC-PLAYER     HEADER EN SPELER COPY NAAR ANDERE PAGINA'S ALS IEDEREEN DEZE GOED VIND.  -->
 
         <!-- START GAME  -->
+         <section class="guess-content">
+            <section class="guess-card">
+                <button id="reset-btn" class="reset-badge">Reset</button>
+                <div class="score-badge">
+                    Mood Score: <span id="current-score">0</span>
+                </div>
+                
+                <div class="player-visual">
+                    <div id="cover-container" class="unknown-art">?</div>
+                    
+                    <div class="audio-controls">
+                        <button id="play-btn" class="play-preview-btn">
+                            <img id="play-icon-img" src="./assets/icons/playIcon.png" alt="Play">
+                        </button>
+                        <p id="status-text">Klik op play voor een preview</p>
+                        <audio id="music-preview" src=""></audio>
+                    </div>
+                </div>
 
+                <div class="guess-form">
+                    <h2>Welk nummer hoor je?</h2>
+                    
+                    <div class="input-group">
+                        <input type="text" id="guess-input" list="song-options" placeholder="Typ titel of artiest...">
+                        <datalist id="song-options">
+                            <option value="AC/DC - Back In Black">
+                            <option value="Metallica - Enter Sandman">
+                            <option value="Nirvana - Smells Like Teen Spirit">
+                        </datalist>
+                    </div>
+
+                    <button id="submit-btn" class="submit-guess-btn">Raad nummer!</button>
+                </div>
+
+                <div id="feedback" class="feedback-area hidden"></div>
+            </section>
         <!-- EINDE GAME  -->
     </main>
     <footer>
