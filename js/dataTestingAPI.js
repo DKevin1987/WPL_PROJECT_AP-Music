@@ -29,6 +29,7 @@ const clientId = "1a54b485e6c148bba2fb5daf9df93e00";
 const clientSecret = "e0e791c69a534d56b02c5e1d01618a2d";
 let tokenAcces;
 let token;
+let refreshToken;
 let artiestData;
 let songData;
 let songFeatures;
@@ -54,32 +55,19 @@ let songId = [
 
 let songList = [];
 
-let song = {
-    id: null,
-    artiest: "",
-    titel: "",
-    duration: 0,
-    releasdate: "",
-    explicit: false,
-    popularity: 0,
-    images: {
-        images1: "",
-        images2: "",
-        images3: "",
-    },
-};
+let song = {};
 
 let artistId = "4Z8W4fKeB5YxbusRsdQVPb";
 const artiestDate = "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb";
 
 
 
-main();
+//main();
 
-/*
- *       TOKEN AANVRAAG VOOR OP API TE RAKEN
- */
 
+//                                            //
+////        API TOKEN AANVRAGEN DEZE WERKT  ////
+//                                            //
 async function getAccessToken() {
     const response = await fetch("https://accounts.spotify.com/api/token", {
         method: "POST",
@@ -87,21 +75,42 @@ async function getAccessToken() {
             "Content-Type": "application/x-www-form-urlencoded",
         },
         body: new URLSearchParams({
-            grant_type: "client_credentials",
+            grant_type: `client_credentials`,
             client_id: clientId,
             client_secret: clientSecret,
         }),
     });
 
     tokenAcces = await response.json();
+    console.log(tokenAcces);
 
-    //console.log(tokenAcces);
     token = tokenAcces.access_token;
     return token;
 }
+
+// deze is mss niet nodig voor ons gebruik
+async function getRefrefreshingToken() {
+    const response = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+            grant_type: "refresh_token",
+            refresh_token : token,
+            client_id: clientId,
+        }),
+    });
+
+    refreshToken = await response.json();
+    console.log(refreshToken);
+    //console.log(tokenAcces);
+    return refreshToken;
+}
+
 // FUNCTIE OM ARTIETS OP TE VRAGEN
 async function getArtistData(token) {
-    const url = `https://api.spotify.com/v1/artists/${artistId}`;
+    const url = `https://api.spotify.com/v1/artists/${artistId[songIndex]}`;
 
     try {
         const response = await fetch(url, {
@@ -112,18 +121,75 @@ async function getArtistData(token) {
             },
         });
 
-        if (!response.ok) {
-            throw new Error(`Foutmelding: ${response.status} ${response.statusText}`);
+        // teveel verzoeken
+        if (response.status === 429) {
+            const waitTime = response.headers.get('Retry-After');
+            console.log(`Wacht ${waitTime} seconden.`)
+            return null;
+        }
+        // token verlopen
+        else if (response.status === 401) {
+            const waitTime = response.headers.get('Retry-After');
+            console.error("Token is verlopen of ongeldig. Vernieuw je access token.");
+            return null;
+        }
+        // andere fouten
+        else if (!response.ok) {
+            console.error(`Foutmelding: ${response.status} ${response.statusText}`);
+            return null;
         }
 
+        // alleen als code 200 is lezen we json in.
         artiestData = await response.json();
         return artiestData;
     } catch (error) {
         console.error("Er is een probleem opgetreden bij het ophalen van de artiest:", error);
+        return null;
     }
 }
-// FUNCTIE OM LIEDJE OP TE VRAGEN WERKT
-async function getSongData(index) {
+
+// FUNCTIE OM 1 LIEDJE OP TE VRAGEN
+async function getSongData1(token) {
+    const url = `https://api.spotify.com/v1/tracks/${songId[songIndex]}`;
+
+    try {
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+
+        // teveel verzoeken
+        if (response.status === 429) {
+            const waitTime = response.headers.get('Retry-After');
+            console.log(`Wacht ${waitTime} seconden.`)
+            return null;
+        }
+        // token verlopen
+        else if (response.status === 401) {
+            const waitTime = response.headers.get('Retry-After');
+            console.error("Token is verlopen of ongeldig. Vernieuw je access token.");
+            return null;
+        }
+        // andere fouten
+        else if (!response.ok) {
+            console.error(`Foutmelding: ${response.status} ${response.statusText}`);
+            return null;
+        }
+        
+
+        artiestData = await response.json();
+        return artiestData;
+    } catch (error) {
+        console.error("Artiest inladen niet gelukt:\n", error);
+    }
+}
+
+
+// FUNCTIE OM 6 LIEDJES OP TE VRAGEN VOOR HOMEPAGE
+async function get6SongData(index) {
     const url = `https://api.spotify.com/v1/tracks/${songId[index]}`;
 
     try {
@@ -135,8 +201,16 @@ async function getSongData(index) {
             },
         });
 
-        if (!response.ok) {
-            throw new Error(`Foutmelding: ${response.status} ${response.statusText} ${response.headers}`);
+        if (response.status === 429) {
+            const waitTime = response.headers.get('Retry-After');
+            console.log(`Wacht ${waitTime} seconden.`)
+        }
+        else if (response.status === 401) {
+            const waitTime = response.headers.get('Retry-After');
+            throw new Error("Token is verlopen of ongeldig. Vernieuw je access token.");
+        }
+        else if (!response.ok) {
+            throw new Error(`Foutmelding: ${response.status} ${response.statusText}`);
         }
 
         songData = await response.json();
@@ -165,7 +239,7 @@ async function getSongData(index) {
         console.log(songData);
         return song;
     } catch (error) {
-        console.error("Er is een probleem opgetreden bij het ophalen van de liedje:", error);
+        console.error("Liedje inladen niet gelukt:\n", error);
     }
 }
 
@@ -199,13 +273,19 @@ function aanbevelingen(songList) {
 async function main() {
     try {
         token = await getAccessToken();
-        console.log(token);
+        console.log(`token:\n ${token}`);
 
+        song = await getArtistData(token);
+        console.log(song);
+
+
+        /* 
         for (let index = 0; index < 6; index++) {
             song = await getSongData(index);
             songList.push(song);
         }
-
+        console.log(songList);
+        */
 
         //getSongData(token).then((songData) => console.log(songData));
         //getArtistData(token).then((artiestData) => console.log(artiestData));
