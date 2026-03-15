@@ -16,3 +16,17 @@ goBack.addEventListener("click", () => {
   musicPlaylist.classList.add("hidden");
   goBack.classList.add("hidden");
 });
+
+const removePlaylist = document.querySelectorAll(".playlist-icon");
+removePlaylist.forEach((icon) => {
+  icon.addEventListener("click", (event) => {
+    event.target.closest(".playlist").classList.add("hidden");
+  });
+});
+
+const removeNumber = document.querySelectorAll(".remove-btn");
+removeNumber.forEach((icon) => {
+  icon.addEventListener("click", (event) => {
+    event.target.closest(".resultaat").classList.add("hidden");
+  });
+});

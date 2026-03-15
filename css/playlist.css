@@ -112,7 +112,9 @@
 .like,
 .like-btn,
 .play,
-.play-btn {
+.play-btn,
+.remove,
+.remove-btn {
   width: 40px;
   height: 40px;
 }
@@ -146,19 +148,21 @@
     width: 2rem;
   }
   .resultaat {
-    gap: 8%;
+    gap: 5%;
   }
   .resultaat-cover {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   .like,
   .like-btn,
   .play,
-  .play-btn {
-    width: 30px;
-    height: 30px;
+  .play-btn,
+  .remove,
+  .remove-btn {
+    width: 25px;
+    height: 25px;
   }
   .resultaat-tekst {
     display: flex;
@@ -211,20 +215,3 @@
     height: 67vh;
   }
 }
-/* @media (max-width: 450px) {
-  .music-playlist {
-    top: 58%;
-    left: 50%;
-    width: 80vw;
-    height: 71vh;
-  }
-}
-
-@media (max-width: 400px) {
-  .music-playlist {
-    top: 60%;
-    left: 50%;
-    width: 80vw;
-    height: 71vh;
-  }
-} */
