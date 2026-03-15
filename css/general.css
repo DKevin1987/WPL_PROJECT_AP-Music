@@ -21,6 +21,7 @@ header {
 }
 .header-inner {
   max-width: 1440px;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-areas: "logo search buttons ";
@@ -261,7 +262,8 @@ header {
 }
 .mainHomePage {
   max-width: 1440px;
-  margin: 2rem;
+  width: 90%;
+  margin-top: 2rem;
   display: flex;
   justify-self: center;
   align-items: center;
@@ -270,7 +272,7 @@ header {
   gap: 2rem;
 }
 .aanbeveling {
-  width: 90%;
+  width: 100%;
   margin: auto;
   background-color: #dbd2d2;
   border-radius: 2rem;
@@ -279,6 +281,9 @@ header {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 2rem;
+}
+.aanbeveling2{
+  padding-top: 1rem;
 }
 .aanbevelingLiedje {
   border: 1px solid black;
@@ -312,10 +317,12 @@ header {
   grid-area: albumicon;
   width: 6rem;
   height: 6rem;
+  /*
   background-image: url("../assets/album-covers/AcDc.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  */
 }
 
 .h1titel {
@@ -345,7 +352,7 @@ header {
 .musicplayer {
   background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%)
     no-repeat;
-  width: 90%;
+  width: 100%;
   max-width: 1440px;
   background-color: rgb(230, 241, 241);
   height: 4rem;
@@ -794,6 +801,10 @@ header {
   }
   .header-buttons {
     width: 15rem;
+  }
+  .icon-header{
+    width: 2rem;
+    height: 2rem;
   }
 
   /*  MAIN  */
