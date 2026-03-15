@@ -11,8 +11,9 @@
         <link rel="stylesheet" href="./css/general.css" />
         <link rel="stylesheet" href="./css/like-playlist-notification.css" />
         <script type="module" defer src="./js/generalJava.js"></script>
-        <script type="module" src="./js/like-playlistJava.js"></script>
         <script type="module" src="./js/lastFM_API.js"></script>
+        <!--    <script type="module" src="./js/like-playlistJava.js"></script> -->
+        <script type="module" src="./js/like-playlistJavaDinamisch.js"></script>
     </head>
     <body class="body-home">
         <header>
@@ -90,7 +91,65 @@
 
             <section class="aanbeveling main-item1">
                 <h1 class="h1titel">Aanbevelingen</h1>
-                <div class="aanbeveling2">
+                <div class="aanbeveling2"></div>
+            </section>
+
+            <!-- EINDE AANBEVELINGEN  -->
+
+            <section class="likeSectionMelding">
+                <div class="notification likeAddMelding hidden">
+                    <h2>Wil je deze toevoegen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteMelding hidden">
+                    <h2>Wil je deze verwijderen aan favorieten?</h2>
+                    <div>
+                        <button class="notificationButton buttonYes">JA</button>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+                <div class="notification likeToegevoegdBevestiging hidden">
+                    <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+                <div class="notification likeDeleteBevestiging hidden">
+                    <h2>U hebt deze verwijderd uit favorieten.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+            </section>
+            <!-- EINDE LIKE MELDING  -->
+
+            <section class="addPlaylistSection">
+                <div class="addToPlaylistMelding notification hidden">
+                    <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                    <div class="playlistadder">
+                        <p>PLAYLIST-NAAM</p>
+                        <button class="notificationButton buttonYes">JA</button>
+                    </div>
+                    <div>
+                        <button class="notificationButton buttonNo">NEE</button>
+                    </div>
+                </div>
+
+                <div class="addPlaylistBevestiging notification hidden">
+                    <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                    <div>
+                        <button class="likeMeldingButton">OK</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+
+<!--
                     <div class="aanbevelingLiedje">
                         <div class="albumIcon"></div>
                         <div class="likedivHome">
@@ -184,72 +243,5 @@
                             </p>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <!-- EINDE AANBEVELINGEN  -->
-
-            <section class="likeSectionMelding">
-                <div class="notification likeAddMelding hidden">
-                    <h2>Wil je deze toevoegen aan favorieten?</h2>
-                    <div>
-                        <button class="notificationButton buttonYes">JA</button>
-                        <button class="notificationButton buttonNo">NEE</button>
-                    </div>
-                </div>
-                <div class="notification likeDeleteMelding hidden">
-                    <h2>Wil je deze verwijderen aan favorieten?</h2>
-                    <div>
-                        <button class="notificationButton buttonYes">JA</button>
-                        <button class="notificationButton buttonNo">NEE</button>
-                    </div>
-                </div>
-                <div class="notification likeToegevoegdBevestiging hidden">
-                    <h2>U hebt deze toegevoegd aan favorieten.</h2>
-                    <div>
-                        <button class="likeMeldingButton">OK</button>
-                    </div>
-                </div>
-                <div class="notification likeDeleteBevestiging hidden">
-                    <h2>U hebt deze verwijderd uit favorieten.</h2>
-                    <div>
-                        <button class="likeMeldingButton">OK</button>
-                    </div>
-                </div>
-            </section>
-            <!-- EINDE LIKE MELDING  -->
-
-            <section class="addPlaylistSection">
-                <div class="addToPlaylistMelding notification hidden">
-                    <h2>Aan welke playlist wil je deze toevoegen?</h2>
-                    <div class="playlistadder">
-                        <p>PLAYLIST-NAAM</p>
-                        <button class="notificationButton buttonYes">JA</button>
-                    </div>
-                    <div>
-                        <button class="notificationButton buttonNo">NEE</button>
-                    </div>
-                </div>
-
-                <div class="addPlaylistBevestiging notification hidden">
-                    <h2>U hebt deze toegevoegd aan de playlist.</h2>
-                    <div>
-                        <button class="likeMeldingButton">OK</button>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy;AP-Music</p>
-        </footer>
-    </body>
-</html>
-
-<!--
-<form class="search-form hidden" action="">
-                    <input class="search-input" type="text" placeholder="Nummer zoeken?" value="" />
-                    <button class="search-button2">
-                        <img src="./assets/icons/iconmonstr-magnifier-lined.svg" class="icon-header" />
-                    </button>
-                </form>
 -->

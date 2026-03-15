@@ -1,3 +1,4 @@
+"use strict";
 /*
 Application name	AP-Music
 API key	a63dc03224789de65a8f82653e512529
@@ -49,7 +50,8 @@ async function getLastFmSession(token) {
         console.error("Netwerkfout:", e);
     }
 }
-
+//
+//  DEZE GEEFT 1 Track terug in array.
 async function get1TrackInfo() {
     //      /2.0/?method=track.getInfo&api_key=YOUR_API_KEY&artist=cher&track=believe&format=json
     const artiestName = "cher";
@@ -64,7 +66,8 @@ async function get1TrackInfo() {
         console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
     }
 }
-
+//
+//  DEZE GEEFT 1 Artiest terug in array.
 async function get1ArtiestInfo() {
     //      /2.0/?method=artist.getinfo&artist=Cher&api_key=YOUR_API_KEY&format=json
     const artiestName = "cher";
@@ -78,7 +81,8 @@ async function get1ArtiestInfo() {
         console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
     }
 }
-
+//
+//  DEZE GEEFT 1 album terug in array.
 async function get1AlbumInfo() {
     //     /2.0/?method=album.getinfo&api_key=YOUR_API_KEY&artist=Cher&album=Believe&format=json
     const artiestName = "cher";
@@ -97,8 +101,6 @@ async function get1AlbumInfo() {
 //  DEZE GEEFT 50 Top-Artiesten terug in array.
 async function getTopArtiest() {
     //      /2.0/?method=chart.gettopartists&api_key=YOUR_API_KEY&format=json
-    const artiestName = "cher";
-    const albumName = "Believe";
     try {
         const url = `${rootUrl}?method=chart.gettopartists&api_key=${apiKey}&format=json`;
         const response = await fetch(url);
@@ -110,19 +112,79 @@ async function getTopArtiest() {
     }
 }
 //
+//  DEZE GEEFT 50 Top-Tags terug in array.
+async function getTopTags() {
+    //       /2.0/?method=chart.gettoptags&api_key=YOUR_API_KEY&format=json
+    try {
+        const url = `${rootUrl}?method=chart.gettoptags&api_key=${apiKey}&format=json`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("Top Tracks data:", data.tags);
+        return data.tags;
+    } catch (error) {
+        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+    }
+}
+//
+//  DEZE GEEFT 50 Top-Artiests-By-Country terug in array.
+async function getTopArtiestByCountry() {
+    //       /2.0/?method=geo.gettopartists&country=spain&api_key=YOUR_API_KEY&format=json
+    const country = "belgium";
+    try {
+        const url = `${rootUrl}?method=geo.gettopartists&country=${country}&api_key=${apiKey}&format=json`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("Top Tracks data:", data.topartists);
+        return data.topartists;
+    } catch (error) {
+        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+    }
+}
+//
 //  DEZE GEEFT 50 Top-Artiesten terug in array.
 async function getTopTracks() {
     //      /2.0/?method=chart.gettoptracks&api_key=YOUR_API_KEY&format=json
-    const artiestName = "cher";
-    const albumName = "Believe";
     try {
         const url = `${rootUrl}?method=chart.gettoptracks&api_key=${apiKey}&format=json`;
         const response = await fetch(url);
         const data = await response.json();
-        console.log("Top Tracks data:", data.tracks);
-        return data.tracks;
+        //console.log("Top Tracks data:", data.tracks.track);
+        return data.tracks.track;
     } catch (error) {
-        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+        console.log("Er ging iets verkeerd bij het ophalen van de Toptrack:", error);
+    }
+}
+
+//
+//  Functie om liedjes in AANBEVELINGLIJST te zetten.
+function aanbeveling(toptracks) {
+    const aanbevelingEl = document.querySelector(".aanbeveling2");
+    aanbevelingEl.innerHTML = ""; // Maak de container leeg voor je begint
+
+    for (let index = 0; index < 6; index++) {
+
+        const element = toptracks[index];
+        const div = document.createElement("div");
+        div.className = "aanbevelingLiedje";
+        
+        // Pak de 'extralarge' afbeelding (index 3)
+        const cover = element.image[1]["#text"];
+
+        div.innerHTML = `
+            <div class="albumIcon"><img src="${cover}" alt="cover" style="width:100%"></div>
+                <div class="likedivHome">
+                    <button class="likeButton detailButton likeButtonEmpty" id=""></button>
+                    <button class="likeButton detailButton likeButtonFull hidden" id=""></button>
+                    <button class="detailButton addPlaylistButton playlistButton" id=""></button>
+                    <button class="playbutton detailButton"></button>
+                    <button class="infobutton detailButton"></button>
+                </div>
+            <div class="album-info">
+                <h2 class="aanbeveling-artiest">${element.artist.name}</h2>
+                <p class="aanbeveling-title">${element.name}</p>
+            </div>`;
+
+        aanbevelingEl.appendChild(div);
     }
 }
 
@@ -133,11 +195,21 @@ async function main() {
 
     if (sessionKey) {
         console.log("Status: Ingelogd als", localStorage.getItem("lastfm_user"));
-        await get1TrackInfo();
+        //await get1TrackInfo();
         //await get1ArtiestInfo();
         //await get1AlbumInfo();
-        //getTopArtiest();
-        //getTopTracks();
+        //await getTopArtiest();
+        //await getTopTracks();
+
+        /* */
+        const topTracks = await getTopTracks();
+        console.log(`testing `,topTracks);
+        if (topTracks) {
+            aanbeveling(topTracks);
+        }
+        
+        //await getTopTags();
+        //await getTopArtiestByCountry();
     } else if (approvedToken) {
         console.log("Token gevonden, sessie ophalen...");
         await getLastFmSession(approvedToken);
@@ -145,5 +217,7 @@ async function main() {
         console.log("Status: Niet ingelogd.");
     }
 }
-
+//aanbeveling();
 main();
+
+
