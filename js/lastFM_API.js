@@ -50,15 +50,77 @@ async function getLastFmSession(token) {
     }
 }
 
-async function get1Track() {
+async function get1TrackInfo() {
+    //      /2.0/?method=track.getInfo&api_key=YOUR_API_KEY&artist=cher&track=believe&format=json
     const artiestName = "cher";
     const trackName = "believe";
     try {
-        const url = `${rootUrl}?method=track.getInfo&api_key=${apiKey}&artist=${encodeURIComponent(artiestName)}&track=${encodeURIComponent(trackName)}&format=json`;
+        const url = `${rootUrl}?method=track.getInfo&api_key=${apiKey}&artist=${artiestName}&track=${trackName}&format=json`;
         const response = await fetch(url);
         const data = await response.json();
         console.log("Track data:", data.track);
         return data.track;
+    } catch (error) {
+        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+    }
+}
+
+async function get1ArtiestInfo() {
+    //      /2.0/?method=artist.getinfo&artist=Cher&api_key=YOUR_API_KEY&format=json
+    const artiestName = "cher";
+    try {
+        const url = `${rootUrl}?method=artist.getinfo&artist=${artiestName}&api_key=${apiKey}&format=json`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("Artiest data:", data.artist);
+        return data.artist;
+    } catch (error) {
+        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+    }
+}
+
+async function get1AlbumInfo() {
+    //     /2.0/?method=album.getinfo&api_key=YOUR_API_KEY&artist=Cher&album=Believe&format=json
+    const artiestName = "cher";
+    const albumName = "Believe";
+    try {
+        const url = `${rootUrl}?method=album.getinfo&api_key=${apiKey}&artist=${artiestName}&album=${albumName}&format=json`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("Album data:", data.album);
+        return data.album;
+    } catch (error) {
+        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+    }
+}
+//
+//  DEZE GEEFT 50 Top-Artiesten terug in array.
+async function getTopArtiest() {
+    //      /2.0/?method=chart.gettopartists&api_key=YOUR_API_KEY&format=json
+    const artiestName = "cher";
+    const albumName = "Believe";
+    try {
+        const url = `${rootUrl}?method=chart.gettopartists&api_key=${apiKey}&format=json`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("Top Artiesten data:", data.artists);
+        return data.artists;
+    } catch (error) {
+        console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
+    }
+}
+//
+//  DEZE GEEFT 50 Top-Artiesten terug in array.
+async function getTopTracks() {
+    //      /2.0/?method=chart.gettoptracks&api_key=YOUR_API_KEY&format=json
+    const artiestName = "cher";
+    const albumName = "Believe";
+    try {
+        const url = `${rootUrl}?method=chart.gettoptracks&api_key=${apiKey}&format=json`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("Top Tracks data:", data.tracks);
+        return data.tracks;
     } catch (error) {
         console.log("Er ging iets verkeerd bij het ophalen van de track:", error);
     }
@@ -71,7 +133,11 @@ async function main() {
 
     if (sessionKey) {
         console.log("Status: Ingelogd als", localStorage.getItem("lastfm_user"));
-        await get1Track();
+        await get1TrackInfo();
+        //await get1ArtiestInfo();
+        //await get1AlbumInfo();
+        //getTopArtiest();
+        //getTopTracks();
     } else if (approvedToken) {
         console.log("Token gevonden, sessie ophalen...");
         await getLastFmSession(approvedToken);
@@ -79,4 +145,5 @@ async function main() {
         console.log("Status: Niet ingelogd.");
     }
 }
-//  main();
+
+main();
