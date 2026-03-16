@@ -49,12 +49,10 @@
     <main class="mainHomePage">
         <div id="dropdownMenu" class="menu hidden">
             <a href="./accountpage.html" class="background-dropdown">Account</a>
-            <a class="background-dropdown">Favorieten</a>
             <a href="./game.html" class="background-dropdown">Muziek Spel</a>
-            <a class="background-dropdown">Geschiedenis</a>
             <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
             <a href="./accountpage.html" class="background-dropdown">Mood</a>
-            <a class="background-dropdown" href="">UITLOGGEN</a>
+            <a href="./index.html" class="background-dropdown">UITLOGGEN</a>
         </div>
 
         <section class="musicplayer main-item2">
@@ -85,20 +83,20 @@
                 </div>
             </div>
         </section>
-</section>
+        </section>
         <!-- EINDE MUSIC-PLAYER     HEADER EN SPELER COPY NAAR ANDERE PAGINA'S ALS IEDEREEN DEZE GOED VIND.  -->
 
         <!-- START GAME  -->
-         <section class="guess-content">
+        <section class="guess-content">
             <section class="guess-card">
                 <button id="reset-btn" class="reset-badge">Reset</button>
                 <div class="score-badge">
                     Mood Score: <span id="current-score">0</span>
                 </div>
-                
+
                 <div class="player-visual">
                     <div id="cover-container" class="unknown-art">?</div>
-                    
+
                     <div class="audio-controls">
                         <button id="play-btn" class="play-preview-btn">
                             <img id="play-icon-img" src="./assets/icons/playIcon.png" alt="Play">
@@ -110,7 +108,7 @@
 
                 <div class="guess-form">
                     <h2>Welk nummer hoor je?</h2>
-                    
+
                     <div class="input-group">
                         <input type="text" id="guess-input" list="song-options" placeholder="Typ titel of artiest...">
                         <datalist id="song-options">
@@ -125,7 +123,7 @@
 
                 <div id="feedback" class="feedback-area hidden"></div>
             </section>
-        <!-- EINDE GAME  -->
+            <!-- EINDE GAME  -->
     </main>
     <footer>
         <p>&copy;AP-Music</p>
