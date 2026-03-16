@@ -22,11 +22,11 @@ if (data) {
             <div id="details">
                 <ul id="detailUl">
                     <li class="detailLi">
-                        <p>${data.artiest}}</p>
+                        <p>${data.artiest}</p>
                     </li>
                     <li class="detailLi">${data.name}</li>
                     <li class="detailLi">${data.album}</li>
-                    <li class="detailLi">${data.jaar}}</li>
+                    <li class="detailLi">${data.jaar}</li>
                     <li class="detailLi">${data.popularity}</li>
                     <li class="detailLi">${data.energy}</li>
                     <li class="detailLi">${data.tempo}</li>
