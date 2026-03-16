@@ -38,7 +38,10 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 }
 
 
-
+#albumDetail{
+  height: 100%;
+  width: 100%;
+}
 #albumlogo {
   grid-area: album;
   width: 25rem;

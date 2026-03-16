@@ -9,7 +9,8 @@ Shared secret	de3d27fc9c9b0aecc0b9ce8af400bc3f
 */
 
 // IMPORT VOOR MD5 apiSig te maken
-import md5 from 'https://cdn.skypack.dev/md5';
+import md5 from "https://cdn.skypack.dev/md5";
+import dummyData from "../Json/dummydata.json" with { type: "json" };
 
 //<script src="https://cdnjs.cloudflare.com"></script>
 // 1. Werkende MD5 Helper (zonder externe libraries)
@@ -23,7 +24,6 @@ async function getLastFmSession(token) {
     // 1. Signature bouwen (Alfabetisch: api_key -> method -> token)
     const sigString = `api_key${apiKey}methodauth.getSessiontoken${token}${sharedSecret}`;
 
-    
     // 2. MD5 hash genereren (via de Blueimp library)
     //const apiSig = window.md5(sigString);
     // 2. MD5 hash genereren (via de MD5 functie)
@@ -156,17 +156,16 @@ async function getTopTracks() {
 }
 
 //
-//  Functie om liedjes in AANBEVELINGLIJST te zetten.
+//  Functie om liedjes in AANBEVELINGLIJST te zetten. VOOR API
 function aanbeveling(toptracks) {
     const aanbevelingEl = document.querySelector(".aanbeveling2");
     aanbevelingEl.innerHTML = ""; // Maak de container leeg voor je begint
 
     for (let index = 0; index < 6; index++) {
-
         const element = toptracks[index];
         const div = document.createElement("div");
         div.className = "aanbevelingLiedje";
-        
+
         // Pak de 'extralarge' afbeelding (index 3)
         const cover = element.image[1]["#text"];
 
@@ -188,10 +187,53 @@ function aanbeveling(toptracks) {
     }
 }
 
+function aanbevelingDummy() {
+    const aanbevelingEl = document.querySelector(".aanbeveling2");
+    aanbevelingEl.innerHTML = ""; // Maak de container leeg voor je begint
+    console.log(dummyData);
+    for (let index = 0; index < 6; index++) {
+        const element = dummyData[index];
+        const div = document.createElement("div");
+        div.className = "aanbevelingLiedje";
+
+        // Pak de 'extralarge' afbeelding (index 3)
+        const cover = ["#text"];
+
+        div.innerHTML = `
+            <div class="albumIcon"><img src="${element.image_url}" alt="cover" style="width:100%"></div>
+                <div class="likedivHome">
+                    <button class="likeButton detailButton likeButtonEmpty" id=""></button>
+                    <button class="likeButton detailButton likeButtonFull hidden" id=""></button>
+                    <button class="detailButton addPlaylistButton playlistButton" id=""></button>
+                    <button class="playbutton detailButton"></button>
+                    <button class="infobutton detailButton"></button>
+                </div>
+            <div class="album-info">
+                <h2 class="aanbeveling-artiest">${element.artiest}</h2>
+                <p class="aanbeveling-title">${element.titel}</p>
+            </div>`;
+
+        const infoBtn = div.querySelector(".infobutton");
+        infoBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // Zet het object om naar een tekst-string voor de localStorage
+            localStorage.setItem("gekozenLiedje", JSON.stringify(element));
+
+            // Navigeer naar de detailpagina
+            window.location.href = "detailpage.html";
+        });
+
+        aanbevelingEl.appendChild(div);
+    }
+}
+
 async function main() {
     const urlParams = new URLSearchParams(window.location.search);
     const approvedToken = urlParams.get("token");
     const sessionKey = localStorage.getItem("lastfm_session");
+
+    aanbevelingDummy();
 
     if (sessionKey) {
         console.log("Status: Ingelogd als", localStorage.getItem("lastfm_user"));
@@ -203,11 +245,11 @@ async function main() {
 
         /* */
         const topTracks = await getTopTracks();
-        console.log(`testing `,topTracks);
+        //console.log(`testing `,topTracks);
         if (topTracks) {
-            aanbeveling(topTracks);
+            //aanbeveling(topTracks);
         }
-        
+
         //await getTopTags();
         //await getTopArtiestByCountry();
     } else if (approvedToken) {
@@ -219,5 +261,3 @@ async function main() {
 }
 //aanbeveling();
 main();
-
-

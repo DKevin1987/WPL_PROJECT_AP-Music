@@ -17,7 +17,6 @@ if (aanbevelingContainer) {
         if (!activeCard) return;
 
         // Gebruik .closest om de button te vinden, ongeacht waar je precies klikt
-        // Let op de spelling: Emtpy (met m) zoals in je CSS
         if (target.closest(".likeButtonEmpty")) {
             likeAddMeldingEl.classList.remove("hidden");
         }
