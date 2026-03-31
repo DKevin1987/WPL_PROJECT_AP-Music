@@ -10,6 +10,12 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 /*              */
 /*  MAIN ORDER  */
 /*              */
+
+footer {
+  position: sticky;
+  margin-top: 3rem;
+  text-align: center;
+}
 .main-detail{
   display: flex;
   flex-direction: column;
@@ -78,35 +84,20 @@ mogelijkheid om te liken/unliken met hart-icoon en bevestigingsflow
 .likeButtonFull {
   background-image: url("../assets/icons/volHart.png");
 }
+.addPlaylistButton:focus,
+.addPlaylistButton:hover,
+.likeButtonEmtpy:hover,
+.likeButtonEmtpy:focus,
+.likeButtonFull:hover,
 .likeButtonFull:focus{
-  border: 3px solid black;
-  border-radius: 1rem;
-}
-.likeButtonFull:hover{
-  border: 3px solid black;
-  border-radius: 1rem;
-}
-.likeButtonEmtpy:focus{
-  border: 3px solid black;
-  border-radius: 1rem;
-}
-.likeButtonEmtpy:hover{
   border: 3px solid black;
   border-radius: 1rem;
 }
 .addPlaylistButton{
   background-image: url("../assets/icons/plus-icon.png");
 }
-.addPlaylistButton:hover{
-  border: 3px solid black;
-  border-radius: 1rem;
-}
-.addPlaylistButton:focus{
-  border: 3px solid black;
-  border-radius: 1rem;
-}
 #details {
-  background-color: rgb(241, 232, 220);
+  background-color: #c0baba;
   grid-area: details;
   width: 35rem;
   height: 100%;

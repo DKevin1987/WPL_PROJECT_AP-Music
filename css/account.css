@@ -2,7 +2,11 @@
 .hidden {
   display: none;
 }
-
+footer {
+  position: sticky;
+  margin-top: 3rem;
+  text-align: center;
+}
 .settings-container {
   width: 70vw;
   height: 55vh;
