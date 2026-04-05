@@ -17,35 +17,34 @@
 
 <body>
     <header>
-            <div class="header-inner">
-                <div class="header-logo">
-                    <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header" /></a>
-                </div>
-                <div class="wtfcrap">
-                    <form class="header-search search-form hidden" action="">
-                        <input class="search-input" type="search" placeholder="Nummer zoeken?" value="" />
-                        <button class="search-button2">OK</button>
-                    </form>
-                    <div class="header-buttons">
-                        <div class="header-search-button">
-                            <button class="search-button">
-                                <img src="./assets/icons/iconmonstr-magnifier-lined-240.png" class="icon-header" />
-                            </button>
-                        </div>
-                        <div class="header-accountbutton">
-                            <a href="./accountpage.html" class="background-icons"
-                                ><img class="icon-header" id="moodIcon" src="./assets/icons/moods/smile.png" alt=""
-                            /></a>
-                        </div>
-                        <div class="header-menuButton">
-                            <button id="menu-button" class="background-icons">
-                                <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
-                            </button>
-                        </div>
+        <div class="header-inner">
+            <div class="header-logo">
+                <a href="./homepage.html"><img src="./assets/images/logo_AP-Music.png" class="logo-header" /></a>
+            </div>
+            <div class="wtfcrap">
+                <form class="header-search search-form hidden" action="">
+                    <input class="search-input" type="search" placeholder="Nummer zoeken?" value="" />
+                    <button class="search-button2">OK</button>
+                </form>
+                <div class="header-buttons">
+                    <div class="header-search-button">
+                        <button class="search-button">
+                            <img src="./assets/icons/iconmonstr-magnifier-lined-240.png" class="icon-header" />
+                        </button>
+                    </div>
+                    <div class="header-accountbutton">
+                        <a href="./accountpage.html" class="background-icons"><img class="icon-header" id="moodIcon"
+                                src="./assets/icons/moods/smile.png" alt="" /></a>
+                    </div>
+                    <div class="header-menuButton">
+                        <button id="menu-button" class="background-icons">
+                            <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
+                        </button>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
     <div id="dropdownMenu" class="menu hidden">
         <a href="./accountpage.html" class="background-dropdown">Account</a>
         <a href="./game.html" class="background-dropdown">Muziek Spel</a>
@@ -72,28 +71,33 @@
         </section>
         <section class="mainSetting">
             <div class="settings-container">
-                <div id="gebruikersnaam-settings" class="hidden">
+
+                <form id="gebruikersnaam-settings" class="hidden">
                     <p>Gebruikersnaam: Kyaro Van Goethem</p>
                     <p>E-mail: random@gmail.com</p>
-                </div>
-                <div id="icoon-settings" class="hidden">
+                </form>
+
+                <form id="icoon-settings" class="hidden">
                     <p>Gebruikers icoon aanpassen:</p>
-                    <button class="user-keuze" id="userIcoonStandaard"></button>
-                    <button class="user-keuze" id="userIcoon1"></button>
-                    <button class="user-keuze" id="userIcoon2"></button>
-                    <button class="user-keuze" id="userIcoon3"></button>
-                </div>
-                <div id="beveiliging-settings" class="hidden">
+                    <button type="button" class="user-keuze" id="userIcoonStandaard"></button>
+                    <button type="button" class="user-keuze" id="userIcoon1"></button>
+                    <button type="button" class="user-keuze" id="userIcoon2"></button>
+                    <button type="button" class="user-keuze" id="userIcoon3"></button>
+                </form>
+
+                <form id="beveiliging-settings" class="hidden">
                     <p>E-mail: random@gmail.com</p>
                     <p>Wachtwoord: ***********</p>
-                </div>
-                <div id="mood-settings" class="hidden">
+                </form>
+
+                <form id="mood-settings" class="hidden">
                     <p>Mood aanpassen:</p>
-                    <button class="mood-keuze" id="moodIcoonStandaard"></button>
-                    <button class="mood-keuze" id="moodIcoonHappy"></button>
-                    <button class="mood-keuze" id="moodIcoonSad"></button>
-                    <button class="mood-keuze" id="moodIcoonMad"></button>
-                </div>
+                    <button type="button" class="mood-keuze" id="moodIcoonStandaard"></button>
+                    <button type="button" class="mood-keuze" id="moodIcoonHappy"></button>
+                    <button type="button" class="mood-keuze" id="moodIcoonSad"></button>
+                    <button type="button" class="mood-keuze" id="moodIcoonMad"></button>
+                </form>
+
             </div>
         </section>
     </main>

@@ -30,7 +30,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.wtfcrap{
+.wtfcrap {
   display: grid;
   grid-template-areas: "search1 buttons1  ";
   gap: 3rem;
@@ -116,7 +116,7 @@ header {
   align-content: center;
 }
 .search-input:hover,
-.search-input:focus{
+.search-input:focus {
   border: 3px solid black;
   border-radius: 5px;
   height: 3rem;
@@ -328,8 +328,7 @@ header {
 */
 
 .musicplayer {
-  background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%)
-    no-repeat;
+  background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%) no-repeat;
   width: 100%;
   max-width: 1440px;
   background-color: rgb(230, 241, 241);
