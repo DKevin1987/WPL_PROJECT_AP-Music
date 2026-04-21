@@ -13,21 +13,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  max-width: 100vw;
   height: 60vh;
 }
 
-.line {
-  background-color: black;
-  width: 5px;
-  height: 60vh;
-}
 #zoekResultaat {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 90vw;
+  width: 1440px;
   height: 60vh;
   background-color: #d9d9d9;
   overflow-y: scroll;
