@@ -1,9 +1,10 @@
 import express, { Express } from "express";
 
 export default function homeRouter() {
-  const router = express.Router();
+	const router = express.Router();
 
-  router.get("/", (req, res) => {
-    res.render("home");
-  });
+	router.get("/", (req, res) => {
+		res.render("home");
+	});
+	return router;
 }
