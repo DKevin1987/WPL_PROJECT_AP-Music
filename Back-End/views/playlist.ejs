@@ -11,236 +11,78 @@
 <body>
 
     <%- include('partials/header') %>
+    <main>
+        <%- include('partials/dropdown') %>
+    <section class="musicplayer main-item2">
+        <div class="player-container">
+            <div class="music-left-logo">
+                <img class="music-logo" src="/assets/album-covers/AcDc.png" alt="">
+            </div>
+            <div class="music-middle-title">
+                <h3 class="title-artist">ARTIEST</h3>
+                <p>TITEL</p>
+            </div>
+            <div class="music-middle-player">
+                <div class="previous-logo">
+                    <button class="player-buttons">
+                        <img class="player-logo" src="/assets/icons/previous-track-icon.png" alt="">
+                    </button>
+                </div>
+                <div class="play-logo">
+                    <button class="player-buttons">
+                        <img class="player-logo" src="/assets/icons/playIcon.png" alt="">
+                    </button>
+                </div>
+                <div class="next-logo">
+                    <button class="player-buttons">
+                        <img class="player-logo" src="/assets/icons/next-track-icon.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section class="playlist-container">
+        <div>
+            <button class="playlistBtn" id="addPlaylist">
+                <img id="addIcon" src="/assets/icons/plus-icon.png" alt="">
+            </button>
+        </div>
 
-    
-        <!-- Kopieer hier de rest van jouw playlist_generator.html <main> inhoud -->
-        <!-- Verander alleen ./assets/ naar /assets/ en ./css/ naar /css/ -->
-        <main>
-        <section class="musicplayer main-item2">
-            <div class="player-container">
-                <div class="music-left-logo">
-                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="" />
-                </div>
-                <div class="music-middle-title">
-                    <h3 class="title-artist">ARTIEST</h3>
-                    <p>TITEL</p>
-                </div>
-                <div class="music-middle-player">
-                    <div class="previous-logo">
-                        <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="" />
-                        </button>
-                    </div>
-                    <div class="play-logo">
-                        <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons//playIcon.png" alt="" />
-                        </button>
-                    </div>
-                    <div class="next-logo">
-                        <button class="player-buttons">
-                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="" />
-                        </button>
-                    </div>
-                </div>
+        <% allSongs.forEach(function(song) { %>
+        <div class="playlist" data-id="<%= song.id %>">
+            <button class="playlistBtn">
+                <img class="playlistCover" src="<%= song.cover %>" alt="<%= song.title %>">
+            </button>
+            <div class="playlist-buttons">
+                <img class="playlist-icon openPlaylist" src="/assets/icons/info.png" alt="">
+                <img class="playlist-icon" src="/assets/icons/removeCross.png" alt="">
             </div>
-        </section>
-        <section class="playlist-container">
-            <div>
-                <button class="playlistBtn" id="addPlaylist"><img id="addIcon" src="./assets/icons/plus-icon.png"
-                        alt=""></button>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/gunsRoses.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
+        </div>
+        <% }); %>
+    </section>
+    <img class="returnArrow hidden" id="arrowBack" src="/assets/icons/arrowBack.png" alt="">
 
+    <section class="music-playlist hidden">
+    <% allSongs.forEach(function(song) { %>
+        <div class="resultaat" data-id="<%= song.id %>">
+            <img class="resultaat-cover" src="<%= song.cover %>" alt="<%= song.title %>">
+            <div class="resultaat-tekst">
+                <h3 class="Title"><%= song.title %></h3>
+                <p class="artiest"><%= song.artist %></p>
             </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/metallica.jpeg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn "><img class="playlistCover" src="./assets/album-covers/gunsRoses.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/gunsRoses.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/pinkFloyd.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/gunsRoses.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/gunsRoses.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/metallica.jpeg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/gunsRoses.jpg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/Nirvana.png"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-            <div class="playlist">
-                <button class="playlistBtn"><img class="playlistCover" src="./assets/album-covers/queen1.jpeg"
-                        alt=""></button>
-                <div class="playlist-buttons">
-                    <img class="playlist-icon openPlaylist" src="./assets/icons/info.png" alt="">
-                    <img class="playlist-icon" src="./assets/icons/removeCross.png" alt="">
-                </div>
-            </div>
-        </section>
-        <img class="returnArrow hidden" id="arrowBack" src="./assets/icons/arrowBack.png" alt="">
-        <section class="music-playlist hidden">
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-            <div class="resultaat"><img class="resultaat-cover" src="./assets/album-covers/AcDc.png" alt="">
-                <div class="resultaat-tekst">
-                    <h3 class="Title">Titel</h3>
-                    <p class="artiest">Artiest</p>
-                </div>
-                <button class="like-btn"><img class="like" src="./assets/icons/heart.png" alt=""></button>
-                <button class="play-btn"><img class="play" src="./assets/icons/playIcon.png" alt=""></button>
-                <button class="remove-btn"><img class="remove" src="./assets/icons/removeCross.png" alt=""></button>
-            </div>
-        </section>
+            <button class="like-btn">
+                <img class="like" src="/assets/icons/heart.png" alt="">
+            </button>
+            <button class="play-btn">
+                <img class="play" src="/assets/icons/playIcon.png" alt="">
+            </button>
+            <button class="remove-btn">
+                <img class="remove" src="/assets/icons/removeCross.png" alt="">
+            </button>
+        </div>
+        <% }); %>
+    </section>
+        
     </main>
 
     <script src="/js/generalJava.js"></script>

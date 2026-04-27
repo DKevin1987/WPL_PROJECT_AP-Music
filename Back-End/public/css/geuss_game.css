@@ -116,11 +116,11 @@ header {
         justify-content: center;
         align-items: center;
     }
-    /* Voeg dit toe of verander de bestaande .player-visual */
+
 .player-visual {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Dit zet alles in het midden */
+        align-items: center; 
         justify-content: center;
     }
 
@@ -200,32 +200,40 @@ header {
     }
 
 .feedback-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
         margin-top: 25px;
         padding: 15px;
         border-radius: 8px;
         font-weight: bold;
         font-size: 1rem;
 }
+.feedback-area.correct {
+    background-color: #4caf50; 
+}
 
+.feedback-area.wrong {
+    background-color: #f44336; 
+}
 .hidden {
   display: none;
 }
 
-/* --- MOBIELE OPTIMALISATIE --- */
+/* --- MOBIELE VERSIE --- */
 @media (max-width: 850px) {
-    /* De container waar alles in zit */
     .guess-content {
-        padding: 40px 15px; /* Minder padding aan de zijkanten */
+        padding: 40px 15px; 
         min-height: auto;
     }
 
-    /* De roze player-balk (musicplayer) aanpassen voor mobiel */
+
     .musicplayer {
-        width: 95% !important;
-        height: auto !important; /* Hoogte variabel maken */
-        padding: 15px !important;
-        border-radius: 1.5rem !important;
-        flex-direction: column !important; /* Alles onder elkaar op mobiel */
+        width: 95% ;
+        height: auto ;
+        padding: 15px ;
+        border-radius: 1.5rem ;
+        flex-direction: column;
         gap: 10px;
     }
 
@@ -234,18 +242,16 @@ header {
         gap: 10px;
     }
 
-    /* De grote grijze kaart */
     .guess-card {
         display: flex;
-        flex-direction: column; /* Alles onder elkaar: foto -> formulier */
-        padding: 50px 20px 30px 20px; /* Meer ruimte bovenin voor badges */
+        flex-direction: column; 
+        padding: 50px 20px 30px 20px; 
         gap: 30px;
         width: 100%;
         max-width: 400px;
         margin-top: 20px;
     }
 
-    /* De Badges (Reset & Score) kleiner en beter gepositioneerd */
     .reset-badge, .score-badge {
         padding: 10px 15px;
         font-size: 0.9rem;
@@ -260,20 +266,17 @@ header {
         right: 10px;
     }
 
-    /* De foto (Unknown Art) */
     .unknown-art {
-        width: 220px; /* Iets groter dan je had, vult het scherm beter */
+        width: 220px; 
         height: 220px;
         font-size: 5rem;
     }
 
-    /* De Play knop */
     .play-preview-btn {
         width: 70px;
         height: 70px;
     }
 
-    /* Tekst en Input */
     .guess-form h2 {
         font-size: 1.4rem;
         margin-bottom: 20px;
@@ -290,7 +293,6 @@ header {
     }
 }
 
-/* Extra kleine schermen (iPhone SE etc.) */
 @media (max-width: 380px) {
     .unknown-art {
         width: 180px;

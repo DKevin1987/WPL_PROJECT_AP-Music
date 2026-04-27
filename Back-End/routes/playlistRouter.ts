@@ -1,8 +1,10 @@
 import { Router, Request, Response } from "express";
-const router = Router();
+import { songs} from "../data/dataSongs";
 
+const router = Router();
+const songss = songs
 router.get("/", (req: Request, res: Response) => {
-    res.render("playlist");
+    res.render("playlist", { allSongs: songss });
 });
 
 export default router;
