@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author 1" content="Dom Kevin" />
+    <meta name="author 2" content="Opong Nana" />
+    <meta name="author 3" content="Kyaro Van Goethem" />
+    <title>AP-Music</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/geuss_game.css">
+    <script type="module" src="./js/geuss_game.js" defer></script>
+    <script type="module" defer src="./js/generalJava.js"></script>
+</head>
+
+<body class="body-home">
+    <%- include('partials/header') %>
+    <main>
+        <%- include('partials/dropdown') %>
+
+        <section class="musicplayer main-item2">
+            <div class="player-container">
+                <div class="music-left-logo">
+                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="" />
+                </div>
+                <div class="music-middle-title">
+                    <h3 class="title-artist">ARTIEST</h3>
+                    <p>TITEL</p>
+                </div>
+                <div class="music-middle-player">
+                    <div class="previous-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="" />
+                        </button>
+                    </div>
+                    <div class="play-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/playIcon.png" alt="" />
+                        </button>
+                    </div>
+                    <div class="next-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- START GAME -->
+        <section class="guess-content">
+            <section class="guess-card">
+                <button id="reset-btn" class="reset-badge">Reset</button>
+                <div class="score-badge">
+                    Mood Score: <span id="current-score">0</span>
+                </div>
+
+                <div class="player-visual">
+                    <div id="cover-container" class="unknown-art">?</div>
+
+                    <div class="audio-controls">
+                        <button id="play-btn" class="play-preview-btn">
+                            <img id="play-icon-img" src="./assets/icons/playIcon.png" alt="Play">
+                        </button>
+                        <p id="status-text">Klik op play voor een preview</p>
+                        <audio id="music-preview" src=""></audio>
+                    </div>
+                </div>
+
+                <div class="guess-form">
+                    <h2>Welk nummer hoor je?</h2>
+
+                    <div class="input-group">
+                        <input type="text" id="guess-input" list="song-options" placeholder="Typ titel of artiest...">
+                        <datalist id="song-options">
+                            <option value="AC/DC - Back In Black">
+                            <option value="Metallica - Enter Sandman">
+                            <option value="Nirvana - Smells Like Teen Spirit">
+                        </datalist>
+                    </div>
+
+                    <button id="submit-btn" class="submit-guess-btn">Raad nummer!</button>
+                </div>
+
+                <div id="feedback" class="feedback-area hidden"></div>
+            </section>
+        </section>
+        <!-- EINDE GAME -->
+    </main>
+    <%- include('partials/footer') %>
+
+</body>
+
+</html>

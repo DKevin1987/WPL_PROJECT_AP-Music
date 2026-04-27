@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP-Music - Vergelijk</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+        <main class="vergelijking-content">
+        <div id="dropdownMenu" class="menu hidden">
+            <a href="./accountpage.html" class="background-dropdown">Account</a>
+            <a href="./game.html" class="background-dropdown">Muziek Spel</a>
+            <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
+            <a href="./accountpage.html" class="background-dropdown">Mood</a>
+            <a href="./index.html" class="background-dropdown">UITLOGGEN</a>
+        </div>
+        <section class="musicplayer main-item2">
+            <div class="player-container">
+                <div class="music-left-logo">
+                    <img class="music-logo" src="./assets/album-covers/AcDc.png" alt="">
+                </div>
+                <div class="music-middle-title">
+                    <h3 class="title-artist">AC/DC</h3>
+                    <p>Thunderstruck</p>
+                </div>
+                <div class="music-middle-player">
+                    <div class="previous-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/previous-track-icon.png" alt="">
+                        </button>
+                    </div>
+                    <div class="play-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/play-icon.png" alt="">
+                        </button>
+                    </div>
+                    <div class="next-logo">
+                        <button class="player-buttons">
+                            <img class="player-logo" src="./assets/icons/next-track-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="vergelijking-grid">
+
+            <section class="vergelijking-card">
+                <div class="vergelijking-art">
+                    <img src="./assets/album-covers/metallica.jpeg" alt="Metallica">
+                </div>
+                <div class="vergelijking-text">
+                    <h2>Master of Puppets</h2>
+                    <p>Metallica</p>
+                    <div class="stats-bar">Jaar: 1986</div>
+                    <div class="stats-bar">Genre: Thrash Metal</div>
+                    <div class="stats-bar last">Duur: 8:36</div>
+                    <div id="likediv">
+                        <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
+                        <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
+                        <button class="detailButton addPlaylistButton playlistButton " id=""></button>
+                    </div>
+                </div>
+                <section class="likeSectionMelding">
+                    <div class="notification likeAddMelding hidden">
+                        <h2>Wil je deze toevoegen aan favorieten?</h2>
+                        <div>
+                            <button class="notificationButton buttonYes">JA</button>
+                            <button class="notificationButton buttonNo">NEE</button>
+                        </div>
+                    </div>
+                    <div class="notification likeDeleteMelding hidden">
+                        <h2>Wil je deze verwijderen aan favorieten?</h2>
+                        <div>
+                            <button class="notificationButton buttonYes">JA</button>
+                            <button class="notificationButton buttonNo">NEE</button>
+                        </div>
+                    </div>
+                    <div class="notification likeToegevoegdBevestiging hidden">
+                        <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                        <div>
+                            <button class="likeMeldingButton">OK</button>
+                        </div>
+                    </div>
+                    <div class="notification likeDeleteBevestiging hidden">
+                        <h2>U hebt deze verwijderd uit favorieten.</h2>
+                        <div>
+                            <button class="likeMeldingButton">OK</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="addPlaylistSection">
+
+                    <div class="addToPlaylistMelding notification hidden">
+                        <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                        <div class="playlistadder">
+                            <p>PLAYLIST-NAAM</p>
+                            <button class="notificationButton buttonYes">JA</button>
+                        </div>
+                        <div>
+                            <button class="notificationButton buttonNo">NEE</button>
+                        </div>
+                    </div>
+
+                    <div class="addPlaylistBevestiging notification hidden">
+                        <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                        <div>
+                            <button class="likeMeldingButton">OK</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="vergelijking-card">
+                <div class="vergelijking-art">
+                    <img src="./assets/album-covers/Nirvana.png" alt="Nirvana">
+                </div>
+                <div class="vergelijking-text">
+                    <h2>Smells Like Teen Spirit</h2>
+                    <p>Nirvana</p>
+                    <div class="stats-bar">Jaar: 1991</div>
+                    <div class="stats-bar">Genre: Grunge</div>
+                    <div class="stats-bar">Duur: 5:01</div>
+                    <div id="likediv">
+                        <button class=" likeButton detailButton likeButtonEmtpy" id=""></button>
+                        <button class=" likeButton detailButton likeButtonFull hidden" id=""></button>
+                        <button class="detailButton addPlaylistButton playlistButton " id=""></button>
+                    </div>
+                </div>
+                <section class="likeSectionMelding">
+                    <div class="notification likeAddMelding hidden">
+                        <h2>Wil je deze toevoegen aan favorieten?</h2>
+                        <div>
+                            <button class="notificationButton buttonYes">JA</button>
+                            <button class="notificationButton buttonNo">NEE</button>
+                        </div>
+                    </div>
+                    <div class="notification likeDeleteMelding hidden">
+                        <h2>Wil je deze verwijderen aan favorieten?</h2>
+                        <div>
+                            <button class="notificationButton buttonYes">JA</button>
+                            <button class="notificationButton buttonNo">NEE</button>
+                        </div>
+                    </div>
+                    <div class="notification likeToegevoegdBevestiging hidden">
+                        <h2>U hebt deze toegevoegd aan favorieten.</h2>
+                        <div>
+                            <button class="likeMeldingButton">OK</button>
+                        </div>
+                    </div>
+                    <div class="notification likeDeleteBevestiging hidden">
+                        <h2>U hebt deze verwijderd uit favorieten.</h2>
+                        <div>
+                            <button class="likeMeldingButton">OK</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="addPlaylistSection">
+
+                    <div class="addToPlaylistMelding notification hidden">
+                        <h2>Aan welke playlist wil je deze toevoegen?</h2>
+                        <div class="playlistadder">
+                            <p>PLAYLIST-NAAM</p>
+                            <button class="notificationButton buttonYes">JA</button>
+                        </div>
+                        <div>
+                            <button class="notificationButton buttonNo">NEE</button>
+                        </div>
+                    </div>
+
+                    <div class="addPlaylistBevestiging notification hidden">
+                        <h2>U hebt deze toegevoegd aan de playlist.</h2>
+                        <div>
+                            <button class="likeMeldingButton">OK</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+        <!-- Kopieer hier de rest van jouw vergelijk.html <main> inhoud -->
+        <!-- Verander alleen ./assets/ naar /assets/ en ./css/ naar /css/ -->
+    
+
+    <script src="/js/generalJava.js"></script>
+    <script src="/js/vergelijk.js"></script>
+    <%- include('partials/footer') %>
+
+</body>
+</html>
