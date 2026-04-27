@@ -211,150 +211,93 @@ header {
   display: none;
 }
 
+/* --- MOBIELE OPTIMALISATIE --- */
 @media (max-width: 850px) {
+    /* De container waar alles in zit */
     .guess-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 60px 20px;
-        min-height: 80vh;
+        padding: 40px 15px; /* Minder padding aan de zijkanten */
+        min-height: auto;
     }
 
+    /* De roze player-balk (musicplayer) aanpassen voor mobiel */
+    .musicplayer {
+        width: 95% !important;
+        height: auto !important; /* Hoogte variabel maken */
+        padding: 15px !important;
+        border-radius: 1.5rem !important;
+        flex-direction: column !important; /* Alles onder elkaar op mobiel */
+        gap: 10px;
+    }
+
+    .player-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* De grote grijze kaart */
     .guess-card {
-        background-color: #cccccc;
-        border-radius: 10px;
-        padding: 35px;
-        width: 100%;
-        max-width: 450px;
-        text-align: center;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        position: relative;
-        color: #333;
-    }
-
-    .score-badge {
-        background-color: #b07a7a;
-        color: white;
-        padding: 13px;
-        border-radius: 20px;
-        position: absolute;
-        top: -15px;
-        right: 20px;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-
-    .unknown-art {
-        width: 180px;
-        height: 180px;
-        background-color: #222;
-        color: #b07a7a;
-        font-size: 6rem;
-        font-weight: bold;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto 20px;
-        border-radius: 10px;
-        border: 4px dashed #b07a7a;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .unknown-art img {
+        flex-direction: column; /* Alles onder elkaar: foto -> formulier */
+        padding: 50px 20px 30px 20px; /* Meer ruimte bovenin voor badges */
+        gap: 30px;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .play-preview-btn {
-        background-color: #b07a7a;
-        border: none;
-        border-radius: 50%;
-        width: 65px;
-        height: 65px;
-        cursor: pointer;
-        margin-bottom: 10px;
-        transition: transform 0.2s, background-color 0.2s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto 15px;
-    }
-
-    .play-preview-btn:hover {
-        transform: scale(1.05);
-        background-color: #8f5c5c;
-    }
-
-    .play-preview-btn img {
-        width: 25px;
-        filter: brightness(0) invert(1); 
-        margin-left: 4px;
-    }
-
-    .guess-form h2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        color: #000;
-    }
-
-    .input-group input {
-        width: 100%;
-        padding: 12px 15px;
-        border-radius: 5px;
-        border: 1px solid #999;
-        margin-bottom: 15px;
-        font-size: 1rem;
-        box-sizing: border-box;
-        background-color: #fff;
-    }
-
-    .submit-guess-btn {
-        background-color: #b07a7a;
-        color: white;
-        border: none;
-        padding: 14px 30px;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 1.1rem;
-        cursor: pointer;
-        width: 100%;
-        transition: background-color 0.2s;
-    }
-
-    .submit-guess-btn:hover {
-        background-color: #8f5c5c;
-    }
-
-    /* Feedback box */
-    .feedback-area {
+        max-width: 400px;
         margin-top: 20px;
-        padding: 12px;
-        border-radius: 5px;
-        font-weight: bold;
+    }
+
+    /* De Badges (Reset & Score) kleiner en beter gepositioneerd */
+    .reset-badge, .score-badge {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        top: -15px;
     }
 
     .reset-badge {
-        background-color: #555; 
-        color: white;
-        padding: 13px;
-        border-radius: 20px;
-        position: absolute;
-        top: -15px;
-        left: 20px; 
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.2s;
+        left: 10px;
     }
 
-    .reset-badge:hover {
-        background-color: #333; 
+    .score-badge {
+        right: 10px;
     }
 
-    .hidden {
-        display: none;
+    /* De foto (Unknown Art) */
+    .unknown-art {
+        width: 220px; /* Iets groter dan je had, vult het scherm beter */
+        height: 220px;
+        font-size: 5rem;
+    }
+
+    /* De Play knop */
+    .play-preview-btn {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Tekst en Input */
+    .guess-form h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .input-group input {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .submit-guess-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra kleine schermen (iPhone SE etc.) */
+@media (max-width: 380px) {
+    .unknown-art {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .guess-form h2 {
+        font-size: 1.2rem;
     }
 }

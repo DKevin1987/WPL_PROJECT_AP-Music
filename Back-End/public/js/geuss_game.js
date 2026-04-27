@@ -1,94 +1,76 @@
-// Database foto's
-const songs = [
-    { answer: "ac/dc - back in black", cover: "./assets/album-covers/AcDc.png" },
-    { answer: "metallica - enter sandman", cover: "./assets/album-covers/metallica.jpeg" },
-    { answer: "nirvana - smells like teen spirit", cover: "./assets/album-covers/Nirvana.png" }
-];
+// geuss_game.js
+// Leest song data veilig uit de <script id="song-data" type="application/json"> tag
 
-let currentSongIndex = 0;
+const CURRENT_SONG = JSON.parse(document.getElementById("song-data").textContent);
+
+const playBtn        = document.getElementById("play-btn");
+const playIconImg    = document.getElementById("play-icon-img");
+const audio          = document.getElementById("music-preview");
+const statusText     = document.getElementById("status-text");
+const submitBtn      = document.getElementById("submit-btn");
+const guessInput     = document.getElementById("guess-input");
+const feedbackEl     = document.getElementById("feedback");
+const scoreEl        = document.getElementById("current-score");
+const resetBtn       = document.getElementById("reset-btn");
+const coverImg       = document.getElementById("cover-img");
+const coverQmark     = document.getElementById("cover-question-mark");
+const coverContainer = document.getElementById("cover-container");
+const playerBarArtist = document.getElementById("player-bar-artist");
+const playerBarTitle  = document.getElementById("player-bar-title");
+const playerBarCover  = document.getElementById("player-bar-cover");
+
 let score = 0;
-let isPlaying = false; 
+let guessedCorrectly = false;
 
-// Elementen 
-const submitBtn = document.getElementById('submit-btn');
-const guessInput = document.getElementById('guess-input');
-const feedback = document.getElementById('feedback');
-const scoreDisplay = document.getElementById('current-score');
-const coverContainer = document.getElementById('cover-container');
-const playBtn = document.getElementById('play-btn');
-const playIconImg = document.getElementById('play-icon-img');
-const resetBtn = document.getElementById('reset-btn');
-
-// knop logica
-playBtn.addEventListener('click', () => {
-    if (!isPlaying) {
-        
-        playIconImg.src = "./assets/icons/pause-icon.png";
-        isPlaying = true;
-
-        setTimeout(() => {
-            if (isPlaying) {
-                playIconImg.src = "./assets/icons/playIcon.png";
-            }
-        }, 500);
-
-        setTimeout(() => {
-            playIconImg.src = "./assets/icons/playIcon.png";
-            isPlaying = false;
-        }, 5000);
-
-    } else {
-        playIconImg.src = "./assets/icons/playIcon.png";
-        isPlaying = false;
-    }
+// ─── Raden ────────────────────────────────────────────────────────────────
+submitBtn.addEventListener("click", checkGuess);
+guessInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") checkGuess();
 });
 
-// Raad logica
-submitBtn.addEventListener('click', () => {
-    const userGuess = guessInput.value.trim().toLowerCase();
-    const correctAnswer = songs[currentSongIndex].answer;
+function checkGuess() {
+    if (guessedCorrectly) return;
 
-    feedback.classList.remove('hidden');
+    const input         = guessInput.value.trim().toLowerCase();
+    const correctTitle  = CURRENT_SONG.title.toLowerCase();
+    const correctArtist = CURRENT_SONG.artist.toLowerCase();
 
-    if (userGuess === correctAnswer) {
+    const isCorrect =
+        input.includes(correctTitle) ||
+        input.includes(correctArtist) ||
+        input === `${correctArtist} - ${correctTitle}`;
+
+    if (isCorrect) {
         score++;
-        scoreDisplay.innerText = score;
-        feedback.innerHTML = " Correct! Je mood krijgt een boost (+1)";
-        feedback.style.backgroundColor = "#d4edda";
-        feedback.style.color = "#155724";
-        
-        coverContainer.style.border = "none";
-        coverContainer.innerHTML = `<img src="${songs[currentSongIndex].cover}" alt="Album Cover">`;
+        scoreEl.textContent = score;
+        guessedCorrectly = true;
 
-        playIconImg.src = "./assets/icons/playIcon.png";
-        isPlaying = false;
+        // Albumhoes onthullen
+        coverQmark.style.display = "none";
+        coverImg.style.display = "block";
+        coverContainer.style.border = "5px solid #4caf50";
 
-        setTimeout(nextSong, 3000);
+        // Player bar updaten met het juiste nummer
+        playerBarArtist.textContent = CURRENT_SONG.artist;
+        playerBarTitle.textContent  = CURRENT_SONG.title;
+        playerBarCover.src          = CURRENT_SONG.cover;
+
+        showFeedback(`✅ Correct! "${CURRENT_SONG.title}" van ${CURRENT_SONG.artist}`, "correct");
+        submitBtn.disabled = true;
+        guessInput.disabled = true;
     } else {
-        feedback.innerHTML = " Helaas, dat is niet juist. Probeer het nog eens!";
-        feedback.style.backgroundColor = "#f8d7da";
-        feedback.style.color = "#721c24";
+        showFeedback("❌ Fout! Probeer opnieuw.", "wrong");
+        guessInput.value = "";
+        guessInput.focus();
     }
-});
-
-// Reset knop 
-resetBtn.addEventListener('click', () => {
-    score = 0;
-    scoreDisplay.innerText = score;
-    currentSongIndex = 0;
-    
-    playIconImg.src = "./assets/icons/playIcon.png";
-    isPlaying = false;
-
-    nextSong(); 
-    feedback.classList.add('hidden'); 
-});
-
-function nextSong() {
-    currentSongIndex = (currentSongIndex + 1) % songs.length;
-    guessInput.value = "";
-    feedback.classList.add('hidden');
-    
-    coverContainer.innerHTML = "?"; 
-    coverContainer.style.border = "4px dashed #b07a7a";
 }
+
+function showFeedback(message, type) {
+    feedbackEl.textContent = message;
+    feedbackEl.className = `feedback-area ${type}`;
+}
+
+// ─── Reset → nieuwe pagina = nieuw random nummer ──────────────────────────
+resetBtn.addEventListener("click", () => {
+    window.location.reload();
+});
