@@ -1,5 +1,3 @@
-// geuss_game.js
-// Leest song data veilig uit de <script id="song-data" type="application/json"> tag
 
 const CURRENT_SONG = JSON.parse(document.getElementById("song-data").textContent);
 
@@ -22,7 +20,7 @@ const playerBarCover  = document.getElementById("player-bar-cover");
 let score = 0;
 let guessedCorrectly = false;
 
-// ─── Raden ────────────────────────────────────────────────────────────────
+// ─── Raden 
 submitBtn.addEventListener("click", checkGuess);
 guessInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkGuess();
@@ -45,12 +43,10 @@ function checkGuess() {
         scoreEl.textContent = score;
         guessedCorrectly = true;
 
-        // Albumhoes onthullen
         coverQmark.style.display = "none";
         coverImg.style.display = "block";
         coverContainer.style.border = "5px solid #4caf50";
 
-        // Player bar updaten met het juiste nummer
         playerBarArtist.textContent = CURRENT_SONG.artist;
         playerBarTitle.textContent  = CURRENT_SONG.title;
         playerBarCover.src          = CURRENT_SONG.cover;
@@ -70,7 +66,7 @@ function showFeedback(message, type) {
     feedbackEl.className = `feedback-area ${type}`;
 }
 
-// ─── Reset → nieuwe pagina = nieuw random nummer ──────────────────────────
+// ─── Reset → nieuwe pagina = nieuw random nummer
 resetBtn.addEventListener("click", () => {
     window.location.reload();
 });
