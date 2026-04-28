@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "path";
 import homeRouter from "./routes/homeRoute";
 import detailRouter from "./routes/detailRoute";
+import accountRoute from "./routes/accountRoute";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 
 app.use("/home", homeRouter());
 app.use("/detail", detailRouter());
+app.use("/account", accountRoute());
 
 app.listen(app.get("port"), () => {
   console.log("Server started on http://localhost:" + app.get("port"));
