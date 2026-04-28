@@ -2,6 +2,7 @@ import express, { Express } from "express";
 import dotenv from "dotenv";
 import path from "path";
 import homeRouter from "./routes/homeRoute";
+import inlogRouter from "./routes/inlog";
 
 dotenv.config();
 
@@ -15,14 +16,16 @@ app.set("views", path.join(__dirname, "views"));
 
 app.set("port", process.env.PORT || 3000);
 
+// LANDINGSPAGINA 
 app.get("/", (req, res) => {
-	res.render("index", {
-		title: "Hello World",
-		message: "Hello World",
+	res.render("index");
 	});
-});
 
 app.use("/home", homeRouter());
+
+
+// ROUTE NAAR INLOG daaruit kan je NIEUWE ACCOUNT maken.
+app.use("/inlog", inlogRouter());
 
 app.listen(app.get("port"), () => {
 	console.log("Server started on http://localhost:" + app.get("port"));
