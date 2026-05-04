@@ -166,6 +166,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    z-index: 10;
 }
 .background-dropdown {
     display: flex;
