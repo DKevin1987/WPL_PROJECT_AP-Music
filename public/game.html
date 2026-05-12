@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/shared_classes.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/play_bar.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dropdownMenu" class="menu hidden">
+        <a href="./accountpage.html" class="background-dropdown">Account</a>
+        <a href="./game.html" class="background-dropdown">Muziek Spel</a>
+        <a href="./playlist_generator.html" class="background-dropdown">Playlist</a>
+        <a href="./accountpage.html" class="background-dropdown">Mood</a>
+        <a href="./index.html" class="background-dropdown">UITLOGGEN</a>
+    </div>
+
+    <header>
+        <a class="logo" href="./homepage.html">
+            <img src="./assets/images/logo_AP-Music.png" class="logo-header"/>
+        </a>
+
+        <form class="searchbar hidden" id="searchbar" action="">
+            <input class="search-input" type="search" placeholder="Nummer zoeken?" value="" />
+        </form>
+        <button class="right search" onclick="search()">
+            <img src="./assets/icons/iconmonstr-magnifier-lined-240.png" class="icon-header" />
+        </button>
+
+        <a class="right" href="./accountpage.html" >
+            <img class="icon-header" id="moodIcon" src="./assets/icons/moods/smile.png" alt=""/>
+        </a>
+
+        <button class="right" onclick="menu()"  id="menu-button" >
+            <img class="icon-header" src="./assets/icons/iconmonstr-menu-lined.svg" alt="" />
+        </button>
+    </header>
+
+    <main class="main_centerd">
+        
+        <section class="playbar">
+            <img id="music_cover" src="assets/album-covers/beatels.jpg" alt="">
+
+            <div class="track_playing">
+                <h3 class="title_playing" id="titel_bar" >Fica Mal Com Deus</h3>
+                <p class="artist_playing" id="artist_bar">Garota Moderna</p>
+            </div>
+
+            <div class="track_control">
+                <button id="previous" onclick="change_play_pos(false)">
+                    <img src="./assets/icons/previous-track-icon.png"/>
+                </button>
+                <button id="start_pause" onclick="play_pause(this)">
+                    <img id="start_pause_icon" src="./assets/icons/playIcon.png"/>
+                </button>
+                <button id="next" onclick="change_play_pos(true)">
+                    <img src="./assets/icons/next-track-icon.png"/>
+                </button>
+            </div>
+        </section>
+        
+    </main>
+
+ <footer class="footer_bottom"><p>©AP-Music</p></footer>
+    
+</body>
+</html>

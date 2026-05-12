@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/shared_classes.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/vergelijk.css">
+
+    <script src="/js/vergelijk.js" defer> </script>
+</head>
+<body>
+
+<%- include("partials/header") %>
+
+<main>
+    <section>
+        <div class="search_for">
+            <input list="search_suggestions_one" id="one" track_id="<%=(track_1) ? track_1.id : ''  %>" type="text" autocomplete="off" placeholder="Search for song">
+            <datalist id="search_suggestions_one">
+            </datalist>  
+        </div>
+
+        <% if (track_1) { %>
+            <%- include("partials/vergelijk_filled") %>
+        <% } else { %>
+            <%- include("partials/vergelijk_empty") %>
+        <% } %>
+       
+    </section>
+
+    <section>
+        <div class="search_for">
+            <input list="search_suggestions_two" id="two" track_id="<%=(track_2) ? track_2.id : ''  %>"  autocomplete="off" type="text" placeholder="Search for song">
+            <datalist id="search_suggestions_two">
+            </datalist>  
+        </div>
+
+        <% if (track_2) { %>
+            <%- include("partials/vergelijk_filled2") %>
+        <% } else { %>
+            <%- include("partials/vergelijk_empty") %>
+        <% } %>
+    </section>
+
+
+</main>
+
+
+<%- include("partials/footer") %>
+
+</body>
+</html>

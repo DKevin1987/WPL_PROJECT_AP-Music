@@ -1,0 +1,32 @@
+ <div id="dropdownMenu" class="menu hidden">
+    <a href="/accountpage.html" class="background-dropdown">Account</a>
+    <a href="/game.html" class="background-dropdown">Muziek Spel</a>
+    <a href="/homepage.html" class="background-dropdown">Playlist</a>
+    <a href="/collectie.html" class="background-dropdown">Collectie</a>
+    <a href="/vergelijk" class="background-dropdown">Vergelijk</a>
+    <a href="/index.html" class="background-dropdown">UITLOGGEN</a>
+</div>
+
+<header>
+    <a class="logo" href="/homepage.html">
+        <img src="/assets/images/logo_AP-Music.png" class="logo-header"/>
+    </a>
+
+    <form class="searchbar hidden" id="searchbar" >
+        <input list="search_suggestions" autocomplete="off" id="search_input" class="search-input" type="search" placeholder="Nummer zoeken?" value="" />
+        <datalist id="search_suggestions">
+        </datalist>  
+    </form>
+    <button id="search_button" class="right search" >
+        <img src="/assets/icons/iconmonstr-magnifier-lined-240.png" class="icon-header" />
+    </button>
+
+    <a class="right" id="moodIcon_container" href="/accountpage.html" >
+        <img class="icon-header" id="moodIcon" src="/assets/icons/moods/neutral.png" alt=""/>
+    </a>
+
+    <button id="menu_button" class="right"  >
+        <img class="icon-header" src="/assets/icons/iconmonstr-menu-lined.svg" alt="" />
+    </button>
+</header>
+

@@ -1,0 +1,29 @@
+ <article>
+    <div class="track_info">
+        <img src="<%= track_2.album_cover_big %>" alt="">
+        <div class="track_name">
+            <h2><%= track_2.title %></h2>
+            <h3><%= track_2.artist %></h3>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="<%=(track_1?.popularity && track_1?.popularity  < track_2.popularity) ? 'green' : ''  %>" ><p>🔥</p><%= track_2.popularity %></div>
+        <div class="<%=(track_1?.energy && track_1?.energy  < track_2.energy) ? 'green' : ''  %>" ><p>⚡</p><%= track_2.energy %></div>
+        <div class="<%=(track_1?.danceability && track_1?.danceability  < track_2.danceability) ? 'green' : ''  %>" ><p>🕺</p><%= track_2.danceability %></div>
+        <div class="<%=(track_1?.tempo && track_1?.tempo  < track_2.tempo) ? 'green' : ''  %>" ><p>⏱️</p><%= track_2.tempo %></div>
+    </div>
+    
+
+    <div class="options">
+        <button>
+            <img src="/assets/icons/heart2.png" alt="">
+        </button>
+        <button>
+            <img src="/assets/icons/info.png" alt="">
+        </button>
+        <button>
+            <img src="/assets/icons/plus-icon.png" alt="">
+        </button>
+    </div>
+</article>

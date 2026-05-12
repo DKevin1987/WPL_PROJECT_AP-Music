@@ -1,0 +1,46 @@
+.main_centerd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(1400px,  90vw );
+    
+    flex-grow: 1;
+}
+
+@media (max-width: 700px) {
+    .main_centerd{
+        width: 100vw;
+    }
+}
+
+:root {
+    --main_content: calc(100dvh - var(--playbar_height) - var(--header_height) - var(--footer_height) );
+    --footer_height: 60px;
+    --button_size: calc(2.4rem + 10px);
+}
+
+.footer_bottom{
+    margin-top: auto;
+    width: 100%;
+    height: var(--footer_height);
+    padding: 15px;
+    display: grid;
+    place-content: center;
+    cursor: default;
+}
+
+@media (max-width: 700px) {
+    :root {
+        --footer_height: 30px;
+    }   
+    .footer_bottom{
+        padding: 5px;
+    }
+}
+
+
+
+.hidden{
+    display: none !important;
+}

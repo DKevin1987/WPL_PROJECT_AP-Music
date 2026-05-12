@@ -1,0 +1,175 @@
+
+
+:root {
+    --header_height: 72px;    
+}
+
+
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+
+    align-items: center;
+    background-color: rgb(165, 160, 160);
+
+    height: var(--header_height);
+    padding: 20px 100px;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    header{
+        gap: 10px;
+        padding: 0px 20px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        --header_height: 50px;    
+    }
+}
+
+
+header a, header button{
+    border: 3px solid transparent;
+}
+
+header a:hover, header button:hover{
+    border-color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    header a:hover, header button:hover{
+        border-color: transparent;
+    }
+    header a:active, header button:active{
+        border-color: black;
+    }
+
+}
+
+
+.logo{
+    margin-right: auto;
+    overflow: hidden;
+    height: calc(var(--header_height) - 3px);
+    border-radius: 15%;
+}
+
+
+img{
+    height: 100%;
+}
+
+.right{
+    
+
+    height: calc(var(--button_size) - 10px);
+    width: calc(var(--button_size) - 10px );
+    display: grid;
+    place-content: center;
+
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 450px) {
+    .right {
+        height: calc(1.8rem );
+        width: calc(1.8rem );
+    }
+}
+
+
+/* @media (max-width: 450px) {
+    .right{
+        height: calc(var(--header_height) - 10px);
+        width: calc(var(--header_height) - 10px);
+    
+    }
+} */
+
+
+.right img{
+    height: 97%;
+    width: 97%;
+    margin: auto;
+}
+
+.search img{
+    height: 93%;
+    width: 93%;
+}
+
+.searchbar{
+    display: flex;
+    width: 400px;
+}
+
+.searchbar input{
+    outline: none;
+    border: none;
+    
+    width: 100%;
+    font-size: 1.3rem;
+
+    padding: 9px 5px;
+    padding-left: 30px;
+
+    border-radius: 40px;
+}
+
+@media (max-width: 450px) {
+    .searchbar {
+        width: auto;
+        flex-grow: 1;
+        
+        
+    }
+
+    .searchbar input{
+        padding-left: 5px;
+        font-size: 0.7rem;
+    }
+}
+
+
+.menu {
+  align-items: center;
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+  width: 15rem;
+  background: #c0baba;
+  padding: 15px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 99;
+}
+
+
+.menu a{
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-align: center  ;
+    cursor: pointer;
+    padding: 7px;
+    width: calc(100% - 20px);
+}
+
+.menu a:hover{
+    
+    background-color: #dfdfdf;
+}
+
+
+
+

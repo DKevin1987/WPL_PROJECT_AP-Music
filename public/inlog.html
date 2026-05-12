@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author 1" content="Dom Kevin" />
+  <meta name="author 2" content="Opong Nana" />
+  <meta name="author 3" content="Kyaro Van Goethem" />
+  <title>AP-Music</title>
+  <link rel="stylesheet" type="text/css" href="./css/oud_reset.css" />
+  <link rel="stylesheet" type="text/css" href="./css/inlog_registratie.css" />
+
+  <script src="./js/inlog.js" defer></script>
+</head>
+
+<body>
+  <main class="main-container">
+    <section class="section-box">
+      <!-- LOGO EN TITEL  -->
+
+      <div class="logo-container">
+        <figure>
+          <img class="Logo" src="./assets/images/logo_AP-Music.png" alt="Logo AP-Music" />
+        </figure>
+      </div>
+      <h1>Inloggen bij AP-Music</h1>
+
+      <!-- INLOG FORMULIER -->
+
+      <form  onsubmit="event.preventDefault();"   class="form-container" id="inlogform">
+        <label for="useremail"><img class="icon" src="./assets/icons/email.jpg" alt="" />
+          Email</label>
+        <input  type="email" name="Email" id="useremail" required placeholder="abc@email.be" value="" />
+        <label for="userpasword"><img class="icon" src="./assets/icons/slot.jpg" alt="" />
+          Wachtwoord</label>
+        <input type="password" name="Wachtwoord" id="userpasword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+          placeholder="Wachtwoord" value="" />
+        <button  id="inlogButton" class="buttonInlog" type="submit">
+          Inloggen
+        </button>
+        <button onclick="window.location.href = './registratie.html'"  class="buttonRegistreren">
+          <a href="./registratie.html">Registreren</a>
+        </button>
+        <button id="buttonRecovery" class="buttonRecovery">Wachtwoord vergeten?</button>
+      </form>
+    </section>
+
+    <!-- INLOG FORMULIER ERROR DEEL -->
+
+    <section class="hidden" id="inlogInputCheck">
+
+      <div class="hidden" id="email_pass_error">
+        <h3>Foutive email of passwoord</h3>
+        <p>Deze email bestaat niet. Of het password is incorrect</p>
+      </div>
+
+       <div class="hidden" id="emptyfields">
+        <h3>Verplichte velden.</h3>
+        <p>U hebt geen email en paswoord ingegeven.</p>
+      </div>
+      
+      <button onclick="hide_error()" class="buttonError" id="buttonError">OK</button>
+    </section>
+
+    <!-- RESET PASWORD DEEL -->
+
+    <section id="sectionPaswordReset" class="sectionPaswordReset hidden">
+      <h3>PASWOORD RESET.</h3>
+      <form action="">
+        <label for="resetEmailLabel"><img class="icon" src="./assets/icons/email.jpg" alt="" />Email</label>
+        <input id="resetEmailLabel" type="text" value="" placeholder="abc@music.be" />
+        <button class="buttonInlog" type="submit">Submit</button>
+        <button id="buttonCancel">Anuleren</button>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

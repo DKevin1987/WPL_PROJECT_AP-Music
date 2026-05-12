@@ -1,0 +1,147 @@
+
+
+
+main{
+    display: flex;
+
+    flex-grow: 1;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 50vw;
+
+    
+    gap: 20px;
+}
+
+
+.search_for{
+    display: flex;
+
+}
+
+input{
+    padding: 10px 10px 10px 20px;
+    width: clamp(230px, 25vw, 400px);
+    border-radius: 30px;
+    font-size: 1.2rem;
+}
+
+article{
+    padding: min(2vw, 20px) min(2vw, 30px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    background-color: #cccccc;
+    width: clamp(300px, 50vw, 700px);
+    height: 100%;
+
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+article img{
+    height: clamp(110px, 15vw, 180px);
+    width:  clamp(110px, 15vw, 180px);
+}
+
+.info_line{
+    display: grid;
+    height: clamp(200px, 25vw, 300px);
+    grid-template-columns: auto auto;
+
+    grid-template-rows: 2fr 2fr 2fr 1fr 1fr 1fr;
+
+    padding: 10px;
+
+    column-gap: min(2vw, 2rem);
+    row-gap: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .info_line{
+        height: 40dvh;
+    }
+}
+
+h3{
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+
+}
+
+
+h3:nth-child(odd){
+    text-align: left;
+}
+
+
+.options{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.options button{
+    position: relative;
+
+    height: clamp(25px, 7vw, 50px);
+    width: clamp(25px, 7vw, 50px);
+    background-color: white;
+    border: 3px solid #cccccc;
+
+
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+
+    
+}
+
+.options button::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 50%;
+    border: clamp(2px, 1vw, 4px) solid black;
+}
+
+
+.options button:hover{
+    border-color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    .options button:hover{
+        border-color: transparent;
+    }
+
+    .options button:active{
+        border-color: black;
+    }
+}
+
+
+.options img{
+    height: 100%;
+    width: 100%;
+}
+
+.options button:nth-child(1) img{
+    scale: 0.6;
+}

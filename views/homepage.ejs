@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/shared_classes.css">
+    <link rel="stylesheet" href="css/play_bar.css">
+    
+    <link rel="stylesheet" href="css/homepage.css">
+
+    <script src="js/homepage.js" defer></script>
+</head>
+<body>
+
+
+    <%- include("partials/header") %>
+
+    <main class="main_centerd">
+        
+        <%- include("partials/playbar") %>
+
+        <section class="aanbeveling">
+            <h1 class="aanbeveling_title">Genereerde Playlist</h1>
+
+            <div class="aanbeveling2" id="aanbeveling_div">
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>

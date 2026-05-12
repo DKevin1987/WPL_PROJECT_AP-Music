@@ -1,0 +1,247 @@
+
+
+main{
+    padding: 0px 10px;
+}
+
+
+.collectie{
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    
+    width: 100%;
+    height: var(--main_content) ;
+
+    overflow-y: scroll;
+
+    scrollbar-width: thin;
+
+    background: linear-gradient(to right, #d5d1d1 0%, #f0dede 60%, #f0dede 100%) no-repeat;
+    
+}
+
+ 
+:root{
+    --collection_sort_filter_height: 3rem;
+}
+
+.collection_sort_filter{
+    width: 100%;
+    height: var(--collection_sort_filter_height);
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: rgb(165, 160, 160);
+    color: white;
+
+    row-gap: 10px;
+}
+
+
+@media (max-width: 1300px) {
+
+    :root{
+        --collection_sort_filter_height: 80px
+    }
+
+    .collection_sort_filter{
+        column-gap: 50px;
+        padding: 0px 20px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    :root{
+        --collection_sort_filter_height: 135px
+    }
+
+
+    .collection_sort_filter{
+        row-gap: 0px;
+        column-gap: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-right: 20px;
+
+        & > h2{
+            margin: 0 auto;
+        }
+    }
+} 
+
+
+/* @media (max-width: 1300px) {
+    .collection_sort_filter{
+        height: calc(1.9 * var(--collection_sort_filter_height));
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+    :root{
+        --collection_sort_filter_height: 50px
+    }
+
+
+    .collection_sort_filter{
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-right: 20px;
+
+        & > h2{
+            display: none;
+        }
+    }
+} */
+
+.search_bars{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+
+.collection_sort_filter h2{
+    padding: 0px 1rem;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+    white-space: nowrap;
+}
+
+.collection_sort_filter h3{
+    white-space: nowrap;
+    font-weight: 200;
+    font-size: clamp(1.1rem, 1.7vw, 1.2rem);
+}
+
+
+.link{
+    display: flex;
+    gap: min(1vw, 20px);
+}
+
+input, select{
+    padding: 2px;
+    padding-left: 10px;
+    border-radius: 15px;
+
+    font-size: 1.1rem;
+    border: none;
+
+    width: clamp(140px , 20vw, 200px);
+
+    &:focus{
+        outline: none;
+    }
+}
+
+
+.music_grid{
+    
+
+    height: calc(var(--main_content)  - var(--collection_sort_filter_height) );
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px); /* fit as many 200px cols as possible */
+    grid-auto-rows: 200px;  
+
+    gap: 20px;
+
+    padding: 20px 10px;
+    
+    justify-content: space-evenly;
+
+    
+}
+
+.track{
+    background-color: rgb(114, 114, 114);
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    
+    border: 3px solid transparent;
+}
+
+.selected {
+    border-color: white;
+}
+
+
+.track > img{
+    height: calc(100% - 2.5rem);
+}
+
+
+
+.track .play_pause{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    scale: 0.3;
+    z-index: 2;
+    margin-left: auto;
+    
+    cursor: pointer;
+    & > img{
+        filter: invert(1);
+        border-radius: 50%;
+        border: solid transparent 7px;
+    }
+}
+
+.track .play_pause img:hover{
+    border-color: black;
+}
+
+
+
+
+.cover_buttons{
+    position: relative;
+    background-color: rgb(114, 114, 114);
+    color: white;
+
+
+    width: 100%;
+    height: 2.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px;
+    align-items: center;
+    
+}
+
+.cover_buttons h3{
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.cover_buttons p{
+    font-size: 0.7rem;
+}
+
+.cover_buttons .img_cont{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.cover_buttons .img_cont img{
+    scale: 1.15;
+}
+

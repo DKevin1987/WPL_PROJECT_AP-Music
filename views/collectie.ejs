@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/shared_classes.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+
+    <link rel="stylesheet" href="/css/play_bar.css">
+
+    <link rel="stylesheet" href="/css/collectie.css">
+
+    <script src="/js/collectie.js" defer></script>
+</head>
+<body>
+   <%- include("partials/header") %>
+
+<main class="main_centerd">
+    
+    <%- include("partials/playbar") %>
+
+    <section class="collectie">
+
+        <div class="collection_sort_filter">
+            <h2>Jouw Collectie</h2>
+
+            <div class="link">
+                <h3>Sort by: </h3>
+                <select name="track_sort_options" id="sortby">
+                    <option value="popularity" selected >Popularity</option>
+                    <option value="energy" >Energy</option>
+                    <option value="danceability" >Danceability</option>
+                </select>
+            </div>
+
+            <div class="link">
+                <h3>Filter on artist: </h3>
+                <input type="text" list="artist_datalist" id="artist_input">
+                <datalist id="artist_datalist">
+                </datalist>  
+            </div>
+
+            <div class="link">
+                <h3>Filter on label: </h3>
+                <input type="text" id="label_input" list="label_datalist">
+                <datalist id="label_datalist">
+                </datalist>  
+            </div>
+   
+
+        </div>
+
+        <article class="music_grid" id="music_grid">
+
+          
+
+        </article>
+    </section>
+</main>
+
+<%- include("partials/footer") %>
+</body>
+</html>
