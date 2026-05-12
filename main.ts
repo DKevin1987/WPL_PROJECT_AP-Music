@@ -76,7 +76,9 @@ app.get("/vergelijk{.html}", RouteSecureMiddleware, (req,res) => {
 app.get("/homepage{.html}", RouteSecureMiddleware, (req,res) => {
     res.render("homepage")
 })
-
+app.get("/game{.html}", RouteSecureMiddleware, (req,res) => {
+    res.render("game")
+})
 app.get("/searchpage/{*any}", RouteSecureMiddleware, (req,res) => {
     res.render("searchpage")
 })
@@ -107,8 +109,8 @@ app.all("/*any", (req,res) => {
 })
 
 
-// awd@wda
-// @ECad2r4
+//email: awd@wda
+// wachtwoord: @ECad2r4
 
 
 app.listen(app.get("port"), async () =>{
