@@ -138,7 +138,7 @@ const MAX_TITLE_LENGTH = 20
 export function track_to_playlist_track(track:Track, liked:boolean) {
   
 
-  const title_shortend =   track.title_short.length > 20 ? track.title_short.substring(0,20) : track.title_short 
+  const title_shortend =   track.title_short.length > 20 ? track.title_short.substring(0,20) + "..." : track.title_short 
 
   const playlist_track: Playlist_track = {
     id: track.id,

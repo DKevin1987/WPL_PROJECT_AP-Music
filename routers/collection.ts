@@ -1,5 +1,5 @@
 import express from "express";
-import { Collection_track, Email, Track, Track_liked, track_to_collection_track, track_to_playlist_track } from "../data/interfaces";
+import { Email, Track, Track_liked, track_to_collection_track, track_to_playlist_track } from "../data/interfaces";
 import { db_get_track_by_id, db_get_user_by_email } from "../mongo_api";
 import { Playlist_track } from "../public/ts/shared/types";
 export default function get_collection() {
@@ -28,9 +28,8 @@ export default function get_collection() {
         }
         
         const sortby = typeof req.query.sortby == "string" ? req.query.sortby : ""        
-        const artist_filter = typeof req.query.artist_filter == "string" ? req.query.artist_filter : ""          
-        const label_filter = typeof req.query.label_filter == "string" ? req.query.label_filter : ""    
-        
+        const artist_filter = typeof req.query.artist_filter == "string" ? req.query.artist_filter : ""  
+
         switch (sortby) {
             case "popularity":
                 full_tracks.sort((a,b) => a.popularity - b.popularity)
@@ -45,17 +44,15 @@ export default function get_collection() {
         if (artist_filter) {
             full_tracks = full_tracks.filter( (track) => track.artist == artist_filter )
         }
-
-
-
+        
+        
         let tracks:Playlist_track[] = full_tracks.map( (track) => track_to_playlist_track(track, true) )
-
- 
-        const final_tracks = tracks.map((track) => {
+        
+        
+        let final_tracks = tracks.map((track) => {
             const if_track_liked = user.collection.find(track_liked => track_liked.track_id == track.id ) as Track_liked
             return track_to_collection_track(track, true, if_track_liked)
         } )
-
 
 
         return res.json(final_tracks)
