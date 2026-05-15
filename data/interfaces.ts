@@ -133,13 +133,17 @@ export function track_to_collection_track(track:Playlist_track,liked:boolean, tr
 }
 
 
+const MAX_TITLE_LENGTH = 20
 
 export function track_to_playlist_track(track:Track, liked:boolean) {
   
+
+  const title_shortend =   track.title_short.length > 20 ? track.title_short.substring(0,20) : track.title_short 
+
   const playlist_track: Playlist_track = {
     id: track.id,
     preview: `/api/music/${track.id}.mp3`,
-    title : track.title,
+    title : title_shortend,
     artist: track.artist,
     image: track.album_cover_medium,
     liked: liked
@@ -149,7 +153,7 @@ export function track_to_playlist_track(track:Track, liked:boolean) {
 }
 
 
-export function playlist_track_to_Track_liked(collection:Track_liked[], tracks:Track[]) {
+export function playlist_track_to_Track_liked(collection:Track_liked[], tracks:Track[]):Playlist_track[] {
 
     let playlist_tracks:Playlist_track[] = tracks.map(track => {
 

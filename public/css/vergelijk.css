@@ -52,6 +52,7 @@ input{
     section{
         gap: 5px;
         margin-top: 5px;
+        width: calc(50% - 5px);
     }
 }
 
@@ -66,11 +67,18 @@ article{
     height: 100%;
 
 
-
+/* 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
+
+    display: grid;
+
+    grid-template-columns: auto;
+    
+    grid-template-rows: 45% 45% 10%;
+    
 }
 
 
@@ -113,6 +121,8 @@ article img{
 
 
 .track_name{
+    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,11 +138,13 @@ article img{
 
 .track_name h2{
     font-weight: 700;
-    font-size: clamp(01rem, 3vw, 1.5rem);
+    font-size: clamp(01rem, 3vw, 1.3rem);
+    white-space: wrap;
 }
 
 .track_name h3{
-    font-size: clamp(01rem, 3vw, 1.5rem);
+    white-space: wrap;
+    font-size: clamp(01rem, 3vw, 1.3rem);
     font-weight: 300;
 }
 
@@ -140,14 +152,16 @@ article img{
 .stats{
     display: grid;
     height: 200px;
-    width: min(100%, 400px);
+    width: min(calc( 100% - min(1vw, 20px) * 2), 400px);
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr;
     column-gap: 10px;
+
+    
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .stats{
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -170,6 +184,8 @@ article img{
     white-space: nowrap;
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     word-spacing: 5px;
+
+    
 }
 
 
