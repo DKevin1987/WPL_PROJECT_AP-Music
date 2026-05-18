@@ -18,6 +18,7 @@ import get_collection from "./routers/collection";
 import liken from "./routers/liken";
 import details from "./routers/details";
 import vergelijk from "./routers/vergelijk";
+import gameRouter from "./routers/game_routes"
 
 
 
@@ -51,6 +52,7 @@ app.use("/api/collectie", ApiSecureMiddleware, get_collection())
 
 app.use("/api/like", ApiSecureMiddleware, liken())
 
+app.use("/api/game", ApiSecureMiddleware, gameRouter)
 
 app.use("/details", RouteSecureMiddleware, details())
 
