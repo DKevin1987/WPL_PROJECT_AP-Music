@@ -1,3 +1,4 @@
 
 
-user input check server side, met ejs voor displaying errors
+
+register melding knop weg doen werkt niet

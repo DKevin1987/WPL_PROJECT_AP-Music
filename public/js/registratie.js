@@ -54,6 +54,8 @@
       var emailCheck = document.getElementById("emailCheck");
       var paswordCheck = document.getElementById("paswordCheck");
       var paswordCheckValid = document.getElementById("paswordCheckValid");
+      var error_notification_button = document.getElementById("buttonErrorRegistratie");
+      error_notification_button.addEventListener("click", clear_error);
       function clear_error() {
         registratieInputCheck.classList.add("hidden");
         usernameCheck.classList.add("hidden");

@@ -22,6 +22,10 @@ const emailCheck             = document.getElementById("emailCheck")            
 const paswordCheck           = document.getElementById("paswordCheck")           as HTMLDivElement;
 const paswordCheckValid      = document.getElementById("paswordCheckValid")      as HTMLDivElement;
 
+let error_notification_button =  document.getElementById("buttonErrorRegistratie") as HTMLButtonElement
+
+error_notification_button.addEventListener("click", clear_error)
+
 function clear_error() {
     registratieInputCheck.classList.add("hidden")
 
