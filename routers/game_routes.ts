@@ -16,7 +16,6 @@ gameRouter.get("/songs", async (req: Request, res: Response) => {
             return
         }
 
-        // Zelfde conversie als de homepage gebruikt
         const playlist_tracks = tracks.map(track => track_to_playlist_track(track, false))
 
         res.json(playlist_tracks)
