@@ -73,3 +73,6 @@ async function register() {
     
 }
 
+buttonRegister.addEventListener("click", register)
+
+//#WRW#C..;3rw3rw

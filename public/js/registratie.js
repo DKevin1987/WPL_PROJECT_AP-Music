@@ -16,6 +16,19 @@
   });
 
   // shared/funcs.ts
+  async function post_request(route, body) {
+    let response = null;
+    response = await fetch(route, {
+      method: "POST",
+      // HTTP method
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body),
+      credentials: "include"
+    });
+    return response;
+  }
   var moodIcon;
   var init_funcs = __esm({
     "shared/funcs.ts"() {
@@ -41,6 +54,47 @@
       var emailCheck = document.getElementById("emailCheck");
       var paswordCheck = document.getElementById("paswordCheck");
       var paswordCheckValid = document.getElementById("paswordCheckValid");
+      function clear_error() {
+        registratieInputCheck.classList.add("hidden");
+        usernameCheck.classList.add("hidden");
+        emailCheckValid.classList.add("hidden");
+        emailCheck.classList.add("hidden");
+        paswordCheck.classList.add("hidden");
+        paswordCheckValid.classList.add("hidden");
+      }
+      async function register() {
+        const usernameInputVal = usernameInput.value;
+        const emailInputVal = emailInput.value;
+        const paswordInputVal = paswordInput.value;
+        const paswordInputCheckVal = paswordInputCheck.value;
+        const email_pattern = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)*$/i;
+        const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
+        clear_error();
+        if (usernameInputVal === "") {
+          usernameCheck.classList.remove("hidden");
+        } else if (!email_pattern.test(emailInputVal)) {
+          emailCheckValid.classList.remove("hidden");
+        } else if (!password_pattern.test(paswordInputVal)) {
+          paswordCheck.classList.remove("hidden");
+        } else if (paswordInputVal != paswordInputCheckVal) {
+          paswordCheckValid.classList.remove("hidden");
+        } else {
+          const user = {
+            "email": emailInputVal,
+            "username": usernameInputVal,
+            "password": paswordInputVal
+          };
+          const responds = await post_request("/api/register", user);
+          if (responds.ok) {
+            window.location.href = responds.url;
+            return;
+          } else {
+            emailCheck.classList.remove("hidden");
+          }
+        }
+        registratieInputCheck.classList.remove("hidden");
+      }
+      buttonRegister.addEventListener("click", register);
     }
   });
   require_registratie();
