@@ -20,7 +20,8 @@ import details from "./routers/details";
 import vergelijk from "./routers/vergelijk";
 import gameRouter from "./routers/game_routes"
 
-
+import { getUsername } from "./database";
+import { User } from "./data/interfaces";
 
 const saltRounds : number = 10;
 
@@ -66,8 +67,10 @@ app.get("/game{.html}", RouteSecureMiddleware, (req,res) => {
 })
 
 
-app.get("/accountpage{.html}", RouteSecureMiddleware, (req,res) => {
-    res.render("accountpage")
+app.get("/accountpage{.html}", RouteSecureMiddleware, async (req,res) => {
+    let email = res.locals.user_email.value
+    let username = await getUsername(email)
+    res.render("accountpage", {email, username})
 })
 
 app.get("/collectie{.html}", RouteSecureMiddleware, (req,res) => {

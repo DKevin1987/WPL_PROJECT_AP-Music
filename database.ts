@@ -1,6 +1,7 @@
 import { MongoClient, Collection, GridFSBucket } from "mongodb";
-import {Artist, Track, type User} from "./data/interfaces"
+import {Artist, Mood, Track, type User} from "./data/interfaces"
 import dotenv from "dotenv";
+import mood from "./routers/mood";
 
 
 dotenv.config();
@@ -49,7 +50,16 @@ export const track_collection:     Collection<Track> =
 export const bucket = 
     new GridFSBucket(client.db(DBName), { bucketName: 'music' });
 
+export async function getUsername(email:string) {
+    let user:User | null = await user_collection.findOne({email: email});
 
+    if (user === null){
+        return "Not found"
+    }
+    else{
+        return user.username;
+    }
+}
 
 
 

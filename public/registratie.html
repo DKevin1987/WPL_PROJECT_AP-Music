@@ -10,7 +10,7 @@
   <title>AP-Music</title>
   <link rel="stylesheet" type="text/css" href="./css/oud_reset.css" />
   <link rel="stylesheet" type="text/css" href="./css/inlog_registratie.css" />
-  <script  src="./js/registratie.js" defer></script>
+  <script src="./js/registratie.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 
       <!-- REGISTRATIE FORMULIER -->
 
-      <form novalidate  onsubmit="event.preventDefault();"  class="form-container" id="registrationform">
+      <form novalidate onsubmit="event.preventDefault();" class="form-container" id="registrationform">
         <label for="Username"><img class="icon" src="./assets/icons/person.jpg" alt="" />
           Gebruikersnaam</label>
         <input type="text" name="Username" id="usernameInput" required placeholder="Gebruikersnaam" value="" />
@@ -59,9 +59,8 @@
           Wachtwoord</label>
         <input type="password" name="Wachtwoord" id="paswordInputCheck" required
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="wachtwoord" value="" />
-        
-          <button  type="submit" class="buttonInlog" id="buttonRegister">Registreren</button>
-        
+
+        <button type="submit" class="buttonInlog" id="buttonRegister">Registreren</button>
         <button class="buttonRecovery">
           <a href="./inlog.html">Heb je al een account?</a>
         </button>
