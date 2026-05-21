@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
@@ -11,77 +11,89 @@
     <script src="js/accountpage.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
 
-<%- include("partials/header") %>
+    <%- include("partials/header") %>
 
-<main>
-    
-    <section class="sidebar">
-        <img id="user_icon" src="assets/icons/person.jpg" alt="">
-        <hr>
-        <button class="view_button" view="gebruikersnaam" > <p>Gebruiker Naam</p> </button>
-        <button class="view_button" view="beveiligin"     > <p>Beveiliging</p> </button>
-        <button class="view_button" view="gebruikers_icon"> <p>Gebruikers Icoon</p> </button>
-        <button class="view_button" view="mood"           > <p>Mood</p> </button>
-    </section>
+        <main>
 
-    <section class="account_page">
-
-        <article class="hidden" id="gebruikersnaam">
-            <p>Gebruikersnaam: Kyaro Van Goethem</p>
-            <p>E-mail: random@gmail.com</p>
-        </article>
-
-        <article class="hidden" id="gebruikers_icon">
-            <p>Gebruikers icoon aanpassen:</p>
-            <div class="user_icons">
-              
-                <button class="change_user">
-                    <img src="assets/icons/person.jpg" alt="">
+            <section class="sidebar">
+                <img id="user_icon" src="assets/icons/person.jpg" alt="">
+                <hr>
+                <button class="view_button" view="gebruikersnaam">
+                    <p>Gebruiker Naam</p>
                 </button>
-                <button class="change_user">
-                    <img src="assets/gebruikers-icoon/user1.png" alt="">
+                <button class="view_button" view="beveiligin">
+                    <p>Beveiliging</p>
                 </button>
-                <button class="change_user">
-                    <img src="assets/gebruikers-icoon/user2.png" alt="">
+                <button class="view_button" view="gebruikers_icon">
+                    <p>Gebruikers Icoon</p>
                 </button>
-                <button class="change_user">
-                    <img src="assets/gebruikers-icoon/user3.png" alt="">
+                <button class="view_button" view="mood">
+                    <p>Mood</p>
                 </button>
-            </div>
-        </article>
+            </section>
 
-        <article class="hidden" id="beveiligin">
-            <p>E-mail: random@gmail.com</p>
-            <p>Wachtwoord: ***********</p>
-        </article>
+            <section class="account_page">
+
+                <article class="hidden" id="gebruikersnaam">
+                    <p>Gebruikersnaam: <%= username %>
+                    </p>
+                    <p>E-mail: <%= email %>
+                    </p>
+                </article>
+
+                <article class="hidden" id="gebruikers_icon">
+                    <p>Gebruikers icoon aanpassen:</p>
+                    <div class="user_icons">
+
+                        <button class="change_user">
+                            <img src="assets/icons/person.jpg" alt="">
+                        </button>
+                        <button class="change_user">
+                            <img src="assets/gebruikers-icoon/user1.png" alt="">
+                        </button>
+                        <button class="change_user">
+                            <img src="assets/gebruikers-icoon/user2.png" alt="">
+                        </button>
+                        <button class="change_user">
+                            <img src="assets/gebruikers-icoon/user3.png" alt="">
+                        </button>
+                    </div>
+                </article>
+
+                <article class="hidden" id="beveiligin">
+                    <p>E-mail: random@gmail.com</p>
+                    <p>Wachtwoord: ***********</p>
+                </article>
 
 
-        <article class="hidden" id="mood">
-            <p>Mood aanpassen:</p>
-            <div class="user_icons">
-                
-                <button class="change_mood" mood="neutral" >
-                    <img src="assets/icons/moods/neutral.png" alt="">
-                </button>
-                <button class="change_mood" mood="happy"  >
-                    <img src="assets/icons/moods/happy.png" alt="">
-                </button>
-                <button class="change_mood" mood="sad"  >
-                    <img src="assets/icons/moods/sad.png" alt="">
-                </button>
-                <button class="change_mood" mood="angry"  >
-                    <img src="assets/icons/moods/angry.png" alt="">
-                </button>
-            </div>
-        </article>
+                <article class="hidden" id="mood">
+                    <p>Mood aanpassen:</p>
+                    <div class="user_icons">
+
+                        <button class="change_mood" mood="neutral">
+                            <img src="assets/icons/moods/neutral.png" alt="">
+                        </button>
+                        <button class="change_mood" mood="happy">
+                            <img src="assets/icons/moods/happy.png" alt="">
+                        </button>
+                        <button class="change_mood" mood="sad">
+                            <img src="assets/icons/moods/sad.png" alt="">
+                        </button>
+                        <button class="change_mood" mood="angry">
+                            <img src="assets/icons/moods/angry.png" alt="">
+                        </button>
+                    </div>
+                </article>
 
 
-    </section>
+            </section>
 
-</main>
+        </main>
 
-    <%- include("partials/footer") %>
+        <%- include("partials/footer") %>
 </body>
+
 </html>
