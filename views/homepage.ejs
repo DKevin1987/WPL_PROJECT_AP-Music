@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AP-Music - home</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/shared_classes.css">
     <link rel="stylesheet" href="css/play_bar.css">
-    
+
     <link rel="stylesheet" href="css/homepage.css">
 
     <script src="js/homepage.js" defer></script>
 </head>
+
 <body>
 
 
     <%- include("partials/header") %>
 
-    <main class="main_centerd">
-        
-        <%- include("partials/playbar") %>
+        <main class="main_centerd">
 
-        <section class="aanbeveling">
-            <h1 class="aanbeveling_title">Genereerde Playlist</h1>
+            <%- include("partials/playbar") %>
 
-            <div class="aanbeveling2" id="aanbeveling_div">
+                <section class="aanbeveling">
+                    <h1 class="aanbeveling_title">Genereerde playlist</h1>
 
-
-            </div>
-        </section>
+                    <div class="aanbeveling2" id="aanbeveling_div">
 
 
-    </main>
+                    </div>
+                </section>
 
 
-    <%- include("partials/footer") %>
+        </main>
+
+
+        <%- include("partials/footer") %>
 
 </body>
+
 </html>

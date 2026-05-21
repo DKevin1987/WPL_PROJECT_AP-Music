@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AP-Music - collectie</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/shared_classes.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -15,45 +16,47 @@
 
     <script src="/js/collectie.js" defer></script>
 </head>
+
 <body>
-   <%- include("partials/header") %>
+    <%- include("partials/header") %>
 
-<main class="main_centerd">
-    
-    <%- include("partials/playbar") %>
+        <main class="main_centerd">
 
-    <section class="collectie">
+            <%- include("partials/playbar") %>
 
-        <div class="collection_sort_filter">
-            <h2>Jouw Collectie</h2>
+                <section class="collectie">
 
-            <div class="link">
-                <h3>Sort by: </h3>
-                <select name="track_sort_options" id="sortby">
-                    <option value="popularity" selected >Popularity</option>
-                    <option value="energy" >Energy</option>
-                    <option value="danceability" >Danceability</option>
-                </select>
-            </div>
+                    <div class="collection_sort_filter">
+                        <h2>Jouw collectie</h2>
 
-            <div class="link">
-                <h3>Filter on artist: </h3>
-                <input type="text" list="artist_datalist" id="artist_input">
-                <datalist id="artist_datalist">
-                </datalist>  
-            </div>
+                        <div class="link">
+                            <h3>Sorteren: </h3>
+                            <select name="track_sort_options" id="sortby">
+                                <option value="popularity" selected>Populair</option>
+                                <option value="energy">Energie</option>
+                                <option value="danceability">Dansbaarheid</option>
+                            </select>
+                        </div>
+
+                        <div class="link">
+                            <h3>Filter op artiest: </h3>
+                            <input type="text" list="artist_datalist" id="artist_input">
+                            <datalist id="artist_datalist">
+                            </datalist>
+                        </div>
 
 
-        </div>
+                    </div>
 
-        <article class="music_grid" id="music_grid">
+                    <article class="music_grid" id="music_grid">
 
-          
 
-        </article>
-    </section>
-</main>
 
-<%- include("partials/footer") %>
+                    </article>
+                </section>
+        </main>
+
+        <%- include("partials/footer") %>
 </body>
+
 </html>

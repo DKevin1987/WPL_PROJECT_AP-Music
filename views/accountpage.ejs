@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/accountpage.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/accountpage.js" defer></script>
-    <title>Document</title>
+    <title>AP-Music - account</title>
 </head>
 
 <body>
@@ -22,13 +22,13 @@
                 <img id="user_icon" src="assets/icons/person.jpg" alt="">
                 <hr>
                 <button class="view_button" view="gebruikersnaam">
-                    <p>Gebruiker Naam</p>
+                    <p>Gebruikersnaam</p>
                 </button>
                 <button class="view_button" view="beveiligin">
                     <p>Beveiliging</p>
                 </button>
                 <button class="view_button" view="gebruikers_icon">
-                    <p>Gebruikers Icoon</p>
+                    <p>Gebruikers icoon</p>
                 </button>
                 <button class="view_button" view="mood">
                     <p>Mood</p>
@@ -64,7 +64,8 @@
                 </article>
 
                 <article class="hidden" id="beveiligin">
-                    <p>E-mail: random@gmail.com</p>
+                    <p>E-mail: <%= email %>
+                    </p>
                     <p>Wachtwoord: ***********</p>
                 </article>
 

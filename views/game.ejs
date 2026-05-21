@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Music - Muziek Spel</title>
+    <title>AP Music - Muziek spel</title>
 
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -13,52 +14,54 @@
 
     <script src="/js/game.js" defer></script>
 </head>
+
 <body>
 
     <%- include("partials/header") %>
 
-    <main class="main_centerd">
+        <main class="main_centerd">
 
 
-        <section id="game_section">
-            <div class="game-card">
+            <section id="game_section">
+                <div class="game-card">
 
-            <div class="game-topbar">
-                <button id="reset_btn" class="reset-btn">Reset</button>
-                <span class="mood-score">Mood Score: <span id="score_value">0</span></span>
-            </div>
-
-            <div class="game-body">
-
-                <div class="game-left">
-                    <div id="cover_container" class="cover-container">
-                        <span class="question-mark">?</span>
-                    </div>
-                    <button id="play_btn" class="play-btn">
-                        <img id="play_icon" src="/assets/icons/playIcon.png" alt="play" />
-                    </button>
-                    <p class="play-hint">Klik op play voor een preview</p>
-                </div>
-
-                <div class="game-right">
-                    <h2>Welk nummer hoor je?</h2>
-                    <p id="song_counter" class="song-counter"></p>
-
-                    <div class="input-group">
-                        <div id="song_options_container" class="options-grid"></div>
+                    <div class="game-topbar">
+                        <button id="reset_btn" class="reset-btn">Reset</button>
+                        <span class="mood-score">Mood score: <span id="score_value">0</span></span>
                     </div>
 
-                    <p id="feedback_text" class="feedback hidden"></p>
+                    <div class="game-body">
+
+                        <div class="game-left">
+                            <div id="cover_container" class="cover-container">
+                                <span class="question-mark">?</span>
+                            </div>
+                            <button id="play_btn" class="play-btn">
+                                <img id="play_icon" src="/assets/icons/playIcon.png" alt="play" />
+                            </button>
+                            <p class="play-hint">Klik op play voor een preview</p>
+                        </div>
+
+                        <div class="game-right">
+                            <h2>Welk nummer hoor je?</h2>
+                            <p id="song_counter" class="song-counter"></p>
+
+                            <div class="input-group">
+                                <div id="song_options_container" class="options-grid"></div>
+                            </div>
+
+                            <p id="feedback_text" class="feedback hidden"></p>
+                        </div>
+
+                    </div>
                 </div>
 
-            </div>
-        </div>
+            </section>
 
-        </section>
+        </main>
 
-    </main>
-
-    <%- include("partials/footer") %>
+        <%- include("partials/footer") %>
 
 </body>
+
 </html>
