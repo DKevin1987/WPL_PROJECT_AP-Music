@@ -20,7 +20,6 @@ import details from "./routers/details";
 import vergelijk from "./routers/vergelijk";
 import gameRouter from "./routers/game_routes"
 
-import { User } from "./data/interfaces";
 import { db_get_user_by_email } from "./mongo_api";
 
 const saltRounds : number = 10;
