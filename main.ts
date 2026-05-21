@@ -20,8 +20,8 @@ import details from "./routers/details";
 import vergelijk from "./routers/vergelijk";
 import gameRouter from "./routers/game_routes"
 
-import { getUsername } from "./database";
 import { User } from "./data/interfaces";
+import { db_get_user_by_email } from "./mongo_api";
 
 const saltRounds : number = 10;
 
@@ -69,7 +69,7 @@ app.get("/game{.html}", RouteSecureMiddleware, (req,res) => {
 
 app.get("/accountpage{.html}", RouteSecureMiddleware, async (req,res) => {
     let email = res.locals.user_email.value
-    let username = await getUsername(email)
+    let username = (await db_get_user_by_email(email))?.username
     res.render("accountpage", {email, username})
 })
 

@@ -50,17 +50,6 @@ export const track_collection:     Collection<Track> =
 export const bucket = 
     new GridFSBucket(client.db(DBName), { bucketName: 'music' });
 
-export async function getUsername(email:string) {
-    let user:User | null = await user_collection.findOne({email: email});
-
-    if (user === null){
-        return "Not found"
-    }
-    else{
-        return user.username;
-    }
-}
-
 
 
 
