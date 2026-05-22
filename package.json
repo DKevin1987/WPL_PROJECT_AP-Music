@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild main.ts --bundle --platform=node --target=node24 --outfile=main.js",
     "start": "node main.js"
   },
   "dependencies": {
