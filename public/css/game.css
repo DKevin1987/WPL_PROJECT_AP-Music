@@ -266,76 +266,91 @@ main {
 .hidden {
     display: none;
 }
-
 @media (max-width: 850px) {
-
+ 
     #game_section {
         padding: 40px 20px;
         min-height: 80vh;
     }
-
+ 
     .game-card {
         padding: 35px;
         width: 100%;
     }
-
+ 
     .game-topbar {
         margin-bottom: 30px;
     }
-
+ 
     .reset-btn,
     .mood-score {
         padding: 13px 20px;
         font-size: 1rem;
         border-radius: 20px;
     }
-
+ 
     .game-body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
+ 
     .cover-container {
         width: 180px;
         height: 180px;
         font-size: 6rem;
         border: 4px dashed #b07a7a;
     }
-
+ 
     .question-mark {
         font-size: 6rem;
     }
-
+ 
     .play-btn {
         width: 65px;
         height: 65px;
     }
-
+ 
     .play-btn img {
         width: 25px;
         margin-left: 4px;
     }
-
+ 
     .game-right h2 {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
-
+ 
     .song-counter {
         margin-bottom: 15px;
     }
-
+ 
     .guess-input {
-        padding: 12px 15px;
-        font-size: 1rem;
+        padding: 10px 14px;
+        font-size: 0.95rem;
         margin-bottom: 15px;
     }
-
+ 
+    .options-grid {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+ 
+    .option-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+       
+        display: flex;              
+        justify-content: center;    
+        align-items: center;        
+        text-align: center !important;
+    }
+ 
     .submit-btn {
         padding: 14px 30px;
         font-size: 1.1rem;
     }
-
+ 
     .feedback {
         margin-top: 15px;
         padding: 12px;
